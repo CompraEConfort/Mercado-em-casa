@@ -1,0 +1,126 @@
+/* Meu comentário no CSS */
+/* Todos são classes do html severvi para melhorar o stilo deles na pagina */
+
+body{
+    width: 100%; /* esse body e recomendado começar sempre com ele para que a pagina fique certa no tamanho e na altura e na margem */
+    height: 100%;
+    margin: 0 auto;
+    background-position: contain;
+
+
+}
+
+.menu-pricipal{ /* Parte de cima do site onde fica a logo e o botao de registro e login*/
+    width: 100%;
+    background-color: white; 
+    height: 80px;
+
+}
+
+main{ /* Esse main e o primeiro que esta localisado no menu-principal, tem o objetivo de pocicionamento e qualidade de tamanho na pagina */
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    
+
+}
+
+.logo{  /* Esse o posicionamento do logo  */
+   float: left; 
+   width: 80%;
+   
+   
+}
+
+
+.busca{ /* Posição e tamanhos da barra de busca */
+    width: 100%;
+    text-align: center;
+    margin: 0; 
+    position:relative;
+    left: 18px;
+    top: 100px;
+
+}
+
+#texto{  /* Tamnaho e tipo da fonte do texto na barra de pesquisa */
+width: 400px;
+height: 40;    
+font-family: Arial;
+font-size: -200px;
+
+}
+
+.btn{ /* posição do botão de confirmar */
+    font-family: arial;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px;
+    cursor: pointer;  
+    background-color: #007b5b;
+    color: #fff;
+    margin-top: 27px; 
+    margin-left: 27px; 
+    margin-right: 27px;
+   
+  
+ }
+ .btn:hover {
+    background-color: #fff;
+    color: #007b5b;
+border: 5px #007b5b;
+    transition: background-color .5s;
+ }
+
+#texto:focus{ /* Borda interna da barra de pesquisa */
+    border: solid 4px #2a6049; 
+}
+.header-2{
+
+    width: 95%;
+    background-color: #fbf9f1; 
+    height: 900px;
+    
+    
+    
+}
+
+.centro{
+font-family: 'Trebuchet MS';
+color: #2a6049;
+text-align: center;
+height: 80;
+
+
+}
+.texto2{
+
+    font-family: 'Trebuchet MS';
+    color:gray;
+    text-align: center;
+    height: 80;
+
+}
+
+.btn1{ /* posição do botão de login */
+    font-family: arial;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px;
+    cursor: pointer;  
+    background-color: #007b5b;
+    color: #fff;
+    margin-top: 27px; 
+    margin-left: 27px; 
+    margin-right: 27px;
+    border-radius: 15px;
+  
+ }
+ .btn1:hover {
+    background-color: #fff;
+    color: #007b5b;
+border: 5px #007b5b;
+    transition: background-color .5s;
+ }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compra&Confort</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"    type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css"    type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css"      type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css"    type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css"     type="text/css">
+    <link rel="stylesheet" href="css/style copy 4.css"     type="text/css">
+    <link rel="stylesheet" href="css/style copy.css"       type="text/css">
+
+    <!-- Head Produtos-->
+    <meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text" >
+                        <img src="./img/Pallet.png" alt="" width="180" height="180">
+                        <h2>Adicionar Produtos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+                <form>
+                    <div class="col-lg-4 col-md-6">
+                            <div class="checkout__order">
+
+                                <nav class="navbar navbar-default">
+                                    <div class="container-fluid">
+                                      <div class="navbar-header">
+                                        <a id="navTitle" class="navbar-brand"></a>
+                                      </div>
+                                    </div>
+                                  </nav>
+                              
+                                <div class="container-fluid1">
+                                  <div class="form-inline">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="desc" placeholder="Produto">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="amount" placeholder="Quantidade">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="value" placeholder="Valor">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="weight" placeholder="Peso">
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control" id="Barcode" placeholder="Código de Barras">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="Expedition Date" placeholder="Data de Expedição">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="Expire" placeholder="Data de Validade">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="Category" placeholder="Categoria">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="image" placeholder="Imagem">                                
+                                  </div>
+                              
+                                    <span id="btnUpdate" style="display: none;">
+                                        <span id="inputIDUpdate"></span>
+                                        <button onclick="updateData();" class="btn btn-default">Salvar</button>
+                                        <button onclick="resetForm();" class="btn btn-default">Cancelar</button>
+                                    </span>
+                                    <span id="btnAdd">
+                                        <button onclick="addData();" class="btn btn-default">Adicionar</button>
+                                        <button onclick="resetForm();" class="btn btn-default">Resetar</button>
+                                        <button onclick="deleteList();" class="btn btn-default">Deletar Lista</button>
+                                    </span>
+                                </div>
+                                </div>
+
+                                  <div class="container-fluid">
+                                      <div id="errors" style="display: none;"></div>
+                              
+                                      <table id="listTable" class="table">
+                                      
+                                      </table>
+                                  </div>
+                              
+                                  <nav class="navbar navbar-default navbar-fixed-bottom">
+                                      <div class="container">
+                                          <h4 class="text-center text-success">Total: <span id="totalValue">R$ 0,00</span></h4>
+                                      </div>
+                                  </nav>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section End -->
+
+    <!-- Footer Section Begin -->
+    <div class="footer-top-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-about-us">
+                        <h2>.<span>Compra&Confort</span></h2>
+                        <p>Siga nas redes sociais pra ficar por dentro de todas as novidades em primeira mão diretamente na sua timeline ! </p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="copyright">
+                        <p>&copy; 2021 Compra&Confort. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="footer-card-icon">
+                        <i class="fa fa-cc-mastercard"></i>
+                        <i class="fa fa-cc-visa"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Footer Section End -->
+    
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/button1.js"></script>
+    
+	<script type="text/javascript" src="js/mainProdutos.js"></script>
+</body>
+
+</html>

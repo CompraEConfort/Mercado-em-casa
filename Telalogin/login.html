@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+        crossorigin="anonymous">
+         
+    <script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+</head>
+<body >
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá!</h2>
+                <p class="description description-primary">Caso possua uma conta, Logue-se !</p>
+                <p class="description description-primary">Pressione o botão abaixo para logar</p>
+                <button id="signin" class="btn btn-primary">Logar</button>
+                
+            </div>    
+            <div class="second-column">
+                <img src="img/logo.jpg" width="150" height="150" alt="">
+                <h2 class="title title-second">Criar conta</h2>
+
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="cadastro-name" type="text" placeholder="Nome" required>
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="cadastro-email" type="email" placeholder="Email" required>
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="cadastro-password" type="password" placeholder="Senha" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-home icon-modify"></i>
+                        <input id="cadastro-endereco" type="text" placeholder="Endereço" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-comment-alt icon-modify"></i>
+                        <input id="cadastro-complemento" type="text" placeholder="Complemento">
+                    </label>
+
+            
+                    <label class="label-input" for="">
+                        <i class="fas fa-map icon-modify"></i>
+                            <input id="cadastro-cidade" type="text" placeholder="Cidade" required>
+                    </label>
+
+                   <label class="label-input" for="">
+                        <i class="fas fa-map-marked-alt icon-modify"></i>
+                        <input id="cadastro-bairro" type="text" placeholder="Bairro" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-map-marker-alt icon-modify"></i>
+                        <input id="cadastro-cep" type="text" placeholder="Cep" required>
+                    </label> 
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-phone icon-modify"></i>
+                        <input id="cadastro-telefone" type="text" placeholder="Telefone" required>
+                    </label> 
+        
+
+                    <button type="button" class="btn btn-second" onclick="cadastroSubmit()">Cadastrar</button>
+                    <a class="password" href="Cadastro de mercado.html">Quer cadastrar seu mercado ? clique aqui</a>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem vindo de volta!</h2>
+                <p class="description description-primary">Digite seus dados pessoais</p>
+                <p class="description description-primary">para logar</p>
+                <button id="signup" class="btn btn-primary">Cadastrar</button>
+            </div>
+            <div class="second-column">
+                 <img src="img/logo.jpg" width="150" height="150" alt="">
+                <h2 class="title title-second">Login</h2>
+                <form class="form">
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="login-email" type="email" placeholder="Email" required>
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="login-password" type="password" placeholder="Senha" required>
+                    </label>
+                
+                    <!-- <a class="password" href="Rsenha.html">Esqueceu sua senha?</a> -->
+                    <button type="button" onclick="loginSubmit()" class="btn btn-second">Logar</button>
+
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="../service/axiosService.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+</body>
+</html>
