@@ -38,6 +38,7 @@ function cadastroSubmit () {
         telefone: telefone
     }
     cadastroService(requestBody)
+    href="Cadastro de mercado.html"
 }
 
 function loginSubmit () {
