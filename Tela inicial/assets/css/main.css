@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
 /*
 	Hielo by TEMPLATED
@@ -2725,12 +2726,12 @@
 		}
 
 			#two {
-				height: 449px;
+				height: 1000px;
 			   }
 			   
 			   #busca {
 				position: relative;
-				top: 50px;
+				top: 0px;
 			   }
 		
 			   #busca:nth-child(1) > p:nth-child(1) {
@@ -2760,7 +2761,8 @@
 		}
 
 		.wrapper.style3 input, .wrapper.style3 select, .wrapper.style3 textarea {
-			color: #ffffff;
+			color: #007b5b;
+    		font-weight: 500;
 		}
 
 		.wrapper.style3 a {
@@ -2885,8 +2887,8 @@
 		.wrapper.style3 input[type="email"],
 		.wrapper.style3 select,
 		.wrapper.style3 textarea {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: rgba(255, 255, 255, 0.25);
+			background-color: white;
+			border-color: black;
 		}
 
 			.wrapper.style3 input[type="text"]:focus,
@@ -2951,7 +2953,7 @@
 		}
 
 		.wrapper.style3 header p {
-			color: white;
+			color: #007b5b;
 		}
 
 		.wrapper.style3 table tbody tr {
@@ -2984,12 +2986,13 @@
 		}
 
 		.wrapper.style3 p {
+			font-family: 'poppins';
 			text-transform: uppercase;
-			font-size: .75rem;
-			font-weight: 300;
+			font-size: 2.75rem;
+			font-weight: 400;
 			margin: 0 0 .5rem 0;
 			padding: 0 0 1rem 0;
-			letter-spacing: .25rem;
+			letter-spacing: .25rem
 		}
 
 			.wrapper.style3 p:after {
@@ -3672,6 +3675,13 @@
 		position: relative;
 	}
 
+		.Card {
+		box-shadow: 1px 1px 5px #ccc;
+		background-color: white;
+		width: 95%;
+		padding: 30px;
+		border-radius: 5px;
+	}
 		.banner input, .banner select, .banner textarea {
 			color: #ffffff;
 		}
