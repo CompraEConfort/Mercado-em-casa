@@ -1934,7 +1934,6 @@
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-radius: 2px;
-		border: 0;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 300;
@@ -2798,6 +2797,7 @@
 		.wrapper.style3 input[type="button"],
 		.wrapper.style3 button,
 		.wrapper.style3 .button {
+
 			background-color: #2a6049;
 			color: white !important;
 			transition: background-color .5s;
@@ -3480,16 +3480,16 @@
 			
 			}
 			   .visible.top:nth-child(1) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(2) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(3) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(4) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 
 
@@ -3875,8 +3875,13 @@
 				}
 
 			.banner > article a {
-				color: #FFF;
 				text-decoration: none;
+				border-radius: 15px;
+				text-transform: uppercase;
+				color: #fff;
+				cursor: pointer;
+				border: 1px solid white;
+				padding: 0px 20px;
 			}
 
 			.banner > article img {
