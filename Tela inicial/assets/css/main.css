@@ -2800,18 +2800,13 @@
 		.wrapper.style3 .button {
 			background-color: #2a6049;
 			color: white !important;
-		}
-
-		.btn-second {
-			background-color: #2a6049;
-			border: 1px solid #2a6049;
 			transition: background-color .5s;
 		}
 
 		.btn {
 			border-radius: 15px;
 			text-transform: uppercase;
-			color: #fff;
+			
 			cursor: pointer;
 			font-weight: bold;
 			border: none;
@@ -2822,7 +2817,10 @@
 			.wrapper.style3 input[type="button"]:hover,
 			.wrapper.style3 button:hover,
 			.wrapper.style3 .button:hover {
-				background-color: white;
+			background-color: #ffffff;
+			border: 1px solid #2a6049;
+			color: #2a6049 !important;
+			transition: background-color .5s;
 			}
 
 			.wrapper.style3 input[type="submit"]:active,
