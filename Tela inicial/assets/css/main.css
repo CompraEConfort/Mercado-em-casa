@@ -1807,7 +1807,7 @@
 		border-bottom-color: rgba(144, 144, 144, 0.25);
 	}
 	.search-container{
-		width: 490px;
+		width: 500px;
 		display: block;
 		margin: 0 auto;
 	  }
@@ -1934,7 +1934,6 @@
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-radius: 2px;
-		border: 0;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 300;
@@ -2748,7 +2747,6 @@
 			   
 			   #search-bar {
 				position: relative;
-				left: -29.4996px;
 			   }
 		.wrapper.style3 {
 			background-color: transparent;
@@ -2799,10 +2797,23 @@
 		.wrapper.style3 input[type="button"],
 		.wrapper.style3 button,
 		.wrapper.style3 .button {
-			background-color: #f2f2f2;
-			color: #000 !important;
+			border-radius: 15px;
+			text-transform: uppercase;
+			color: #fff;
+			cursor: pointer;
+			font-weight: bold;
+			margin-top: 1rem;
+			background-color: #2a6049;
+			border: 2px solid #2a6049;
+			transition: background-color .4s;
+			
 		}
 
+		.btn {
+			background-color: #2a6049;
+			border: 1px solid #2a6049;
+			transition: background-color .5s;
+		}
 			.wrapper.style3 input[type="submit"]:hover,
 			.wrapper.style3 input[type="reset"]:hover,
 			.wrapper.style3 input[type="button"]:hover,
@@ -2888,7 +2899,6 @@
 		.wrapper.style3 select,
 		.wrapper.style3 textarea {
 			background-color: white;
-			border-color: black;
 		}
 
 			.wrapper.style3 input[type="text"]:focus,
@@ -2986,6 +2996,7 @@
 		}
 
 		.wrapper.style3 p {
+			color: #007b5b;
 			font-family: 'poppins';
 			text-transform: uppercase;
 			font-size: 2.75rem;
@@ -3468,16 +3479,16 @@
 			
 			}
 			   .visible.top:nth-child(1) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(2) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(3) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 			   .visible.top:nth-child(4) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
-				font-size: 20px;
+				font-size: 30px;
 			   }
 
 
@@ -3675,13 +3686,6 @@
 		position: relative;
 	}
 
-		.Card {
-		box-shadow: 1px 1px 5px #ccc;
-		background-color: white;
-		width: 95%;
-		padding: 30px;
-		border-radius: 5px;
-	}
 		.banner input, .banner select, .banner textarea {
 			color: #ffffff;
 		}
@@ -3870,8 +3874,13 @@
 				}
 
 			.banner > article a {
-				color: #FFF;
 				text-decoration: none;
+				border-radius: 15px;
+				text-transform: uppercase;
+				color: #fff;
+				cursor: pointer;
+				border: 1px solid white;
+				padding: 0px 20px;
 			}
 
 			.banner > article img {
