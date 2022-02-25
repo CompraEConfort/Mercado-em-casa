@@ -2797,29 +2797,30 @@
 		.wrapper.style3 input[type="button"],
 		.wrapper.style3 button,
 		.wrapper.style3 .button {
-			border-radius: 15px;
-			text-transform: uppercase;
-			color: #fff;
-			cursor: pointer;
-			font-weight: bold;
-			margin-top: 1rem;
+
 			background-color: #2a6049;
-			border: 2px solid #2a6049;
-			transition: background-color .4s;
-			
+			color: white !important;
+			transition: background-color .5s;
 		}
 
 		.btn {
-			background-color: #2a6049;
-			border: 1px solid #2a6049;
-			transition: background-color .5s;
+			border-radius: 15px;
+			text-transform: uppercase;
+			
+			cursor: pointer;
+			font-weight: bold;
+			border: none;
+			margin-top: 1rem;
 		}
 			.wrapper.style3 input[type="submit"]:hover,
 			.wrapper.style3 input[type="reset"]:hover,
 			.wrapper.style3 input[type="button"]:hover,
 			.wrapper.style3 button:hover,
 			.wrapper.style3 .button:hover {
-				background-color: white;
+			background-color: #ffffff;
+			border: 1px solid #2a6049;
+			color: #2a6049 !important;
+			transition: background-color .5s;
 			}
 
 			.wrapper.style3 input[type="submit"]:active,
