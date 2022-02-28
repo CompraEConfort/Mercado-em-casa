@@ -58,7 +58,7 @@ input:-webkit-autofill
 }
 .card-group > label{
     width: 100%;
-    color: rgb(75, 75, 75);
+    color: #4b4b4b;
 }
 .card-group > input{
     border-radius: 5px;

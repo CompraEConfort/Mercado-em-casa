@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" href="css/Perfil.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+	crossorigin="anonymous">
+	<script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+</head>
+
+<body>
+    <form Class="form">
+        <div class="card">
+            <div class="card-top">
+                <img src="img/logo.jpg" width="200" height="200">
+                <h1 class="title">Perfil do Usuário</h1>
+                <h2>Bem-vindo ao Mecado em Casa!!</h2>
+            </div>
+            <form class="form">
+                    <i class="fa fa-shopping-cart icon-modify"></i>
+                    <input class="btn btn-second" type="Button" value="Comprar" onClick="Sair()">
+                    <br>
+					<i class="fa fa-user-edit icon-modify"></i>
+					<input class="btn btn-second" type="Button" value="Editar Pefil" onClick="Perfil()">
+                    <br>
+                    <i class="fa fa-clock icon-modify" ></i>
+					<input class="btn btn-second" type="Button" value="Histórico" onClick="Perfil()">
+                    <br>
+                    <i class="fa fa-sign-out-alt icon-modify"></i>
+					<input class="btn btn-second" type="Button" value="Sair" onClick="Sair()">
+            </form>
+        </div>
+
+    </form>
+</body>
+<script type="text/javascript">
+    function Perfil()
+    {
+    location.href="Cadastro de mercado.html"
+    }
+</script>
+<script type="text/javascript">
+    function Sair()
+    {
+    location.href="http://localhost/Mercado-em-casa/Tela%20inicial/"
+    }
+</script>
+<script src="../service/axiosService.js"></script>
+<script src="js/app.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+</html>
