@@ -3425,13 +3425,14 @@
 			color: inherit;
 			text-decoration: none;
 			color: #FFF;
+			font-size: 15px;
 		}
 
 			#header > a:hover {
 				color: #f2f2f2;
 			}
 
-			#header > a[href="#menu"] {
+			/* #header > a[href="#menu"] {
 				text-decoration: none;
 				font-size: 1.8em;
 				-webkit-tap-highlight-color: transparent;
@@ -3460,7 +3461,7 @@
 
 			#header > a:last-child {
 				padding-right: 1.25em;
-			}
+			} 
 
 			@media screen and (max-width: 736px) {
 
@@ -3478,7 +3479,8 @@
 					}
 
 			
-			}
+			}*/
+			
 			   .visible.top:nth-child(1) > .inner:nth-child(2) > header:nth-child(1) > a:nth-child(3) {
 				font-size: 30px;
 			   }
