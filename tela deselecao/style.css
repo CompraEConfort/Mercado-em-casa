@@ -75,7 +75,7 @@ body { font-family: 'Titillium Web', sans-serif; }
 }
 
 .mainmenu-area {background: none repeat scroll 0 0 #1abc9c;
-font-family: "Roboto Condensed",sans-serif;
+
 text-transform: uppercase;
 width: 100%;
 z-index: 999;}
@@ -89,6 +89,10 @@ z-index: 999;}
 .logo h1 a {
     color: #999;
 }
+.i {
+    color: white
+}
+
 .logo h1 a:hover {text-decoration: none;opacity: .7}
 .logo h1 a span {
     color: #1abc9c;
@@ -151,6 +155,7 @@ z-index: 999;}
 
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #222}
 .mainmenu-area .nav > li > a:focus {color: #000}
+.mainmenu-area .navbar-nav i { color: white}
 
 .slider-area {clear: both}
 .slider-area, .promo-area, .brands-area, .maincontent-area, .footer-top-area, .product-widget-area, .product-breadcroumb-area, .single-product-area {position: relative;overflow: hidden}
@@ -499,7 +504,7 @@ padding: 35px 0 180px;}
 .newsletter-form {
     margin-top: 25px;
 }
-a {color: #1abc9c}
+a {color: #17a78b}
 a:hover, a:focus {color: #17a78b}
 .footer-bottom-area {
   background: none repeat scroll 0 0 #000;
@@ -565,7 +570,7 @@ width: 10px;
 .product-bit-title h2 {
   font-family: raleway;
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0;
   padding: 50px 0;color: #fff;
 }
