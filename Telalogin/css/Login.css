@@ -120,9 +120,7 @@ body {
   
     display: flex;
     width: 90%;
-    overflow-y: scroll;
     padding: 20px;
-    height: 250px;
     flex-direction: column;
     
 }

@@ -38,7 +38,7 @@ function cadastroSubmit () {
         telefone: telefone
     }
     cadastroService(requestBody)
-    href=""
+   
 }
 
 function loginSubmit () {
@@ -50,6 +50,7 @@ function loginSubmit () {
         senha: password,
     }
     loginService(requestBody)
+
 }
 
 function cadastroMercadoSubmit () {
@@ -77,6 +78,7 @@ function cadastroMercadoSubmit () {
         imagem: imagem_link,
     }
     cadastroMercadoService(requestBody)
+
 }
 
 async function getProductsByCategoryAndSupermarketId() {
