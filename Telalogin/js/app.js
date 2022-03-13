@@ -4,14 +4,14 @@ var btnSignup = document.querySelector("#signup");
 
 var body = document.querySelector("body");
 
+//btnSignin.addEventListener("click", function () {
+//   body.className = "sign-in-js"; 
+//});
 
-btnSignin.addEventListener("click", function () {
-   body.className = "sign-in-js"; 
-});
--
-btnSignup.addEventListener("click", function () {
-    body.className = "sign-up-js";
-})
+//btnSignup.addEventListener("click", function () {
+//    body.className = "sign-up-js";
+//})
+
 
 
 
@@ -38,7 +38,7 @@ function cadastroSubmit () {
         telefone: telefone
     }
     cadastroService(requestBody)
-   
+    href=""
 }
 
 function loginSubmit () {
@@ -50,7 +50,6 @@ function loginSubmit () {
         senha: password,
     }
     loginService(requestBody)
-
 }
 
 function cadastroMercadoSubmit () {
@@ -78,7 +77,6 @@ function cadastroMercadoSubmit () {
         imagem: imagem_link,
     }
     cadastroMercadoService(requestBody)
-
 }
 
 async function getProductsByCategoryAndSupermarketId() {
