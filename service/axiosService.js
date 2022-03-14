@@ -17,7 +17,8 @@ function loginService (requestBody) {
     .then(res => {
         console.log(res)
         alert("Logado com sucesso !")
-        const token = res.token
+        window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
+        //const token = res.token
         // 1, Guardar o token no Cache/Local Storage
         // 2, Fazer o redirect para tela
         
@@ -34,23 +35,23 @@ function loginService (requestBody) {
     })
 }
 
-function profileService() {
+//function profileService() {
     // Vai pegar o token do local storage
     // Vai montar a requisição com o token
     // Fazer a chamada ao endpoint GET usuarios/perfil/
     
-    await axios.get('http://localhost:3000/usuarios/perfil', {
-        headers: {
-          'authorization': `Bearer ${token}`
-        }
-    })
-    .then(res => {
-        return res.data
-    })
-    .catch(err => {
-        console.log(err)
-    })
-}
+   // await axios.get('http://localhost:3000/usuarios/perfil', {
+   //     headers: {
+   //       'authorization': `Bearer ${token}`
+  //      }
+  //  })
+  //  .then(res => {
+  //      return res.data
+  //  })
+  //  .catch(err => {
+  //      console.log(err)
+   // })
+//}
 
 function cadastroMercadoService (requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
