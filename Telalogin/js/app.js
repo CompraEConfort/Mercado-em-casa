@@ -4,8 +4,14 @@ var btnSignup = document.querySelector("#signup");
 var body = document.querySelector("body");
 
 btnSignin.addEventListener("click", function () {
-   body.className = "sign-in-js"; 
+
+  body.className = "sign-in-js"; 
 });
+
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-up-js";
+})
+
 
 btnSignup.addEventListener("click", function () {
     body.className = "sign-up-js";
@@ -36,8 +42,28 @@ function cadastroSubmit () {
         imagem: imagem_link,
     }
     cadastroService(requestBody)
-    
-   
+}
+
+function altSubmit () {
+    var name = $("#alt-name").val()
+    var endereco = $("#alt-endereco").val()
+    var complemento = $("#alt-complemento").val()
+    var cidade = $("#alt-cidade").val()
+    var bairro = $("#alt-bairro").val()
+    var cep = $("#alt-cep").val()
+    var telefone = $("#alt-telefone").val()
+
+
+    var requestBody = {
+        name: name,
+        endereco: endereco,
+      complemento: complemento,
+        cidade: cidade,
+        bairro: bairro,
+        cep: cep,
+        telefone: telefone
+    }
+    alterarPerfilService(requestBody)
 
 }
 
@@ -89,3 +115,33 @@ async function getProductsByCategoryAndSupermarketId() {
     }
     return await productsByCategoryService(requestBody)
 }
+
+
+/* botão de upar imagens */
+
+var btnClose = document.querySelector('.close-preview-js');
+var output = document.getElementById("new");
+var loaderFile = function(event){
+var reader = new FileReader();
+      reader.onload = function() {
+output.style.display = "block";
+btnClose.style.display = "block";
+output.style.backgroundImage = "url("+reader.result+")";
+  }
+reader.readAsDataURL(event.target.files[0]);
+}
+
+var editarAvatar = document.querySelector(".editar-content");
+var buttonFile = document.getElementById("file-preview-js");
+
+editarAvatar.addEventListener("click", function(){
+buttonFile.click();
+});
+
+btnClose.addEventListener("click", function(){
+btnClose.style.display = "none";
+output.style.backgroundImage = "url('')";
+document.getElementById("file-preview-js").value = "";
+});
+
+

@@ -24,4 +24,4 @@
 // logo_alignment: "left",
  //Text:"$ {button.text}",} // customization attributes
   //);
- // google.accounts.id.prompt(); // also display the One Tap dialog}
+ // google.accounts.id.prompt(); // also display the One Tap dialog} 

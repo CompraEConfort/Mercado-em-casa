@@ -20,6 +20,7 @@ function cadastroService (requestBody) {
     axios.post('http://localhost:3000/usuarios/cadastro', requestBody)
     .then(res => {
         console.log(res)
+
         vnome=document.getElementById("cadastro-name").value;
         vemail=document.getElementById("cadastro-email").value;
         vendereco=document.getElementById("cadastro-endereco").value;
@@ -39,6 +40,7 @@ function cadastroService (requestBody) {
         localStorage.telefone=vtelefone;
         alert("Cadastrado com sucesso !")
        // window.location.href = "http://localhost/Mercado-em-casa/Telalogin/Perfil.html"
+
     })
     .catch(err => {
         console.log(err)
@@ -56,6 +58,7 @@ function loginService (requestBody) {
         console.log(res)
         alert("Logado com sucesso !")
         window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
+      
         //const token = res.token
         // 1, Guardar o token no Cache/Local Storage
         // 2, Fazer o redirect para tela
@@ -73,23 +76,41 @@ function loginService (requestBody) {
     })
 }
 
+
+function alterarPerfilService (requestBody) {
+    axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
+    .then(res => {
+        console.log(res)
+        alert("Atualizado com sucesso ! ") 
+       // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
+    })
+    .catch(err => {
+        console.log(err)
+        alert("Erro ao aualizar") 
+    })
+}
+/*
 //function profileService() {
+
     // Vai pegar o token do local storage
     // Vai montar a requisição com o token
     // Fazer a chamada ao endpoint GET usuarios/perfil/
     
-   // await axios.get('http://localhost:3000/usuarios/perfil', {
-   //     headers: {
-   //       'authorization': `Bearer ${token}`
-  //      }
-  //  })
-  //  .then(res => {
-  //      return res.data
-  //  })
-  //  .catch(err => {
-  //      console.log(err)
-   // })
-//}
+
+  //  await axios.get('http://localhost:3000/usuarios/perfil', {
+      //  headers: {
+      //    'authorization': `Bearer ${token}`
+      //  }
+    })
+    .then(res => {
+        console.log(requestBody)
+        return res.data
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+*/
 
 function cadastroMercadoService (requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)

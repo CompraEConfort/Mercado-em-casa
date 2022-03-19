@@ -6,7 +6,7 @@
 
     corredores.corredores.forEach(element => {
         console.log(element)
-//gitgub test
+
 
         CorredoresDinamico += `<div class="col-md-3 col-sm-6">`
         CorredoresDinamico +=    `<div class="single-shop-product">`
