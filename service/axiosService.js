@@ -4,6 +4,7 @@ function cadastroService (requestBody) {
     axios.post('http://localhost:3000/usuarios/cadastro', requestBody)
     .then(res => {
         console.log(res)
+       
        // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
     })
     .catch(err => {
@@ -16,8 +17,8 @@ function loginService (requestBody) {
     axios.post('http://localhost:3000/usuarios/login', requestBody)
     .then(res => {
         console.log(res)
-        alert("Logado com sucesso !")
         const token = res.token
+        localStorage.jwt = token;
         // 1, Guardar o token no Cache/Local Storage
         // 2, Fazer o redirect para tela
         
@@ -34,24 +35,38 @@ function loginService (requestBody) {
     })
 }
 
-function profileService() {
+function alterarPerfilService (requestBody) {
+    axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
+    .then(res => {
+        console.log(res)
+        alert("Atualizado com sucesso ! ") 
+       // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
+    })
+    .catch(err => {
+        console.log(err)
+        alert("Erro ao aualizar") 
+    })
+}
+/*
+//function profileService(requestBody) {
     // Vai pegar o token do local storage
     // Vai montar a requisição com o token
     // Fazer a chamada ao endpoint GET usuarios/perfil/
     
-    await axios.get('http://localhost:3000/usuarios/perfil', {
-        headers: {
-          'authorization': `Bearer ${token}`
-        }
+  //  await axios.get('http://localhost:3000/usuarios/perfil', {
+      //  headers: {
+      //    'authorization': `Bearer ${token}`
+      //  }
     })
     .then(res => {
+        console.log(requestBody)
         return res.data
     })
     .catch(err => {
         console.log(err)
     })
 }
-
+*/
 function cadastroMercadoService (requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
     .then(res => {
