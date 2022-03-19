@@ -1,25 +1,13 @@
-/* body{
-    font-family: 'Open Sans', sans-serif;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin: auto;
-    padding-top: 50px;
-}
-.form input {
-    height: 45px;
-    width: 100%;
-    border: none;
-    background-color: #ecf0f1;
-}
 
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-size: 1350px 1100px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: center;
+    -o-background-size: center;
+    background-image: url(https://i.imgur.com/XS6yRJf.png); 
+}
 .card{
     box-shadow: 1px 1px 5px #ccc;
     background-color: white;
@@ -27,30 +15,50 @@
     padding: 30px;
     border-radius: 5px;
 }
-.card-top{
-    text-align: center;
-    
-}
 .title{
     color: #2a6049;
     font-size: 40px;
     font-family: 'Trebuchet MS';
 }
-.description {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 30px;
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+    padding-top: 50px;
+    
 }
-.description-primary {
-    color: #007b5b;
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+    
+}
+input:-webkit-autofill 
+{    
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
 }
 
+.card-top{
+    text-align: center;
+}
 .card-group{
     margin-bottom: 10px;
 }
 .card-group > label{
     width: 100%;
-    color: rgb(75, 75, 75);
+    color: #4b4b4b;
 }
 .card-group > input{
     border-radius: 5px;
@@ -71,7 +79,7 @@
     border: none;
     margin-top: 1rem;
 }
-.bnt{
+.btn{
     border-radius: 15px;
     text-transform: uppercase;
     background-color: #007b5b;
@@ -87,9 +95,13 @@
     margin-left: 33%; 
     
 }
-.bnt:hover {
+.btn:hover {
     background-color: #fff;
     color: #007b5b;
 border: 5px #007b5b;
     transition: background-color .5s;
-} */
+}
+
+
+
+

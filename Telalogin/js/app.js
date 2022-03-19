@@ -1,9 +1,7 @@
-
 var btnSignin = document.querySelector("#signin");
 var btnSignup = document.querySelector("#signup");
 
 var body = document.querySelector("body");
-
 
 btnSignin.addEventListener("click", function () {
    body.className = "sign-in-js"; 
@@ -12,8 +10,6 @@ btnSignin.addEventListener("click", function () {
 btnSignup.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
-
-
 
 function cadastroSubmit () {
     var name = $("#cadastro-name").val()
@@ -25,6 +21,7 @@ function cadastroSubmit () {
     var bairro = $("#cadastro-bairro").val()
     var cep = $("#cadastro-cep").val()
     var telefone = $("#cadastro-telefone").val()
+    var imagem_link = $("#cadastro-imagem").val()
 
     var requestBody = {
         name: name,
@@ -35,9 +32,13 @@ function cadastroSubmit () {
         cidade: cidade,
         bairro: bairro,
         cep: cep,
-        telefone: telefone
+        telefone: telefone,
+        imagem: imagem_link,
     }
     cadastroService(requestBody)
+    
+   
+
 }
 
 function loginSubmit () {

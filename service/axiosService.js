@@ -1,30 +1,101 @@
-
+function inicia(){
+    if(localStorage.nome){
+        var vnome=localStorage.nome;
+        var vemail=localStorage.email;
+        var  vendereco=localStorage.endereco;
+        var vcomplemento=localStorage.complemento;
+        var vcidade=localStorage.cidade;
+        var vbairro=localStorage.bairro;
+        vcep=localStorage.cep;
+        var vtelefone=localStorage.telefone;
+        document.getElementById("boasvindas").innerHTML="Seja Bem-vindo(a) ao Seu Mercado em Casa "+vnome+"!!"+"<br>";
+        document.getElementById("emailperfil").innerHTML= vemail;
+        document.getElementById("enderecoperfil").innerHTML= vendereco+", "+vcomplemento+", "+vbairro+", "+vcidade;
+        document.getElementById("telefoneperfil").innerHTML= vtelefone;
+       
+    }
+}
 
 function cadastroService (requestBody) {
     axios.post('http://localhost:3000/usuarios/cadastro', requestBody)
     .then(res => {
         console.log(res)
+        vnome=document.getElementById("cadastro-name").value;
+        vemail=document.getElementById("cadastro-email").value;
+        vendereco=document.getElementById("cadastro-endereco").value;
+        vcomplemento=document.getElementById("cadastro-complemento").value;
+        vcidade=document.getElementById("cadastro-cidade").value;
+        vbairro=document.getElementById("cadastro-bairro").value;
+        vcep=document.getElementById("cadastro-cep").value;
+        vtelefone=document.getElementById("cadastro-telefone").value;
+    
+        localStorage.nome=vnome;
+        localStorage.email=vemail;
+        localStorage.endereco=vendereco;
+        localStorage.complemento=vcomplemento;
+        localStorage.cidade=vcidade;
+        localStorage.bairro=vbairro;
+        localStorage.cep=vcep;
+        localStorage.telefone=vtelefone;
+        alert("Cadastrado com sucesso !")
+       // window.location.href = "http://localhost/Mercado-em-casa/Telalogin/Perfil.html"
     })
     .catch(err => {
         console.log(err)
+        alert("Falha ao Cadastrar : Dados incorretos ou já existentes") 
     })
+
+   
 }
+
+window.addEventListener("load", inicia);
 
 function loginService (requestBody) {
     axios.post('http://localhost:3000/usuarios/login', requestBody)
     .then(res => {
         console.log(res)
-        window.location ("http://localhost/Mercado-em-casa/Tela%20inicial/#busca")
+        alert("Logado com sucesso !")
+        window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
+        //const token = res.token
+        // 1, Guardar o token no Cache/Local Storage
+        // 2, Fazer o redirect para tela
+        
+        // 2 PARTE
+        // Vai pegar o token do local storage
+        // Vai montar a requisição com o token
+        // Fazer a chamada ao endpoint GET usuarios/perfil/
+        // Pegar o body/corpo da requisição que irá conter as informações do usuário
+        // Preencher os campos da tela com as informações do usuário, (Foto, nome e etc)
     })
     .catch(err => {
         console.log(err)
+        alert("Falha no login, Usuario ou senha invalidos") 
     })
 }
+
+//function profileService() {
+    // Vai pegar o token do local storage
+    // Vai montar a requisição com o token
+    // Fazer a chamada ao endpoint GET usuarios/perfil/
+    
+   // await axios.get('http://localhost:3000/usuarios/perfil', {
+   //     headers: {
+   //       'authorization': `Bearer ${token}`
+  //      }
+  //  })
+  //  .then(res => {
+  //      return res.data
+  //  })
+  //  .catch(err => {
+  //      console.log(err)
+   // })
+//}
+
 function cadastroMercadoService (requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
     .then(res => {
         console.log(res)
-        window.location ("http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?")
+       // window.location.href = "http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?"
     })
     .catch(err => {
         console.log(err)

@@ -4,4 +4,3 @@ Tela deselecao : Tela de seleção de mercados, assim como a nova pasta usa Html
 
 tela deseleção/indexmercado.js = indentificar o nome do mercados
 tela deseleção/js/corredores.js = function nomesupermercado
-
