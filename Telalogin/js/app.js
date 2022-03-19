@@ -1,4 +1,3 @@
-
 var btnSignin = document.querySelector("#signin");
 var btnSignup = document.querySelector("#signup");
 
@@ -12,9 +11,6 @@ btnSignup.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
 
-
-
-
 function cadastroSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
@@ -25,6 +21,7 @@ function cadastroSubmit () {
     var bairro = $("#cadastro-bairro").val()
     var cep = $("#cadastro-cep").val()
     var telefone = $("#cadastro-telefone").val()
+    var imagem_link = $("#cadastro-imagem").val()
 
     var requestBody = {
         name: name,
@@ -35,10 +32,13 @@ function cadastroSubmit () {
         cidade: cidade,
         bairro: bairro,
         cep: cep,
-        telefone: telefone
+        telefone: telefone,
+        imagem: imagem_link,
     }
     cadastroService(requestBody)
-    href=""
+    
+   
+
 }
 
 function loginSubmit () {
@@ -89,4 +89,3 @@ async function getProductsByCategoryAndSupermarketId() {
     }
     return await productsByCategoryService(requestBody)
 }
-
