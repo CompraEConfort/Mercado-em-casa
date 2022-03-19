@@ -8,15 +8,21 @@
 	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 	crossorigin="anonymous">
 	<script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+    <style type="text/css"> img{border-radius: 600px; height: 200px; width: 200px;}</style>
 </head>
 
 <body>
     <form Class="form">
         <div class="card">
             <div class="card-top">
-                <img src="img/user.png" width="300" height="260">
+
+               <img src="https://i.imgur.com/IS9UUOG.jpg" alt="minha figura"/> 
+               <!-- <img id="picture" /> -->
+
                 <h1 class="title">Perfil do Usuário</h1>
-                <h2>Bem-vindo ao Mecado em Casa!!</h2>
+                <h2 style="font-size: 20px;">Bem-vindo(a) ao Mecado em Casa, Ana!! </h2> <!-- <h2 id="given_name"></h2> -->
             </div>
             <form class="form">
                     <i class="fa fa-shopping-cart icon-modify"></i>
