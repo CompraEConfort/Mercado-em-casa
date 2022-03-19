@@ -5,18 +5,24 @@ body{
     -moz-background-size: center;
     -o-background-size: center;
     background-image: url(https://i.imgur.com/flRWtrt.png); 
+
     background-position: center;
+
 }
 .card{
     box-shadow: 1px 1px 5px #ccc;
     background-color: white;
-    width: 95%;
+    width: 100%;
     padding: 30px;
     border-radius: 5px;
 }
 .card-top{
     text-align: center;
 }
+.profile-user-img{
+    width: 125px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  }
 .title{
     color: #2a6049;
     font-size: 40px;
@@ -27,7 +33,7 @@ body{
     flex-direction: column;
     width: 35%;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 5px;
     text-align: center;
 }
 .icon-modify {
@@ -61,6 +67,7 @@ body{
     border: 1px solid #2a6049;
     color: #2a6049;
 }
+
 
 /* Inicio do botão de troca da foto de perfil*/
 
