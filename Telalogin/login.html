@@ -26,12 +26,33 @@
                 
             </div>    
             <div class="second-column">
-                <img src="img/logo.jpg" width="150" height="150" alt="">
+
+                 <!-- botão de mudar imagem de perfil -->
+            
+            
+            
+                <!-- <img src="img/logo.jpg" width="150" height="150" alt=""> -->
                 <h2 class="title title-second">Criar conta</h2>
+                <!--Fim do botão-->
 
                <!-- <div id="buttonDiv"></div> --> <!--Butão do google-->
 
                 <form class="form">
+
+                    <div class="image">
+                        <div class="editar-content">
+                        <span>
+                        <i>editar</i>
+                        </span>
+                        </div>
+                        <div id="new">
+                        <div class="close-preview-js close-preview">x</div>
+                        </div>
+                        <img src="https://jamesrmoro.me/wp-content/uploads/2021/02/profile.png" width="150" height="150" alt="Sem imagem">
+                        </div>
+                        <br>
+                        <input id="file-preview-js" type="file" accept="image/*" onchange="loaderFile(event)"><br><br>
+                        
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
                         <input id="cadastro-name" type="text" placeholder="Insira o seu Nome" required>
