@@ -22,13 +22,13 @@
 
 				<label class="label-input" for="">
 					<i class="far fa-user icon-modify"></i>
-					<input id="alt-name" type="text" placeholder="Alterar Nome">
+					<input id="alt-name" type="text" placeholder="Alterar Nome" required>
 				</label>
 				
 
 				<label class="label-input" for="">
 					<i class="fas fa-home icon-modify"></i>
-					<input id="alt-endereco" type="text" placeholder="Alterar Endereço">
+					<input id="alt-endereco" type="text" placeholder="Alterar Endereço" required>
 				</label>
 
 				<label class="label-input" for="">
@@ -40,32 +40,34 @@
 				<label class="label-input" for="">
 					<i class="fas fa-map icon-modify"></i>
           
-						<input id="alt-cidade" type="text" placeholder="Alterar Cidade">
+						<input id="alt-cidade" type="text" placeholder="Alterar Cidade" required>
 
 				</label>
 
 			   <label class="label-input" for="">
 					<i class="fas fa-map-marked-alt icon-modify"></i>
 
-					<input id="alt-bairro" type="text" placeholder="Alterar Bairro">
+					<input id="alt-bairro" type="text" placeholder="Alterar Bairro" required>
 
 				</label>
 
 				<label class="label-input" for="">
 					<i class="fas fa-map-marker-alt icon-modify"></i>
 
-					<input id="alt-cep" type="text" placeholder="Alterar Cep">
+					<input id="alt-cep" type="number" placeholder="Alterar Cep" required>
 
 				</label> 
 
 				<label class="label-input" for="">
 					<i class="fas fa-phone icon-modify"></i>
 
-					<input id="alt-telefone" type="text" placeholder="Alterar Telefone">
+					<input id="alt-telefone" type="number" placeholder="Alterar Telefone" required>
 				</label> 
 
             
-                <input class="btn btn-second" type="button" value="Atualizar" onclick="altSubmit()">
+                <input class="btn btn-second" type="submit" value="Atualizar" onclick="altSubmit()">
+
+				<input class="btn btn-second" type="button" value="Deletar Perfil" onclick="deleteSubmit()">
 		</form>
 		</div>
 	<form>

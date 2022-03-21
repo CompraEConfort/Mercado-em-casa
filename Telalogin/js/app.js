@@ -21,25 +21,13 @@ function cadastroSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
     var password = $("#cadastro-password").val()
-    var endereco = $("#cadastro-endereco").val()
-    var complemento = $("#cadastro-complemento").val()
-    var cidade = $("#cadastro-cidade").val()
-    var bairro = $("#cadastro-bairro").val()
-    var cep = $("#cadastro-cep").val()
-    var telefone = $("#cadastro-telefone").val()
-    var imagem_link = $("#cadastro-imagem").val()
+   // var imagem_link = $("#cadastro-imagem").val()
 
     var requestBody = {
         name: name,
         email: email,
         senha: password,
-        endereco: endereco,
-        complemento: complemento,
-        cidade: cidade,
-        bairro: bairro,
-        cep: cep,
-        telefone: telefone,
-        imagem: imagem_link,
+        //imagem: imagem_link,
     }
     cadastroService(requestBody)
 }
@@ -65,6 +53,11 @@ function altSubmit () {
     }
     alterarPerfilService(requestBody)
 
+}
+
+function deletePerfil () {
+
+    deletePerfilService (requestBody)
 }
 
 function loginSubmit () {
