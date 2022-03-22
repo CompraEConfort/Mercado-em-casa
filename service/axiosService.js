@@ -19,145 +19,158 @@
 }
 */
 
-function getService (requestBody) {
+function getService(requestBody) {
     axios.get('http://localhost:3000/usuarios/Profile', requestBody)
-    .then(res => {
-        console.log(res)
-        alert("Logado com sucesso !")
-        //window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
-      
-        //const token = res.token
-        // 1, Guardar o token no Cache/Local Storage
-        // 2, Fazer o redirect para tela
-        
-        // 2 PARTE
-        // Vai pegar o token do local storage
-        // Vai montar a requisição com o token
-        // Fazer a chamada ao endpoint GET usuarios/perfil/
-        // Pegar o body/corpo da requisição que irá conter as informações do usuário
-        // Preencher os campos da tela com as informações do usuário, (Foto, nome e etc)
-    })
-    .catch(err => {
-        console.log(err)
-        alert("Falha no login, Usuario ou senha invalidos") 
-    })
+        .then(res => {
+            console.log(res)
+            alert("Logado com sucesso !")
+            //window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
+
+            //const token = res.token
+            // 1, Guardar o token no Cache/Local Storage
+            // 2, Fazer o redirect para tela
+
+            // 2 PARTE
+            // Vai pegar o token do local storage
+            // Vai montar a requisição com o token
+            // Fazer a chamada ao endpoint GET usuarios/perfil/
+            // Pegar o body/corpo da requisição que irá conter as informações do usuário
+            // Preencher os campos da tela com as informações do usuário, (Foto, nome e etc)
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Falha no login, Usuario ou senha invalidos")
+        })
 }
-function cadastroService (requestBody) {
+function cadastroService(requestBody) {
     axios.post('http://localhost:3000/usuarios/cadastro', requestBody)
-    .then(res => {
-        console.log(res)
+        .then(res => {
+            console.log(res)
 
-        vnome=document.getElementById("cadastro-name").value;
-        vemail=document.getElementById("cadastro-email").value;
-        vimagem=document.getElementById("file-preview-js").value;
-       /* vendereco=document.getElementById("cadastro-endereco").value;
-        vcomplemento=document.getElementById("cadastro-complemento").value;
-        vcidade=document.getElementById("cadastro-cidade").value;
-        vbairro=document.getElementById("cadastro-bairro").value;
-        vcep=document.getElementById("cadastro-cep").value;
-        vtelefone=document.getElementById("cadastro-telefone").value;
-    */ 
-        localStorage.nome=vnome;
-        localStorage.email=vemail;
-        localStorage.imagem=vimagem;
-      /*  localStorage.endereco=vendereco;
-        localStorage.complemento=vcomplemento;
-        localStorage.cidade=vcidade;
-        localStorage.bairro=vbairro;
-        localStorage.cep=vcep;
-        localStorage.telefone=vtelefone;
-        */
-        alert("Cadastrado com sucesso !")
-       // window.location.href = "http://localhost/Mercado-em-casa/Telalogin/Perfil.html"
+            vnome = document.getElementById("cadastro-name").value;
+            vemail = document.getElementById("cadastro-email").value;
+            // vendereco=document.getElementById("cadastro-endereco").value;
+            // vcomplemento=document.getElementById("cadastro-complemento").value;
+            // vcidade=document.getElementById("cadastro-cidade").value;
+            // vbairro=document.getElementById("cadastro-bairro").value;
+            //vcep=document.getElementById("cadastro-cep").value;
+            //vtelefone=document.getElementById("cadastro-telefone").value;
 
-    })
-    .catch(err => {
-        console.log(err)
-        alert("Falha ao Cadastrar : Dados incorretos ou já existentes") 
-    })
+            localStorage.nome = vnome;
+            localStorage.email = vemail;
+            //localStorage.endereco=vendereco;
+            //localStorage.complemento=vcomplemento;
+            //localStorage.cidade=vcidade;
+            //localStorage.bairro=vbairro;
+            //localStorage.cep=vcep;
+            //localStorage.telefone=vtelefone;
+            alert("Cadastrado com sucesso !")
+            window.location.href = 'http://localhost:5500/Telalogin/login.html'
 
-   
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Falha ao Cadastrar : Dados incorretos ou já existentes")
+        })
+
+
 }
 
-window.addEventListener("load", inicia);
+//window.addEventListener("load", inicia);
 
-function loginService (requestBody) {
+function loginService(requestBody) {
     axios.post('http://localhost:3000/usuarios/login', requestBody)
-    .then(res => {
-        console.log(res)
-        alert("Logado com sucesso !")
-        window.location.href = "http://localhost:5500/Telalogin/Perfil.html"
-      
-        //const token = res.token
-        // 1, Guardar o token no Cache/Local Storage
-        // 2, Fazer o redirect para tela
-        
-        // 2 PARTE
-        // Vai pegar o token do local storage
-        // Vai montar a requisição com o token
-        // Fazer a chamada ao endpoint GET usuarios/perfil/
-        // Pegar o body/corpo da requisição que irá conter as informações do usuário
-        // Preencher os campos da tela com as informações do usuário, (Foto, nome e etc)
-    })
-    .catch(err => {
-        console.log(err)
-        alert("Falha no login, Usuario ou senha invalidos") 
-    })
+        .then(res => {
+            console.log(res)
+            alert("Logado com sucesso !")
+            // 1, Guardar o token no Cache/Local Storage
+            localStorage.setItem('token', res.data.token)
+            localStorage.setItem('user', JSON.stringify(res.data.user))
+            window.location.href = 'http://localhost:5500/Tela%20inicial/'
+            // 2, Fazer o redirect para tela
+
+            // 2 PARTE
+            // Vai pegar o token do local storage
+            // Vai montar a requisição com o token
+            // Fazer a chamada ao endpoint GET usuarios/perfil/
+            // Pegar o body/corpo da requisição que irá conter as informações do usuário
+            // Preencher os campos da tela com as informações do usuário, (Foto, nome e etc)
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Falha no login, Usuario ou senha invalidos")
+        })
 }
 
 
-function alterarPerfilService (requestBody) {
+function alterarPerfilService(requestBody) {
     axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
-    .then(res => {
-        console.log(res)
-        alert("Atualizado com sucesso ! ") 
-       // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
-    })
-    .catch(err => {
-        console.log(err)
-        alert("Erro ao aualizar") 
-    })
+        .then(res => {
+            console.log(res)
+            alert("Atualizado com sucesso ! ")
+            localStorage.setItem('user', JSON.stringify(res.data.usuarioAtualizado))
+            // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Erro ao aualizar")
+        })
 }
-/*
-//function profileService() {
+
+function deletePerfilService(requestBody) {
+    axios.delete('http://localhost:3000/usuarios/deletePerfil', {data: requestBody})
+        .then(res => {
+            console.log(res)
+            alert("Deletado com sucesso ! ")
+            localStorage.clear()
+            window.location.href = "http://localhost:5500/Telalogin/login.html"
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Erro ao Deletar")
+        })
+}
+
+
+function profileService() {
 
     // Vai pegar o token do local storage
     // Vai montar a requisição com o token
     // Fazer a chamada ao endpoint GET usuarios/perfil/
-    
+    const token = localStorage.getItem('token')
 
-  //  await axios.get('http://localhost:3000/usuarios/perfil', {
-      //  headers: {
-      //    'authorization': `Bearer ${token}`
-      //  }
+    axios.get('http://localhost:3000/usuarios/perfil', {
+        headers: {
+            'authorization': token
+        }
     })
-    .then(res => {
-        console.log(requestBody)
-        return res.data
-    })
-    .catch(err => {
-        console.log(err)
-    })
+        .then(res => {
+            console.log(res)
+            return res.data
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }
-*/
 
-function cadastroMercadoService (requestBody) {
+
+function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
-    .then(res => {
-        console.log(res)
-       // window.location.href = "http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?"
-    })
-    .catch(err => {
-        console.log(err)
-    })
+        .then(res => {
+            console.log(res)
+            // window.location.href = "http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?"
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }
 async function productsByCategoryService(requestBody) {
     await axios.get('http://localhost:3000/produtos', requestBody)
-    .then(res => {
-        console.log(res)
-        return res.data
-    })
-    .catch(err => {
-        console.log(err)
-    })
+        .then(res => {
+            console.log(res)
+            return res.data
+        })
+        .catch(err => {
+            console.log(err)
+        })
 }

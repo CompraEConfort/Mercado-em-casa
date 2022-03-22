@@ -14,64 +14,73 @@
 	<form class="form">
 		<div class="card">
 			<div class="card-top">
-				<img src="img/user.png" width="300" height="260" alt="">
-				<h2 class="title">Editar Perfil</h2> 
+				<img id="user-pic" src="img/user.png" width="300" height="260" alt="">
+				<h2 class="title">Dados Pessoais</h2> 
 			</div>
 		
 			<form class="form">
 
 				<label class="label-input" for="">
 					<i class="far fa-user icon-modify"></i>
-					<input id="alt-name" type="text" placeholder="Alterar Nome">
+					<input id="alt-name" type="text" placeholder="Nome" required>
+				</label>
+
+				<label class="label-input" for="">
+					<i class="far fa-envelope icon-modify"></i>
+					<input id="alt-email" type="email" placeholder="" disabled required>
 				</label>
 				
 
 				<label class="label-input" for="">
 					<i class="fas fa-home icon-modify"></i>
-					<input id="alt-endereco" type="text" placeholder="Alterar Endereço">
+					<input id="alt-endereco" type="text" placeholder="Insira Endereço, Ex: Rua Doze, 244" required>
 				</label>
 
 				<label class="label-input" for="">
 					<i class="far fa-comment-alt icon-modify"></i>
-					<input id="alt-complemento" type="text" placeholder="Alterar Complemento">
+					<input id="alt-complemento" type="text" placeholder="Insira Complemento, Ex: Quadra J">
 
 				</label>
 
 				<label class="label-input" for="">
 					<i class="fas fa-map icon-modify"></i>
           
-						<input id="alt-cidade" type="text" placeholder="Alterar Cidade">
+						<input id="alt-cidade" type="text" placeholder="Insira Cidade, Ex: Abreu e Lima" required>
 
 				</label>
 
 			   <label class="label-input" for="">
 					<i class="fas fa-map-marked-alt icon-modify"></i>
 
-					<input id="alt-bairro" type="text" placeholder="Alterar Bairro">
+					<input id="alt-bairro" type="text" placeholder="Insira Bairro, Ex: Desterro" required>
 
 				</label>
 
 				<label class="label-input" for="">
 					<i class="fas fa-map-marker-alt icon-modify"></i>
 
-					<input id="alt-cep" type="text" placeholder="Alterar Cep">
+					<input id="alt-cep" type="number" placeholder="Insira CEP: Somente Números" required>
 
 				</label> 
 
 				<label class="label-input" for="">
 					<i class="fas fa-phone icon-modify"></i>
 
-					<input id="alt-telefone" type="text" placeholder="Alterar Telefone">
+					<input id="alt-telefone" type="number" placeholder="Insira Telefone: Somente Números" required>
 				</label> 
 
             
-                <input class="btn btn-second" type="button" value="Atualizar" onclick="altSubmit()">
+                <input class="btn btn-second" type="submit" value="Atualizar" onclick="altSubmit()">
+
+				<input class="bot btn-prime" type="button" value="Deletar Perfil" onclick="deleteSubmit()">
 		</form>
 		</div>
 	<form>
 
 	<script src="../service/axiosService.js"></script>
+    <script src="js/Perfil.js"></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>

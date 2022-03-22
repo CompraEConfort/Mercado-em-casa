@@ -1,3 +1,4 @@
+
 var btnSignin = document.querySelector("#signin");
 var btnSignup = document.querySelector("#signup");
 
@@ -48,25 +49,13 @@ function cadastroSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
     var password = $("#cadastro-password").val()
-    var endereco = $("#cadastro-endereco").val()
-    var complemento = $("#cadastro-complemento").val()
-    var cidade = $("#cadastro-cidade").val()
-    var bairro = $("#cadastro-bairro").val()
-    var cep = $("#cadastro-cep").val()
-    var telefone = $("#cadastro-telefone").val()
-    var imagem_link = $("#file-preview-js").val()
+   // var imagem_link = $("#cadastro-imagem").val()
 
     var requestBody = {
         name: name,
         email: email,
         senha: password,
-        endereco: endereco,
-        complemento: complemento,
-        cidade: cidade,
-        bairro: bairro,
-        cep: cep,
-        telefone: telefone,
-        imagem: imagem_link,
+        //imagem: imagem_link,
     }
     cadastroService(requestBody)
 }
@@ -84,15 +73,38 @@ function altSubmit () {
     var requestBody = {
         name: name,
         endereco: endereco,
-      complemento: complemento,
+        complemento: complemento,
         cidade: cidade,
         bairro: bairro,
         cep: cep,
-        telefone: telefone
+        telefone: telefone,
+        id: JSON.parse(localStorage.getItem('user')).id
     }
     alterarPerfilService(requestBody)
 
 }
+
+function deleteSubmit () {
+    if (confirm('Deseja Deletar Sua Conta?')) {
+        var requestBody = {
+            id: JSON.parse(localStorage.getItem('user')).id
+        }
+        deletePerfilService (requestBody)
+    }
+    
+}
+
+// pega a referencia dos form do login
+var login_form = document.querySelector('#login-form')
+// adicionda um evento onsubmit, e passa a função com o parametro event
+// com esse parametro é possivel cancelar a ação default do submit que seria de recarregar
+login_form.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    // chama o loginsubmit
+    loginSubmit()
+})
+
 
 function loginSubmit () {
     var email = $("#login-email").val()
@@ -102,6 +114,7 @@ function loginSubmit () {
         email: email,
         senha: password,
     }
+    // console.log('aqui');
     loginService(requestBody)
 }
 
