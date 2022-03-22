@@ -39,7 +39,7 @@
 
                 <form class="form">
 
-                    <div class="image">
+                    <!-- <div class="image">
                         <div class="editar-content">
                         <span>
                         <i>editar</i>
@@ -51,7 +51,7 @@
                         <img src="https://jamesrmoro.me/wp-content/uploads/2021/02/profile.png" width="150" height="150" alt="Sem imagem">
                         </div>
                         <br>
-                        <input id="file-preview-js" type="file" accept="image/*" onchange="loaderFile(event)"><br><br>
+                        <input id="file-preview-js" type="file" accept="image/*" onchange="loaderFile(event)"><br><br> -->
                         
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
@@ -115,9 +115,9 @@
                 <button id="signup" class="btn btn-primary">Cadastrar</button>
             </div>
             <div class="second-column">
-                 <img src="img/logo.jpg" width="150" height="150" alt="">
+                 <!-- <img src="img/logo.jpg" width="150" height="150" alt=""> -->
                 <h2 class="title title-second">Login</h2>
-                <form class="form">
+                <form class="form" id="login-form">
                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
@@ -133,14 +133,13 @@
                     <!--<button type="button" onclick="loginSubmit()" class="btn btn-second">Logar</button> -->
                     
 
-                    <input  type="submit" type="button" value="Logar" class="btn btn-second" style="color: #2a6049;" onClick="loginSubmit()">
-
-                
+                    <input type="submit" value="Logar" class="btn btn-second" style="color: #2a6049;" >                
                  </form>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
      
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../service/axiosService.js"></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>

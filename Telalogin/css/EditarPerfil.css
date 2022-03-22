@@ -6,7 +6,7 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: center;
     -o-background-size: center;
-    background-image: url(https://i.imgur.com/XS6yRJf.png); 
+    background-image: url(https://i.imgur.com/oFD8ESX.png); 
 }
 .card{
     box-shadow: 1px 1px 5px #ccc;
@@ -101,14 +101,40 @@ input:-webkit-autofill
     
 }
 .btn-second {
-    background-color: #2a6049;
-    border: 1px solid #2a6049;
+    background-color: #007b5b;
+    border: 1px solid #007b5b;
     transition: background-color .5s;
 }
 .btn-second:hover {
-    background-color: #fff;
-    border: 1px solid #2a6049;
-    color: #2a6049;
+    background-color: #007b5b;
+    border: 1px solid #007b5b;
+    color: white;
+}
+
+.bot{
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: red;
+    color: red;
+    font-size: 10px;
+    padding: 10px 43px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100px;
+    align-self: center;
+    border: none;
+    margin-top: 10px; 
+}
+
+.btn-prime {
+    background-color: red;
+    border: 1px solid red;
+    transition: background-color .5s;
+}
+.btn-prime:hover {
+    background-color: red;
+    border: 1px solid red;
+    color: white;
 }
 
 
