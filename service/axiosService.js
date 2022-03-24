@@ -1,24 +1,3 @@
-/* function inicia(){
-    if(localStorage.nome){
-        var vnome=localStorage.nome;
-        var vemail=localStorage.email;
-        var vimagem=localStorage.imagem;
-        var  vendereco=localStorage.endereco;
-        var vcomplemento=localStorage.complemento;
-        var vcidade=localStorage.cidade;
-        var vbairro=localStorage.bairro;
-        vcep=localStorage.cep;
-        var vtelefone=localStorage.telefone;
-        
-        document.getElementById("boasvindas").innerHTML="Seja Bem-vindo(a) ao Seu Mercado em Casa "+vnome+"!!"+"<br>";
-        document.getElementById("emailperfil").innerHTML= vemail;
-        document.getElementById("imgperfil").innerHTML = '<img id = "imgperfil" src="'+vimagem+'" alt="minha figura"/>' ;
-        document.getElementById("enderecoperfil").innerHTML= vendereco+", "+vcomplemento+", "+vbairro+", "+vcidade;
-        document.getElementById("telefoneperfil").innerHTML= vtelefone;
-    }
-}
-*/
-
 function getService(requestBody) {
     axios.get('http://localhost:3000/usuarios/Profile', requestBody)
         .then(res => {
@@ -49,21 +28,10 @@ function cadastroService(requestBody) {
 
             vnome = document.getElementById("cadastro-name").value;
             vemail = document.getElementById("cadastro-email").value;
-            // vendereco=document.getElementById("cadastro-endereco").value;
-            // vcomplemento=document.getElementById("cadastro-complemento").value;
-            // vcidade=document.getElementById("cadastro-cidade").value;
-            // vbairro=document.getElementById("cadastro-bairro").value;
-            //vcep=document.getElementById("cadastro-cep").value;
-            //vtelefone=document.getElementById("cadastro-telefone").value;
-
+          
             localStorage.nome = vnome;
             localStorage.email = vemail;
-            //localStorage.endereco=vendereco;
-            //localStorage.complemento=vcomplemento;
-            //localStorage.cidade=vcidade;
-            //localStorage.bairro=vbairro;
-            //localStorage.cep=vcep;
-            //localStorage.telefone=vtelefone;
+        
             alert("Cadastrado com sucesso !")
             window.location.href = 'http://localhost:5500/Telalogin/login.html'
 
