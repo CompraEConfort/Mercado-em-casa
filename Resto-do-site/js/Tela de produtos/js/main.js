@@ -15,6 +15,22 @@ function addProduto (){
    addProdutoService(requestBody)
 }
 
+function updateproduto (){
+    var produto = $("#nomeproduto").val()
+    var preco = $("#precoproduto").val()
+    var imagem = $("#imagemproduto").val()
+    var categoria = $("#categoriaproduto").val()
+    
+    var requestBody = {
+        name: produto,
+        value: preco,
+        image_link: imagem,
+        category: categoria
+    }
+    updateProdutosService(requestBody)
+}
+
+
 
 // const openModal = () => document.getElementById('modal')
 //     .classList.add('active')
