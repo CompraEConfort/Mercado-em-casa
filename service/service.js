@@ -49,6 +49,23 @@ function getprodutosNome(nomeCorredor) {
 	return produtos;
 }
 
+// function getaddProduto(nomeCorredor) {
+// 	var url  = "http://localhost:3000/produtos/addProdutos/"; 
+// 	var xhr  = new XMLHttpRequest()
+// 	var produtos = {}
+// 	xhr.open('GET', url+nomeCorredor, false)
+// 	xhr.onload = function () {
+// 		produtos = JSON.parse(xhr.responseText);
+// 		if (xhr.readyState == 4 && xhr.status == "200") {
+// 			console.log(produtos);
+// 		} else {
+// 			console.error(produtos);
+// 		}
+// 	}
+// 	xhr.send(null);
+// 	return produtos;
+// }
+
 function getProductsByCategoryAndSupermarketId() {
 	var url  = "http://localhost:3000/produtos/corredores";
 	var xhr  = new XMLHttpRequest()

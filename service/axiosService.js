@@ -70,7 +70,6 @@ function loginService(requestBody) {
         })
 }
 
-
 function alterarPerfilService(requestBody) {
     axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
         .then(res => {
@@ -99,7 +98,6 @@ function deletePerfilService(requestBody) {
         })
 }
 
-
 function profileService() {
 
     // Vai pegar o token do local storage
@@ -121,7 +119,6 @@ function profileService() {
         })
 }
 
-
 function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
         .then(res => {
@@ -142,3 +139,70 @@ async function productsByCategoryService(requestBody) {
             console.log(err)
         })
 }
+
+function addProdutoService(requestBody){
+    axios.post('http://localhost:3000/produtos/add', requestBody)
+    .then(res => {
+
+
+        nomeProduto = document.getElementById("add-produto").value;
+        precoProduto = document.getElementById("add-preco").value;
+        categoriaProduto = document.getElementById("add-categoria").value;
+      
+        localStorage.produto = nomeProduto;
+        localStorage.preco = precoProduto;
+        localStorage.categoria = categoriaProduto;
+    
+        alert("Adicionado com sucesso !")
+        // window.location.href = 'http://localhost:5500/Telalogin/login.html'
+
+    })
+    .catch(err => {
+        console.log(requestBody);
+        console.log(err)
+        alert("Falha ao Cadastrar : Dados incorretos ou já existentes")
+    })
+}
+
+function getProdutosService(requestBody){
+  return axios.get('http://localhost:3000/produtos', { params: requestBody})
+.then(res => {
+
+    console.log(res);
+    return res.data.produtos
+
+})
+.catch(err => {
+    console.log(err)
+})
+}
+
+function deleteProdutosService(requestBody){
+    return axios.delete('http://localhost:3000/produtos', { params: requestBody })
+  .then(res => {
+  
+      console.log(res);
+        alert('Produtos removidos com sucesso')
+        
+  window.location.reload()
+  })
+  .catch(err => {
+      console.log(err)
+      alert('Erro ao remover produtos')
+  })
+  }
+
+  function updateProdutosService(requestBody){
+    return axios.patch('http://localhost:3000/produtos', requestBody)
+  .then(res => {
+  
+      console.log(res);
+        alert('Produtos Atualizado Com Sucesso')
+        
+  window.location.reload()
+  })
+  .catch(err => {
+      console.log(err)
+      alert('Erro ao Atualizar Produtos')
+  })
+  }
