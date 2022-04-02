@@ -1,6 +1,0 @@
-Mercado-em-casa : Tela de login usando react, precisa emular com npm start no terminal para funcionar corretamente.
-Nova pasta: Tela de Busca, usa Html convencional sendo necessario usar o xamp ou outro programa para emular o localhost.
-Tela deselecao : Tela de seleção de mercados, assim como a nova pasta usa Html convencional.
-
-tela deseleção/indexmercado.js = indentificar o nome do mercados
-tela deseleção/js/corredores.js = function nomesupermercado

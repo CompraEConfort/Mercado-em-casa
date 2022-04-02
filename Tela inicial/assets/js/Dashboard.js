@@ -19,9 +19,7 @@ export default function Dashboard() {
       setError("Falha ao sair")
     }
   }
-function esconderlogin(){
-  document.getElementById("menu").style.display="none";
-}
+
   return (
     <>  <img alt="background" class="wave" src="https://i.imgur.com/eI3NnHz.png"/>
   
