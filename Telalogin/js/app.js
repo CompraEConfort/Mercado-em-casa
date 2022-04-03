@@ -49,13 +49,13 @@ function cadastroSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
     var password = $("#cadastro-password").val()
-   // var imagem_link = $("#cadastro-imagem").val()
+    var imagem_link = "https://i.imgur.com/5FmOYw7.png"
 
     var requestBody = {
         name: name,
         email: email,
         senha: password,
-        //imagem: imagem_link,
+        imagem: imagem_link,
     }
     cadastroService(requestBody)
 }
