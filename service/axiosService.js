@@ -153,7 +153,7 @@ function profileMercadoService() {
     // Fazer a chamada ao endpoint GET usuarios/perfil/
     const tokenMerc = localStorage.getItem('tokenMerc')
 
-    axios.get('http://localhost:3000/Supermercado/perfilMercado', {
+    axios.get('http://localhost:3000/Supermercados/perfilMercado', {
         headers: {
             'authorization': tokenMerc
         }
@@ -168,7 +168,7 @@ function profileMercadoService() {
 }
 
 function UpdateMercadoService(requestBody) {
-    axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
+    axios.patch('http://localhost:3000/supermercados/', requestBody)
         .then(res => {
             console.log(res)
             alert("Atualizado com sucesso ! ")
