@@ -1,5 +1,7 @@
 
 // Esconder barra do login 
+var user = JSON.parse(localStorage.getItem('user'))
+var userMercado = JSON.parse(localStorage.getItem('userMercado'))
 
 function mudarForm(){
     if (user == null && userMercado != null){

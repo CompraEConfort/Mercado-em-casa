@@ -125,7 +125,7 @@ function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
         .then(res => {
             console.log(res)
-            // window.location.href = "http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?"
+            window.location.href = 'http://localhost:5500/Telalogin/loginMercado.html'
         })
         .catch(err => {
             console.log(err)
@@ -153,7 +153,7 @@ function profileMercadoService() {
     // Fazer a chamada ao endpoint GET usuarios/perfil/
     const tokenMerc = localStorage.getItem('tokenMerc')
 
-    axios.get('http://localhost:3000/Supermercado/perfilMercado', {
+    axios.get('http://localhost:3000/Supermercados/perfilMercado', {
         headers: {
             'authorization': tokenMerc
         }
@@ -168,7 +168,7 @@ function profileMercadoService() {
 }
 
 function UpdateMercadoService(requestBody) {
-    axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
+    axios.patch('http://localhost:3000/supermercados/', requestBody)
         .then(res => {
             console.log(res)
             alert("Atualizado com sucesso ! ")

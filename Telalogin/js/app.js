@@ -166,7 +166,7 @@ function cadastroMercadoSubmit () {
         bairro: neighborhood,
         cep: cep,
         telefone: telefone,
-        // imagem: image_link,
+        imagem: image_link,
     }
     cadastroMercadoService(requestBody)
 }

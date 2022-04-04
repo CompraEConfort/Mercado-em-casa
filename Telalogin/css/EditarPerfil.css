@@ -28,6 +28,14 @@ body{
     padding-top: 50px;
     
 }
+.forms {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: auto;
+    padding-top: 50px;
+    
+}
 .form input[type="radio" i] {
     cursor: default;
     width: 20px;
