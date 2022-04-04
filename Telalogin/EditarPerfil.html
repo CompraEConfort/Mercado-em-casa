@@ -10,8 +10,11 @@
 	crossorigin="anonymous">
 	<script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
 </head>
-<body>
-	<form class="form">
+<body onload="mudarForm()">
+
+	<!-- **** Editar Usuário **** -->
+
+	<form class="form" id="mudaruser">
 		<div class="card">
 			<div class="card-top">
 				<img id="user-pic" src="img/user.png" width="300" height="260" alt="">
@@ -59,28 +62,99 @@
 				<label class="label-input" for="">
 					<i class="fas fa-map-marker-alt icon-modify"></i>
 
-					<input id="alt-cep" type="number" placeholder="Insira CEP: Somente Números" required>
+					<input id="alt-cep" type="text" placeholder="Insira CEP, Ex: 12.345-678" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}" required>
 
 				</label> 
 
 				<label class="label-input" for="">
 					<i class="fas fa-phone icon-modify"></i>
 
-					<input id="alt-telefone" type="number" placeholder="Insira Telefone: Somente Números" required>
+					<input id="alt-telefone" type="tel" placeholder="Insira Telefone, Ex:(00)12345-6789 " required>
 				</label> 
-
             
                 <input class="btn btn-second" type="submit" value="Atualizar" onclick="altSubmit()">
 
 				<input class="bot btn-prime" type="button" value="Deletar Perfil" onclick="deleteSubmit()">
 		</form>
 		</div>
+
 	<form>
+		<!-- **** Editar Mercado **** -->
+
+		<form class="form" id="mudarmercado">
+			<div class="card">
+				<div class="card-top">
+					<img id="user-pic" src="img/user.png" width="300" height="260" alt="">
+					<h2 class="title">Dados Pessoais</h2> 
+				</div>
+			
+				<form class="form">
+	
+					<label class="label-input" for="">
+						<i class="far fa-user icon-modify"></i>
+						<input id="alt-namemercado" type="text" placeholder="Nome" required>
+					</label>
+	
+					<label class="label-input" for="">
+						<i class="far fa-envelope icon-modify"></i>
+						<input id="alt-emailmercado" type="email" placeholder="" disabled required>
+					</label>
+
+					<label class="label-input" for="">
+						<i class="far fa-comment-alt icon-modify"></i>
+						<input id="alt-cnpjmercado" type="email" placeholder="" disabled required>
+					</label>
+				
+					<label class="label-input" for="">
+						<i class="fas fa-home icon-modify"></i>
+						<input id="alt-enderecomercado" type="text" placeholder="Insira Endereço, Ex: Rua Doze, 244" required>
+					</label>
+	
+					<label class="label-input" for="">
+						<i class="fas fa-map icon-modify"></i>
+			  
+							<input id="alt-cidademercado" type="text" placeholder="Insira Cidade, Ex: Abreu e Lima" required>
+	
+					</label>
+	
+				   <label class="label-input" for="">
+						<i class="fas fa-map-marked-alt icon-modify"></i>
+	
+						<input id="alt-bairromercado" type="text" placeholder="Insira Bairro, Ex: Desterro" required>
+	
+					</label>
+	
+					<label class="label-input" for="">
+						<i class="fas fa-map-marker-alt icon-modify"></i>
+	
+						<input id="alt-cepmercado" type="text" placeholder="Insira CEP, Ex: 12.345-678" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}" required>
+	
+					</label> 
+	
+					<label class="label-input" for="">
+						<i class="fas fa-phone icon-modify"></i>
+	
+						<input id="alt-telefonemercado" type="tel" placeholder="Insira Telefone, Ex:(00)12345-6789 " pattern="([0-9]{2})[0-9]{5}-[0-9]{4}" required>
+					</label> 
+
+					<!-- <label class="label-input" for="">
+						<i class="fas fa-image icon-modify"></i>
+	
+						<input id="alt-imagemmercado" type="text" placeholder="Insira a Logo do Mercado Ex:logoMercado.jpg " required>
+					</label>  -->
+				
+					<input class="btn btn-second" type="submit" value="Atualizar" onclick="updateMercado()">
+	
+					<input class="bot btn-prime" type="button" value="Deletar Perfil" onclick="">
+			</form>
+			</div>
+		<form>
 
 	<script src="../service/axiosService.js"></script>
+	<script src="js/mudarForm.js"></script>
     <script src="js/Perfil.js"></script>
+	<script src="js/PerfilMercado.js"></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-	<script src="js/index.js"></script>
 </body>
 </html>

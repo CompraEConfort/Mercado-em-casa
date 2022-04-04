@@ -7,6 +7,7 @@ function addProduto (){
     var image_link = $("#add-imagem").val()
 
     var requestBody = {
+        id_supermarket: JSON.parse(localStorage.getItem('userMercado'))?.id_supermarket,
         name: name,
         value: value,
         category: category,
@@ -16,16 +17,17 @@ function addProduto (){
 }
 
 function updateproduto (){
-    var produto = $("#nomeproduto").val()
-    var preco = $("#precoproduto").val()
-    var imagem = $("#imagemproduto").val()
-    var categoria = $("#categoriaproduto").val()
+    var name = $("#alt-produto").val()
+    var value = $("#alt-preco").val()
+    var image_link = $("#alt-imagem").val()
+    var category = $("#alt-categoria").val()
     
     var requestBody = {
-        name: produto,
-        value: preco,
-        image_link: imagem,
-        category: categoria
+        id_product: JSON.parse(localStorage.getItem('prodTemp'))?.id_produto,
+        name: name,
+        value: value,
+        image_link: image_link,
+        category: category,
     }
     updateProdutosService(requestBody)
 }

@@ -11,11 +11,11 @@ var telefone = document.querySelector("#alt-telefone")
 
 console.log(user);
 
-nome.value = user.name
-email.value = user.email
-endereco.value = user.endereco
-complemento.value = user.complemento
-cidade.value = user.cidade
-bairro.value = user.bairro
-cep.value = user.cep
-telefone.value = user.telefone
+nome.value = user?.name
+email.value = user?.email
+endereco.value = user?.endereco
+complemento.value = user?.complemento
+cidade.value = user?.cidade
+bairro.value = user?.bairro
+cep.value = user?.cep
+telefone.value = user?.telefone
