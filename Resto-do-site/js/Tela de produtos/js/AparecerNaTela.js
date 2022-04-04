@@ -9,7 +9,7 @@
 // categoriaproduto.innerHTML = localStorage.categoria;
 function displayProducts() {
   var requestBody = {
-    id_supermarket: 7
+    id_supermarket: JSON.parse(localStorage.getItem('userMercado'))?.id_supermarket
   }
   getProdutosService(requestBody)
   .then(produtos => {
@@ -30,8 +30,8 @@ function addProdutoInTable (produto, index) {
 <input type="checkbox" id="checkbox${index}" name="options[]" value="${produto.id_produto}">
 <label for="checkbox${index}"></label>
 </span>`
-var buttons = `<a href="#editEmployeeModal" class="edit" data-toggle="modal" onclick="preencherForm(${produto})">
-  <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+var buttons = `<a href="#editEmployeeModal" class="edit" data-toggle="modal">
+  <i class="material-icons" title="Edit">&#xE254;</i>
 </a>
 `
 
@@ -46,22 +46,31 @@ var buttons = `<a href="#editEmployeeModal" class="edit" data-toggle="modal" onc
   newRow.insertCell(2).innerHTML = produto.preco;
   newRow.insertCell(3).innerHTML = produto.imagem_produto;
   newRow.insertCell(4).innerHTML = produto.categoria;
-  newRow.insertCell(5).innerHTML = buttons;
+  var actions = newRow.insertCell(5);
+  actions.innerHTML = buttons;
+  var editButton = actions.querySelector('.edit')
+  editButton?.addEventListener('click', (event) => {
+    event.preventDefault()
+    preencherForm(produto)
+  })
 }
+
 
 function preencherForm (produto) {
-var nomeproduto = document.querySelector("#nomeproduto")
-var precoproduto = document.querySelector("#precoproduto")
-var imagemproduto = document.querySelector("#imagemproduto")
-var categoriaproduto = document.querySelector("#categoriaproduto")
+  console.log('o prod: ', produto);
+  localStorage.setItem('prodTemp', JSON.stringify(produto))
 
-nomeproduto.value = produto.name
-precoproduto = produto.value
-imagemproduto = produto.image_link
-categoriaproduto.value = produto.category
+  var nomeproduto = document.querySelector("#alt-produto")
+  var precoproduto = document.querySelector("#alt-preco")
+  var imagemproduto = document.querySelector("#alt-imagem")
+  var categoriaproduto = document.querySelector("#alt-categoria")
+
+  nomeproduto.value = produto.nome
+  precoproduto.value = produto.preco
+  imagemproduto.value = produto.imagem_produto
+  categoriaproduto.value = produto.categoria
 
 }
-
 
 var deleteForm = document.querySelector("#deleteForm")
 deleteForm.addEventListener('submit', function (event) {
@@ -82,35 +91,3 @@ deleteForm.addEventListener('submit', function (event) {
   deleteProdutosService(requestBody)
 })
 
-
-// (function () {
-
-//     var nomeCorredor = localStorage.getItem("produto");
-//     var produtosAdd = getprodutosName(nomeCorredor);
-//     var trprodutos = document.getElementById('nomeProdutos');
-//     var produtosAddDinamico = '';
-
-//     produtosAdd.produtos.forEach(element => {
-//         console.log(element)
-
-  
-//     produtosAddDinamico += `<td>`
-//     produtosAddDinamico +=     `<span class="custom-checkbox">`
-//     produtosAddDinamico +=  `<input type="checkbox" id="checkbox1" name="options[]" value="1">`
-//     produtosAddDinamico +=  `<label for="checkbox1"></label>`
-//     produtosAddDinamico +=  `</span>`
-//     produtosAddDinamico +=  `</td>`
-//     produtosAddDinamico +=  `<td>${element.name}</td>`
-//     produtosAddDinamico +=  `<td>${element.value}</td>`
-//     produtosAddDinamico +=  `<td>${element.image_link}</td>`
-//     produtosAddDinamico +=  `<td>${element.category}</td>`
-//     produtosAddDinamico +=  `<td>`
-//     produtosAddDinamico +=      `<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>`
-//     produtosAddDinamico +=      `<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>`
-//     produtosAddDinamico +=  `</td>`
-  
-                    
-//     });
-//     console.log("Após a chamada da function")
-//     trprodutos.innerHTML = produtosAddDinamico;
-// })()

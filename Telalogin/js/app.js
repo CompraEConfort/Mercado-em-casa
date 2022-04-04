@@ -4,19 +4,20 @@ var btnSignup = document.querySelector("#signup");
 
 var body = document.querySelector("body");
 
-btnSignin.addEventListener("click", function () {
+btnSignin?.addEventListener("click", function () {
 
   body.className = "sign-in-js"; 
 });
 
-btnSignup.addEventListener("click", function () {
+btnSignup?.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
 
-
-btnSignup.addEventListener("click", function () {
+btnSignup?.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
+
+/*      Usuário       */
 
 function getSubmit () {
     var name = $("#cadastro-name").val()
@@ -98,7 +99,7 @@ function deleteSubmit () {
 var login_form = document.querySelector('#login-form')
 // adicionda um evento onsubmit, e passa a função com o parametro event
 // com esse parametro é possivel cancelar a ação default do submit que seria de recarregar
-login_form.addEventListener('submit', function (event) {
+login_form?.addEventListener('submit', function (event) {
     event.preventDefault()
 
     // chama o loginsubmit
@@ -118,6 +119,31 @@ function loginSubmit () {
     loginService(requestBody)
 }
 
+/*      Mercado       */
+
+// pega a referencia dos form do login
+var login_formMercado = document.querySelector('#login-formMercado')
+// adicionda um evento onsubmit, e passa a função com o parametro event
+// com esse parametro é possivel cancelar a ação default do submit que seria de recarregar
+login_formMercado?.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    // chama o loginsubmit
+    loginMercado()
+})
+
+function loginMercado () {
+    var email = $("#loginMercado-email").val()
+    var password = $("#loginMercado-password").val()
+
+    var requestBody = {
+        email: email,
+        senha: password,
+    }
+    console.log(requestBody);
+    loginMercadoService(requestBody)
+}
+
 function cadastroMercadoSubmit () {
     var name = $("#cadastromercado-name").val()
     var email = $("#cadastromercado-email").val()
@@ -128,7 +154,7 @@ function cadastroMercadoSubmit () {
     var neighborhood = $("#cadastromercado-bairro").val()
     var cep = $("#cadastromercado-cep").val()
     var telefone = $("#cadastromercado-telefone").val()
-    var imagem_link = $("#cadastromercado-imagem").val()
+    var image_link = $("#cadastromercado-imagem").val()
 
     var requestBody = {
         name: name,
@@ -140,10 +166,36 @@ function cadastroMercadoSubmit () {
         bairro: neighborhood,
         cep: cep,
         telefone: telefone,
-        imagem: imagem_link,
+        // imagem: image_link,
     }
     cadastroMercadoService(requestBody)
 }
+
+function updateMercado () {
+    var name = $("#alt-namemercado").val()
+    var endereco = $("#alt-enderecomercado").val()
+    var cidade = $("#alt-cidademercado").val()
+    var bairro = $("#alt-bairromercado").val()
+    var cep = $("#alt-cepmercado").val()
+    var telefone = $("#alt-telefonemercado").val()
+    // var image_link = $("#alt-imagemmercado").val()
+
+
+    var requestBody = {
+        name: name,
+        endereco: endereco,
+        cidade: cidade,
+        bairro: bairro,
+        cep: cep,
+        telefone: telefone,
+        // imagem_link: image_link,
+        id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
+    }
+    UpdateMercadoService(requestBody)
+
+}
+
+/*      Produtos       */
 
 async function getProductsByCategoryAndSupermarketId() {
     var nomeCorredor = localStorage.getItem("nome-corredor");
@@ -174,11 +226,11 @@ reader.readAsDataURL(event.target.files[0]);
 var editarAvatar = document.querySelector(".editar-content");
 var buttonFile = document.getElementById("file-preview-js");
 
-editarAvatar.addEventListener("click", function(){
+editarAvatar?.addEventListener("click", function(){
 buttonFile.click();
 });
 
-btnClose.addEventListener("click", function(){
+btnClose?.addEventListener("click", function(){
 btnClose.style.display = "none";
 output.style.backgroundImage = "url('')";
 document.getElementById("file-preview-js").value = "";

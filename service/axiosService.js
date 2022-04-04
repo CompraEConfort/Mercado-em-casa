@@ -1,4 +1,6 @@
-function getService(requestBody) {
+//  Usuário   //
+
+function getService(requestBody) { 
     axios.get('http://localhost:3000/usuarios/Profile', requestBody)
         .then(res => {
             console.log(res)
@@ -43,8 +45,6 @@ function cadastroService(requestBody) {
 
 
 }
-
-//window.addEventListener("load", inicia);
 
 function loginService(requestBody) {
     axios.post('http://localhost:3000/usuarios/login', requestBody)
@@ -119,6 +119,8 @@ function profileService() {
         })
 }
 
+//  Mercado  //
+
 function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
         .then(res => {
@@ -129,6 +131,58 @@ function cadastroMercadoService(requestBody) {
             console.log(err)
         })
 }
+
+function loginMercadoService(requestBody) {
+    axios.post('http://localhost:3000/supermercados/loginMercado', requestBody)
+        .then(res => {
+            alert("Logado com sucesso !")
+            console.log(res);
+            localStorage.setItem('tokenMerc', res.data.tokenMerc)
+            localStorage.setItem('userMercado', JSON.stringify(res.data.userMercado))
+            window.location.href = 'http://localhost:5500/Tela%20inicial/'
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+
+function profileMercadoService() {
+
+    // Vai pegar o token do local storage
+    // Vai montar a requisição com o token
+    // Fazer a chamada ao endpoint GET usuarios/perfil/
+    const tokenMerc = localStorage.getItem('tokenMerc')
+
+    axios.get('http://localhost:3000/Supermercado/perfilMercado', {
+        headers: {
+            'authorization': tokenMerc
+        }
+    })
+        .then(res => {
+            console.log(res)
+            return res.data
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+
+function UpdateMercadoService(requestBody) {
+    axios.patch('http://localhost:3000/usuarios/altPerfil', requestBody)
+        .then(res => {
+            console.log(res)
+            alert("Atualizado com sucesso ! ")
+            localStorage.setItem('userMercado', JSON.stringify(res.data.mercadoAtualizado))
+            window.location.reload
+        })
+        .catch(err => {
+            console.log(err)
+            alert("Erro ao aualizar")
+        })
+}
+
+//  produtos  //
+
 async function productsByCategoryService(requestBody) {
     await axios.get('http://localhost:3000/produtos', requestBody)
         .then(res => {
@@ -154,7 +208,7 @@ function addProdutoService(requestBody){
         localStorage.categoria = categoriaProduto;
     
         alert("Adicionado com sucesso !")
-        // window.location.href = 'http://localhost:5500/Telalogin/login.html'
+        window.location.reload()
 
     })
     .catch(err => {
@@ -195,7 +249,6 @@ function deleteProdutosService(requestBody){
   function updateProdutosService(requestBody){
     return axios.patch('http://localhost:3000/produtos', requestBody)
   .then(res => {
-  
       console.log(res);
         alert('Produtos Atualizado Com Sucesso')
         
