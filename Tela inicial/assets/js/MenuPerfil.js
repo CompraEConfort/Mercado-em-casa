@@ -1,3 +1,49 @@
+// Variaveis para aparecer as fotos no header (Cliente)
+
+var user = JSON.parse(localStorage.getItem('user'))
+
+var userPic = document.querySelector('#user-pic')
+var userPicMenu = document.querySelector('#user-picMenu')
+var username = document.querySelector('#user-name')
+
+// Variaveis para aparecer as fotos no header (Mercado) 
+
+var userMercado = JSON.parse(localStorage.getItem('userMercado'))
+
+var MercadoPic = document.querySelector('#user-pic')
+var MercadoPicMenu = document.querySelector('#user-picMenu')
+var Mercadoname = document.querySelector('#user-name')
+
+// Esconder barra do login 
+
+function esconderlogin(){
+    if (user == null && userMercado == null){
+        document.getElementById("btnlogado").style.display="none";
+        document.getElementById("btncadastro").style.display="block";
+    } else {
+        document.getElementById("btnlogado").style.display="block";
+        document.getElementById("btncadastro").style.display="none";    
+    }
+    if (user != null){
+        Userfoto()
+    } else {
+        Mercadofoto()
+    }
+  }
+
+  function Userfoto () {
+    userPic.setAttribute('src', user.imagem)
+    username.innerHTML += user.name
+    userPicMenu.setAttribute('src', user.imagem)
+}
+
+
+function Mercadofoto () {
+    MercadoPic.setAttribute('src', userMercado.image_link)
+    Mercadoname.innerHTML += userMercado.name
+    MercadoPicMenu.setAttribute('src', userMercado.image_link)
+}
+
 // Botão de deslogar
 
 function deslogarPerfil () { 
@@ -18,52 +64,5 @@ function deslogarPerfil () {
     }
 }
         
-// Função para aparecer as fotos no header (Cliente)
 
-var user = JSON.parse(localStorage.getItem('user'))
-
-var userPic = document.querySelector('#user-pic')
-var userPicMenu = document.querySelector('#user-picMenu')
-var username = document.querySelector('#user-name')
-
-
-//  Função para aparecer as fotos no header (Mercado) 
-
-var userMercado = JSON.parse(localStorage.getItem('userMercado'))
-
-var MercadoPic = document.querySelector('#user-pic')
-var MercadoPicPerfil = document.querySelector('#mercado-pic')
-var MercadoPicMenu = document.querySelector('#user-picMenu')
-var Mercadoname = document.querySelector('#user-name')
-
-// Esconder barra do login 
-
-function esconderlogin(){
-    if (user == null && userMercado == null){
-        document.getElementById("btnlogado").style.display="none";
-        document.getElementById("btncadastro").style.display="block";
-    } else {
-        document.getElementById("btnlogado").style.display="block";
-        document.getElementById("btncadastro").style.display="none";    
-    }
-    if (user != null) {
-        userFoto()
-    }
-    else{
-        mercadoFoto()
-    }
-  }
-
-  function userFoto(){
-    userPic.setAttribute('src', user?.imagem)
-    username.innerHTML += user?.name
-    userPicMenu.setAttribute('src', user?.imagem)
-
-  }
-  function mercadoFoto(){
-    MercadoPic.setAttribute('src', userMercado?.image_link)
-    Mercadoname.innerHTML += userMercado?.name
-    MercadoPicMenu.setAttribute('src', userMercado?.image_link)
-    MercadoPicPerfil.setAttribute('src', userMercado?.image_link)
-  }
 

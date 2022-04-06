@@ -124,8 +124,8 @@ function profileService() {
 function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
         .then(res => {
-            alert("Cadastrado com sucesso !")
-            window.location.href = "http://localhost:5500/Telalogin/loginMercado.html"
+            console.log(res)
+            window.location.href = 'http://localhost:5500/Telalogin/loginMercado.html'
         })
         .catch(err => {
             console.log(err)
