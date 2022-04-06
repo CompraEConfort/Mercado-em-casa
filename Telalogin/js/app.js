@@ -195,6 +195,16 @@ function updateMercado () {
 
 }
 
+function deleteMercado () {
+    if (confirm('Deseja Deletar Sua Conta?')) {
+        var requestBody = {
+            email: JSON.parse(localStorage.getItem('userMercado')).email
+        }
+        deleteMercadoService (requestBody)
+    }
+    
+}
+
 /*      Produtos       */
 
 async function getProductsByCategoryAndSupermarketId() {

@@ -11,7 +11,7 @@ function addProduto (){
         name: name,
         value: value,
         category: category,
-        image_link: image_link,
+        image_link: image_link
     }
    addProdutoService(requestBody)
 }

@@ -126,7 +126,13 @@
                         </div>
                         <div class="form-group">
                             <label>Categoria</label>
-                            <input type="text" id="add-categoria" class="form-control" required>
+                            <!-- <input type="text" id="add-categoria" class="form-control" required> -->
+                            <select name="category" id="add-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
+                            <option value="">Selecione a Categoria </option>  
+                            <option value="hortifruti">Hortifruti</option>
+                            <option value="massas">Massas</option>
+                            <option value="docesebiscoitos">Doces e Biscoitos</option>
+                            </select>
                         </div>					
                     </div>
                     <div class="modal-footer">
@@ -157,11 +163,17 @@
                         </div>
                         <div class="form-group">
                             <label>Imagem</label>
-                            <input id="alt-imagem" type="url" class="form-control" required>
+                            <input id="alt-imagem" type="url" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Categoria</label>
-                            <input id="alt-categoria" type="text" class="form-control" required>
+                            <!-- <input id="alt-categoria" type="text" class="form-control" required> -->
+                            <select name="category" id="alt-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
+                                <option value="">Selecione a Categoria </option>  
+                                <option value="hortifruti">Hortifruti</option>
+                                <option value="massas">Massas</option>
+                                <option value="docesebiscoitos">Doces e Biscoitos</option>
+                                </select>
                         </div>					
                     </div>
                     <div class="modal-footer">

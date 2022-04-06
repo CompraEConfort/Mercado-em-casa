@@ -28,11 +28,11 @@ function cadastroService(requestBody) {
         .then(res => {
             console.log(res)
 
-            vnome = document.getElementById("cadastro-name").value;
-            vemail = document.getElementById("cadastro-email").value;
+            // vnome = document.getElementById("cadastro-name").value;
+            // vemail = document.getElementById("cadastro-email").value;
           
-            localStorage.nome = vnome;
-            localStorage.email = vemail;
+            // localStorage.nome = vnome;
+            // localStorage.email = vemail;
         
             alert("Cadastrado com sucesso !")
             window.location.href = 'http://localhost:5500/Telalogin/login.html'
@@ -91,7 +91,7 @@ function deletePerfilService(requestBody) {
             alert("Deletado com sucesso ! ")
             localStorage.clear()
             window.location.href = "http://localhost:5500/Telalogin/login.html"
-        })
+        })  
         .catch(err => {
             console.log(err)
             alert("Erro ao Deletar")
@@ -124,8 +124,8 @@ function profileService() {
 function cadastroMercadoService(requestBody) {
     axios.post('http://localhost:3000/supermercados/cadastro', requestBody)
         .then(res => {
-            console.log(res)
-            // window.location.href = "http://localhost/Mercado-em-casa/Resto-do-site/produtos.html?"
+            alert("Cadastrado com sucesso !")
+            window.location.href = "http://localhost:5500/Telalogin/loginMercado.html"
         })
         .catch(err => {
             console.log(err)
@@ -181,6 +181,20 @@ function UpdateMercadoService(requestBody) {
         })
 }
 
+function deleteMercadoService(requestBody) {
+    return axios.delete('http://localhost:3000/supermercados', { data: requestBody })
+  .then(res => {
+  
+      console.log(res);
+        alert('Perfil Desativado com sucesso')
+        
+        window.location.href = "http://localhost:5500/Telalogin/login.html"
+  })
+  .catch(err => {
+      console.log(err)
+      alert('Erro ao Desativar Perfil')
+  })
+  }
 //  produtos  //
 
 async function productsByCategoryService(requestBody) {

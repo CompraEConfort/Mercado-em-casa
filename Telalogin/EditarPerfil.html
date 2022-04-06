@@ -75,7 +75,7 @@
             
                 <input class="btn btn-second" type="submit" value="Atualizar" onclick="altSubmit()">
 
-				<input class="bot btn-prime" type="button" value="Deletar Perfil" onclick="deleteSubmit()">
+				<input class="bot btn-prime" type="button" value="Desativar Perfil" onclick="deleteSubmit()">
 		</form>
 		</div>
 
@@ -85,7 +85,7 @@
 			<div class="card">
 				<a href="http://localhost:5500/Tela%20inicial/"> voltar </a>
 				<div class="card-top">
-					<img id="user-pic" src="img/user.png" width="300" height="260" alt="">
+					<img id="mercado-pic" src="img/user.png" alt="Avatar" class="avatar" width="300" height="260">
 					<h2 class="title">Dados Pessoais</h2> 
 				</div>
 			
@@ -146,12 +146,13 @@
 				
 					<input class="btn btn-second" type="submit" value="Atualizar" onclick="updateMercado()">
 	
-					<input class="bot btn-prime" type="button" value="Deletar Perfil" onclick="">
+					<input class="bot btn-prime" type="button" value="Desativar Perfil" onclick="deleteMercado()">
 			</form>
 			</div>
 
 	<script src="../service/axiosService.js"></script>
 	<script src="js/mudarForm.js"></script>
+	<script src="../Tela inicial/assets/js/MenuPerfil.js"></script>
     <script src="js/Perfil.js"></script>
 	<script src="js/PerfilMercado.js"></script>
     <script src="js/app.js"></script>
