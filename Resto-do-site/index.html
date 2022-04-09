@@ -22,9 +22,16 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/style copy.css" type="text/css">
+
+    <!-- Css HeaderMenu -->
+    <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
+    <link rel="stylesheet" href="css/HeaderMenu.css/style.css">
+
 </head>
 
-<body>
+ <body onload="esconderlogin()"> <!-- -->
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -32,43 +39,63 @@
 
     <!-- Header Section Begin -->
     <header class="header">
-        <div class="header__top">
-            <div class="container">
+        <div class="mainmenu-area">
+            <div class="container" style="width: 100%;">
                 <div class="row">
-                    <div class="col-lg-6">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="http://localhost//Mercado-em-casa/Tela%20inicial"><img src="img/Logom.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="http://localhost/Mercado-em-casa/tela%20deselecao/Selecionarmercado.html">Selecionar Mercado</a></li>
-                            <li><a href="http://localhost/Mercado-em-casa/tela%20deselecao/Corredores.html">Corredores</a></li>
-                            <li class="active"><a href="./index.html">Produtos</a></li>
-                                                  
+                    <div class="navbar-header" style="margin-left: 5%;">
+                        <a href="../Tela inicial/index.html" style="color: white;font-weight: 600;margin-right: 85px; text-decoration: none;">
+                            <img src="img/Logom.jpg"width="50" height="100" style=" border-radius: 20%; padding-top: 6px; vertical-align: -20px;"> Compra&Confort
+                        </a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>       
+                             
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav" style="margin-right: 15%;">
+                            <li><a href="../Tela inicial/index.html">Buscar Mercados</a></li>
+                            <li><a href="Selecionarmercado.html">Selecionar Mercado</a></li>
+                            <li class="active"><a href="Corredores.html">Corredores</a></li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__cart">
                         <ul>
-                            <li><a href="http://localhost/Mercado-em-casa/Resto-do-site/shoping-cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                            <a id="btnlogado" href="#menu" style="font-size: 35px; margin-left: 94%; position: relative; color: white; text-decoration: none; ">
+                                <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+                                ≡ </a>
+                                <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; margin-left: 88%; padding: 1% 0px 0px 0px;" href="../Telalogin/login.html">Cadastre-se</a>
+                   
                         </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
+                        
+                        <!-- Menu -->
+                        <nav id="menu">
+                            <ul class="links">
+                                    <form Class="form">
+                                        <div id="infuser" class="card">
+                
+                                            <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                                            
+                                                <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                                                <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                                           
+                                                <div class="opcoes">
+                
+                                                        <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                                                    <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Configurações<br></a>
+                                                        <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                                                    <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                                        <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                                                    <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+                
+                                                </div>
+                                        </div>
+                                    </form>
+                                </nav> 
+                         </div>  
+                   </div>
+             </div>
+        </div> <!-- End mainmenu area -->
     </header>
     <!-- Header Section End -->
 
@@ -256,6 +283,19 @@
     <script src="../service/service.js"></script>
     <script src="js/produtos.js"></script>
     <script src="../Telalogin/js/app.js"></script>
+
+     <!-- HeaderMenu -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="../service/axiosService.js"></script>
+     <script src="js/HeaderMenu/jquery.min.js"></script>
+     <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
+     <script src="js/HeaderMenu/skel.min.js"></script>
+
+     <script src="js/HeaderMenu/Buscar.js"></script>
+     <script src="js/HeaderMenu/util.js"></script>
+     <script src="js/HeaderMenu/mainHeader.js"></script>
+     <script src="js/HeaderMenu/MenuPerfil.js"></script>
+
 
 </body>
 
