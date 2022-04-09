@@ -19,7 +19,7 @@
         produtosDinamico +=         `</div>`
         produtosDinamico +=         `<div class="product__item__text">`
         produtosDinamico +=            `<h6><a href="#">${element.name}</a></h6>`
-        produtosDinamico +=            `<h5>R$ ${element.value}.00</h5>`
+        produtosDinamico +=            `<h5>R$ ${element.value}</h5>`
         produtosDinamico +=         `</div>`
         produtosDinamico +=      `</div>`
         produtosDinamico +=  `</div>`

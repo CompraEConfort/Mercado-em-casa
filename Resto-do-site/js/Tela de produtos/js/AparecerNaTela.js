@@ -1,12 +1,3 @@
-// var nomeproduto = document.querySelector("#myTable");
-// var precoproduto = document.querySelector("#myTable2");
-// var categoriaproduto = document.querySelector("#myTable4");
-
-
-// nomeproduto.innerHTML = localStorage.produto;
-// precoproduto.innerHTML = localStorage.preco;
-// // nomeproduto.innerHTML = localStorage.produto;
-// categoriaproduto.innerHTML = localStorage.categoria;
 function displayProducts() {
   var requestBody = {
     id_supermarket: JSON.parse(localStorage.getItem('userMercado'))?.id_supermarket
@@ -30,8 +21,9 @@ function addProdutoInTable (produto, index) {
 <input type="checkbox" id="checkbox${index}" name="options[]" value="${produto.id_produto}">
 <label for="checkbox${index}"></label>
 </span>`
-var buttons = `<a href="#editEmployeeModal" class="edit" data-toggle="modal">
-  <i class="material-icons" title="Edit">&#xE254;</i>
+var buttons = `<a href="#editEmployeeModal" class="btn btn-info" data-toggle="modal" style = "color: #fff; font-size: 13px; border-radius: 2px; outline: none !important; width: 95px;">
+  <i class="material-icons" style="float:left; font-size: 21px; margin-right: 5px; margin-left: auto;" title="Edit">&#xE254;</i>
+  <span style=" float: left; margin-top: 2px;" >Editar</span>
 </a>
 `
 
@@ -48,7 +40,7 @@ var buttons = `<a href="#editEmployeeModal" class="edit" data-toggle="modal">
   newRow.insertCell(4).innerHTML = produto.categoria;
   var actions = newRow.insertCell(5);
   actions.innerHTML = buttons;
-  var editButton = actions.querySelector('.edit')
+  var editButton = actions.querySelector('.btn-info')
   editButton?.addEventListener('click', (event) => {
     event.preventDefault()
     preencherForm(produto)

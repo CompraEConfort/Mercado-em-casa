@@ -1,14 +1,15 @@
 var userMercado = JSON.parse(localStorage.getItem('userMercado'))
+// localStorage.setItem('userMercado', JSON.stringify(userMercado))
 
 var nome = document.querySelector("#alt-namemercado")
 var email = document.querySelector("#alt-emailmercado")
-var cnpj =document.querySelector("#alt-cnpjmercado")
+var cnpj = document.querySelector("#alt-cnpjmercado")
 var endereco = document.querySelector("#alt-enderecomercado")
 var cidade = document.querySelector("#alt-cidademercado")
 var bairro = document.querySelector("#alt-bairromercado")
 var cep = document.querySelector("#alt-cepmercado")
 var telefone = document.querySelector("#alt-telefonemercado")
-// var image_link = document.querySelector ("alt-imagemmercado")
+var imagem = document.querySelector("alt-imagemmercado")
 
 console.log(userMercado);
 
@@ -20,5 +21,4 @@ cidade.value = userMercado?.city
 bairro.value = userMercado?.neighborhood
 cep.value = userMercado?.cep
 telefone.value = userMercado?.telefone
-// image_link.value = userMercado?.image_link
-
+imagem.value = userMercado?.image_link

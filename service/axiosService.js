@@ -28,11 +28,11 @@ function cadastroService(requestBody) {
         .then(res => {
             console.log(res)
 
-            vnome = document.getElementById("cadastro-name").value;
-            vemail = document.getElementById("cadastro-email").value;
+            // vnome = document.getElementById("cadastro-name").value;
+            // vemail = document.getElementById("cadastro-email").value;
           
-            localStorage.nome = vnome;
-            localStorage.email = vemail;
+            // localStorage.nome = vnome;
+            // localStorage.email = vemail;
         
             alert("Cadastrado com sucesso !")
             window.location.href = 'http://localhost:5500/Telalogin/login.html'
@@ -91,7 +91,7 @@ function deletePerfilService(requestBody) {
             alert("Deletado com sucesso ! ")
             localStorage.clear()
             window.location.href = "http://localhost:5500/Telalogin/login.html"
-        })
+        })  
         .catch(err => {
             console.log(err)
             alert("Erro ao Deletar")
@@ -181,6 +181,20 @@ function UpdateMercadoService(requestBody) {
         })
 }
 
+function deleteMercadoService(requestBody) {
+    return axios.delete('http://localhost:3000/supermercados', { data: requestBody })
+  .then(res => {
+  
+      console.log(res);
+        alert('Perfil Desativado com sucesso')
+        
+        window.location.href = "http://localhost:5500/Telalogin/login.html"
+  })
+  .catch(err => {
+      console.log(err)
+      alert('Erro ao Desativar Perfil')
+  })
+  }
 //  produtos  //
 
 async function productsByCategoryService(requestBody) {
@@ -202,10 +216,12 @@ function addProdutoService(requestBody){
         nomeProduto = document.getElementById("add-produto").value;
         precoProduto = document.getElementById("add-preco").value;
         categoriaProduto = document.getElementById("add-categoria").value;
+        imagemproduto = document.getElementById("add-image").value;
       
         localStorage.produto = nomeProduto;
         localStorage.preco = precoProduto;
         localStorage.categoria = categoriaProduto;
+        localStorage.imagemproduto = imagemproduto;
     
         alert("Adicionado com sucesso !")
         window.location.reload()
