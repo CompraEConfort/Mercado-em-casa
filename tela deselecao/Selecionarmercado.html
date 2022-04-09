@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/Menu.css">
+
+    <!-- Css HeaderMenu -->
+    <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,47 +40,13 @@
 <body onload="esconderlogin()">
 
     <!-- Header -->
-	<header id="header" class="alt">
-		<div class="logo"><a href="index.html">Compra&Confort</a></div>
-		<a id="btnlogado" href="#menu" style="font-size: 35px;" >
-			<img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar"style="vertical-align: -9px;">	 
-			≡ </a>
-		<a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; " href="../Telalogin/login.html">Cadastre-se</a>
-	</header>
-	 <!-- Menu -->
-		<nav id="menu">
-			<ul class="links">
-					<form Class="form">
-						<div id="infuser" class="card">
 
-							<img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
-							
-								<h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
-								<h2 id="boasvindas" style="font-size: 20px;"></h2> 
-						   
-								<div class="opcoes">
-
-										<img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
-									<a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Configurações<br></a>
-										<img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
-									<a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
-										<img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
-									<a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
-
-								</div>
-						</div>
-					</form>
-			</ul>
-		</nav> 
-
-    <!-- <div class="mainmenu-area">
-        <div class="container">
+    <div class="mainmenu-area">
+        <div class="container" style="width: 100%;">
             <div class="row">
-                <div class="navbar-header">
-
-                    <a href="http://localhost/Mercado-em-casa/Tela%20inicial/" style="color: white; font-weight: 600;margin-right: 85px;">
-                  
-                        <img src="img/Logom.jpg"width="60" height="100"> Compra&Confort
+                <div class="navbar-header" style="margin-left: 5%;">
+                    <a href="../Tela inicial/index.html" style="color: white;font-weight: 600;margin-right: 85px; text-decoration: none;">
+                        <img src="img/Logom.jpg"width="50" height="100" style=" border-radius: 20%; padding-top: 6px; vertical-align: -20px;"> Compra&Confort
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -84,18 +54,53 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>
-
+                </div>  
 
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="http://localhost/Mercado-em-casa/Tela%20inicial/">Buscar Mercados</a></li>
-                        <li class="active"><a href="Selecionarmercado.html">Selecionar</a></li>
+                    <ul class="nav navbar-nav" style="margin-right: 15%;">
+                        <li><a href="../Tela inicial/index.html">Buscar Mercados</a></li>
+                        <li><a href="Selecionarmercado.html">Selecionar Mercado</a></li>
+                        
                     </ul>
+                    <ul>
+                        <a id="btnlogado" href="#menu" style="font-size: 35px; margin-left: 94%; position: relative; color: white; text-decoration: none; ">
+                            <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+                            ≡ </a>
+                            <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; margin-left: 88%; padding: 1% 0px 0px 0px;" href="../Telalogin/login.html">Cadastre-se</a>
+               
+                    </ul>
+               
+       
+                <!-- Menu -->
+                <nav id="menu">
+                    <ul class="links">
+                            <form Class="form">
+                                <div id="infuser" class="card">
+        
+                                    <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                                    
+                                        <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                                        <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                                   
+                                        <div class="opcoes">
+        
+                                                <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                                            <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Configurações<br></a>
+                                                <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                                            <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                                <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                                            <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+        
+                                        </div>
+                                </div>
+                            </form>
+                        </nav> 
                 </div>
             </div>
         </div>
-    </div> End mainmenu area -->
+    </div> 
+   
+    <!-- End mainmenu area -->
 
     <div class="product-big-title-area">
         <div class="container">
@@ -324,9 +329,13 @@
     </div>
 
      <!-- HeaderMenu -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="../service/axiosService.js"></script>
      <script src="js/HeaderMenu/jquery.min.js"></script>
      <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
      <script src="js/HeaderMenu/skel.min.js"></script>
+
+     <script src="js/HeaderMenu/Buscar.js"></script>
      <script src="js/HeaderMenu/util.js"></script>
      <script src="js/HeaderMenu/mainHeader.js"></script>
      <script src="js/HeaderMenu/MenuPerfil.js"></script>
