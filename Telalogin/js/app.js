@@ -86,7 +86,7 @@ function altSubmit () {
 }
 
 function deleteSubmit () {
-    if (confirm('Deseja Deletar Sua Conta?')) {
+    if (confirm('Deseja Desativar seu Perfil?')) {
         var requestBody = {
             id: JSON.parse(localStorage.getItem('user')).id
         }
@@ -105,7 +105,6 @@ login_form?.addEventListener('submit', function (event) {
     // chama o loginsubmit
     loginSubmit()
 })
-
 
 function loginSubmit () {
     var email = $("#login-email").val()
@@ -178,7 +177,7 @@ function updateMercado () {
     var bairro = $("#alt-bairromercado").val()
     var cep = $("#alt-cepmercado").val()
     var telefone = $("#alt-telefonemercado").val()
-    // var image_link = $("#alt-imagemmercado").val()
+    var image_link = $("#alt-imagemmercado").val()
 
 
     var requestBody = {
@@ -188,7 +187,7 @@ function updateMercado () {
         bairro: bairro,
         cep: cep,
         telefone: telefone,
-        // imagem_link: image_link,
+        imagem: image_link,
         id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
     }
     UpdateMercadoService(requestBody)
@@ -196,14 +195,13 @@ function updateMercado () {
 }
 
 function deleteMercado () {
-    if (confirm('Deseja Deletar Sua Conta?')) {
+    if (confirm('Deseja Desativar Sua Conta?')) {
         var requestBody = {
-            email: JSON.parse(localStorage.getItem('userMercado')).email
+            id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
+    }
         }
         deleteMercadoService (requestBody)
     }
-    
-}
 
 /*      Produtos       */
 
@@ -217,7 +215,6 @@ async function getProductsByCategoryAndSupermarketId() {
     }
     return await productsByCategoryService(requestBody)
 }
-
 
 /* botão de upar imagens */
 

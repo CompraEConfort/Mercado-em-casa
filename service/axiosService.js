@@ -216,10 +216,12 @@ function addProdutoService(requestBody){
         nomeProduto = document.getElementById("add-produto").value;
         precoProduto = document.getElementById("add-preco").value;
         categoriaProduto = document.getElementById("add-categoria").value;
+        imagemproduto = document.getElementById("add-image").value;
       
         localStorage.produto = nomeProduto;
         localStorage.preco = precoProduto;
         localStorage.categoria = categoriaProduto;
+        localStorage.imagemproduto = imagemproduto;
     
         alert("Adicionado com sucesso !")
         window.location.reload()
