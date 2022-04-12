@@ -18,7 +18,7 @@ var Mercadoname = document.querySelector('#user-name')
 
 function esconderlogin(){
     //Gambiarra pra tirar o erro do Undefined-sticky-wrapper
-   document.getElementById('undefined-sticky-wrapper').setAttribute('style', 'clear: both;')
+   //document.getElementById('undefined-sticky-wrapper').setAttribute('style', 'clear: both;')
 
     if (user == null && userMercado == null){
         document.getElementById("btnlogado").style.display="none";

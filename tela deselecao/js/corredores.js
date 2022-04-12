@@ -13,7 +13,7 @@
         CorredoresDinamico +=        `<div class="product-upper">`
         CorredoresDinamico +=            `<img src="${element.imageLink}" alt="">`
         CorredoresDinamico +=        `</div>`
-        CorredoresDinamico +=        `<h2><a href="http://localhost/Mercado-em-casa/Resto-do-site/" onclick="guardarNomeCorredor('${element.nome}')">${element.nome}</a></h2>`
+        CorredoresDinamico +=        `<h2><a href="../Resto-do-site/index.html" onclick="guardarNomeCorredor('${element.nome}')">${element.nome}</a></h2>`
         CorredoresDinamico +=        `<div class="product-carousel-price">`
         CorredoresDinamico +=        `</div>`
         CorredoresDinamico +=    `</div>`
