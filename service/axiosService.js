@@ -76,7 +76,7 @@ function alterarPerfilService(requestBody) {
             console.log(res)
             alert("Atualizado com sucesso ! ")
             localStorage.setItem('user', JSON.stringify(res.data.usuarioAtualizado))
-            // window.location ("http://localhost/Mercado-em-casa/Telalogin/Perfil.html")
+            window.location.href = "http://localhost:5500/Telalogin/EditarPerfil.html"
         })
         .catch(err => {
             console.log(err)
@@ -117,6 +117,21 @@ function profileService() {
         .catch(err => {
             console.log(err)
         })
+}
+
+function userUploadImage (formData) {
+    axios.post("http://localhost:3000/usuarios/uploadImage", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+    }).then(res => {
+
+        alert('Imagem atualizada com sucesso')
+
+    }).catch(err => {
+        console.log(err);
+        alert('Erro ao atualizar imagem')
+    })
 }
 
 //  Mercado  //
@@ -173,7 +188,8 @@ function UpdateMercadoService(requestBody) {
             console.log(res)
             alert("Atualizado com sucesso ! ")
             localStorage.setItem('userMercado', JSON.stringify(res.data.mercadoAtualizado))
-            window.location.reload
+            window.location.href = "http://localhost:5500/Telalogin/EditarPerfil.html"
+            
         })
         .catch(err => {
             console.log(err)
@@ -211,20 +227,9 @@ async function productsByCategoryService(requestBody) {
 function addProdutoService(requestBody){
     axios.post('http://localhost:3000/produtos/add', requestBody)
     .then(res => {
-
-
-        nomeProduto = document.getElementById("add-produto").value;
-        precoProduto = document.getElementById("add-preco").value;
-        categoriaProduto = document.getElementById("add-categoria").value;
-        imagemproduto = document.getElementById("add-image").value;
-      
-        localStorage.produto = nomeProduto;
-        localStorage.preco = precoProduto;
-        localStorage.categoria = categoriaProduto;
-        localStorage.imagemproduto = imagemproduto;
-    
         alert("Adicionado com sucesso !")
         window.location.reload()
+        // prodtudosAdicionados()
 
     })
     .catch(err => {
@@ -233,6 +238,20 @@ function addProdutoService(requestBody){
         alert("Falha ao Cadastrar : Dados incorretos ou já existentes")
     })
 }
+
+// function prodtudosAdicionados (produtoAdd){
+//     console.log('Produto Adicionado: ', produtoAdd);
+//     localStorage.setItem('AddProd', JSON.stringify(produtoAdd))
+//     var nomeProdutoadd = document.querySelector("add-produto")
+//     var precoProdutoadd = document.querySelector("add-preco")
+//     var categoriaProdutoadd = document.querySelector("add-categoria")
+//     var imagemProdutoadd = document.querySelector("add-image")
+  
+//     nomeProdutoadd.value = produtoAdd.nome
+//     precoProdutoadd.value = produtoAdd.preco
+//     imagemProdutoadd.value = produtoAdd.imagem_produto
+//     categoriaProdutoadd.value = produtoAdd.categoria
+// }
 
 function getProdutosService(requestBody){
   return axios.get('http://localhost:3000/produtos', { params: requestBody})

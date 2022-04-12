@@ -46,7 +46,6 @@ function Mercadofoto () {
     Mercadoname.innerHTML += userMercado.name
     MercadoPicMenu.setAttribute('src', userMercado.image_link)
     
-
 }
 
 // Botão de deslogar

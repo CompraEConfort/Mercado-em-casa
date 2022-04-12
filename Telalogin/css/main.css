@@ -39,6 +39,7 @@
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+
 }
 
 /*---------------------------------------------*/
@@ -178,7 +179,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #ebeeef;
+  background-image: url(https://i.imgur.com/flRWtrt.png);
 }
 
 
@@ -188,6 +189,7 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  box-shadow: 1px 1px 20px 5px rgb(0 0 0 / 20%);
 }
 
 /*==================================================================
@@ -400,11 +402,12 @@ input.input100 {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 160px;
+  min-width: 256px;
   height: 50px;
   background-color: #57b846;
   border-radius: 25px;
-
+  margin-left: 25px;
+  margin: 5% 0;
   font-family: Poppins-Regular;
   font-size: 16px;
   color: #fff;
@@ -418,6 +421,9 @@ input.input100 {
 
 .login100-form-btn:hover {
   background-color: #333333;
+}
+.voltar{
+  margin-left: 17px;
 }
 
 

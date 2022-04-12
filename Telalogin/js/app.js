@@ -69,6 +69,8 @@ function altSubmit () {
     var bairro = $("#alt-bairro").val()
     var cep = $("#alt-cep").val()
     var telefone = $("#alt-telefone").val()
+    var imagem = $("alt-imagemuser").val()
+    
 
 
     var requestBody = {
@@ -79,6 +81,7 @@ function altSubmit () {
         bairro: bairro,
         cep: cep,
         telefone: telefone,
+        imagem: imagem,
         id: JSON.parse(localStorage.getItem('user')).id
     }
     alterarPerfilService(requestBody)

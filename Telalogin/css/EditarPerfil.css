@@ -17,8 +17,9 @@ body{
 }
 .title{
     color: #2a6049;
-    font-size: 40px;
+    font-size: 25px;
     font-family: 'Trebuchet MS';
+    margin-top: auto;
 }
 .form {
     display: flex;
@@ -145,6 +146,23 @@ input:-webkit-autofill
     color: white;
 }
 
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 
+  #userPerfil-pic {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+#mercadoPerfil-pic {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
 
 

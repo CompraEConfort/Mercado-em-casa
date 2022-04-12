@@ -9,7 +9,7 @@ var cidade = document.querySelector("#alt-cidademercado")
 var bairro = document.querySelector("#alt-bairromercado")
 var cep = document.querySelector("#alt-cepmercado")
 var telefone = document.querySelector("#alt-telefonemercado")
-var imagem = document.querySelector("alt-imagemmercado")
+// var imagem = document.querySelector("alt-imagemmercado")
 
 console.log(userMercado);
 
@@ -21,4 +21,5 @@ cidade.value = userMercado?.city
 bairro.value = userMercado?.neighborhood
 cep.value = userMercado?.cep
 telefone.value = userMercado?.telefone
-imagem.value = userMercado?.image_link
+// imagem.value= userMercado?.image_link 
+
