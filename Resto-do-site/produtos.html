@@ -23,19 +23,87 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css"    type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css"     type="text/css">
-    <link rel="stylesheet" href="css/style copy 4.css"       type="text/css">
+    <link rel="stylesheet" href="css/style copy 4.css"     type="text/css">
     <link rel="stylesheet" href="css/style copy.css"       type="text/css">
-    
 
+     <!-- Css HeaderMenu -->
+     <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
+     <link rel="stylesheet" href="css/HeaderMenu.css/style.css">
+     <link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
+     <link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/clicky-menus.css" />
     
 </head>
 
-<body>
+<body onload="esconderlogin()">
     <!-- Page Preloder -->
     <!-- <div id="preloder">
         <div class="loader"></div>
     </div> -->
     
+ <!-- Header Section Begin -->
+ <header class="header" style="position: fixed; width: 100%;">
+    <!-- for use with <use> -->
+<svg xmlns="http://www.w3.org/2000/svg"  hidden>
+  <symbol id="arrow" viewbox="0 0 16 16" >
+      <polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
+  </symbol>
+</svg>
+
+<!-- In the real world, all hrefs would have go to real, unique URLs, not a "#" -->
+<nav id="site-navigation" class="site-navigation" aria-label="Clickable Menu Demonstration">
+ 
+  <ul class="main-menu clicky-menu no-js">
+      <a href="../Tela inicial/index.html" style="color:white; font-weight: 600;margin: 0px 85px 0px 65px; text-decoration: none; text-transform: uppercase; background: #007b5b;">
+          <img src="https://i.imgur.com/6pTWKvq.jpg"width="50" height="100" style=" border-radius: 20%; padding: 4px 0px 4px 0px;"> Compra&Confort
+      </a>
+      <li>
+          <a href="../Tela inicial/index.html">Buscar Mercados</a>
+      </li>
+      <li>
+          <a href="../tela deselecao/Selecionarmercado.html">Selecionar Mercados</a>
+      </li>
+      <li>
+          <a href="../tela deselecao/Corredores.html">Corredores</a>
+      </li>
+      <li style="margin-left: 93%;position: absolute;">
+          <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%;">
+              <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+              ≡ </a>
+              <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; padding: 1% 0px 0px 0px; margin: 15px 0px 0px -115px" href="../Telalogin/login.html">Cadastre-se</a>
+ 
+      </li>
+  </ul>
+
+</nav> <!-- End mainmenu area -->
+
+<!-- Menu -->
+   <div id="menu">
+      <ul class="links">
+              <form Class="form">
+                  <div id="infuser" class="card" style=" background: rgb(0 0 0 / 0%); display: block; border: rgb(0 0 0 / 0%);">
+
+                      <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                      
+                          <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                          <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                     
+                          <div class="opcoes">
+
+                                  <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                              <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Configurações<br></a>
+                                  <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                              <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                  <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                              <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+
+                          </div>
+                  </div>
+              </form>
+          </div> 
+</header>
+<!-- Header Section End -->
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="">
         <div class="container">
@@ -245,7 +313,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-        
+       <!-- HeaderMenu -->
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+       <script src="../service/axiosService.js"></script>
+       <script src="js/HeaderMenu/jquery.min.js"></script>
+       <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
+       <script src="js/HeaderMenu/skel.min.js"></script>
+  
+       <script src="/Resto-do-site/js/HeaderMenu/clicky-menus.js"></script>
+       <script src="js/HeaderMenu/Buscar.js"></script>
+       <script src="js/HeaderMenu/util.js"></script>
+       <script src="js/HeaderMenu/mainHeader.js"></script>
+       <script src="js/HeaderMenu/MenuPerfil.js"></script>   
+
     <script>
         $(document).ready(function(){
             // Activate tooltip
@@ -273,232 +353,3 @@
     </script>
 </body>
 </html>
-
-    <!-- Table CSS -->
-<!-- <style>
-        body {
-            color: #566787;
-            background: #f5f5f5;
-            font-family: 'Varela Round', sans-serif;
-            font-size: 13px;
-        }
-        .table-responsive {
-            margin: 30px 0;
-        }
-        .table-wrapper {
-            background: #fff;
-            padding: 20px 25px;
-            border-radius: 3px;
-            min-width: 1000px;
-            box-shadow: 0 1px 1px rgba(0,0,0,.05);
-        }
-        .table-title {        
-            padding-bottom: 15px;
-            background: #435d7d;
-            color: #fff;
-            padding: 16px 30px;
-            min-width: 100%;
-            margin: -20px -25px 10px;
-            border-radius: 3px 3px 0 0;
-        }
-        .table-title h2 {
-            margin: 5px 0 0;
-            font-size: 24px;
-            color: white;
-        }
-        .table-title .btn-group {
-            float: right;
-        }
-        .table-title .btn {
-            color: #fff;
-            float: right;
-            font-size: 13px;
-            border: none;
-            min-width: 50px;
-            border-radius: 2px;
-            border: none;
-            outline: none !important;
-            margin-left: 10px;
-        }
-        .table-title .btn i {
-            float: left;
-            font-size: 21px;
-            margin-right: 5px;
-        }
-        .table-title .btn span {
-            float: left;
-            margin-top: 2px;
-        }
-        table.table tr th, table.table tr td {
-            border-color: #e9e9e9;
-            padding: 12px 15px;
-            vertical-align: middle;
-        }
-        table.table tr th:first-child {
-            width: 60px;
-        }
-        table.table tr th:last-child {
-            width: 100px;
-        }
-        table.table-striped tbody tr:nth-of-type(odd) {
-            background-color: #fcfcfc;
-        }
-        table.table-striped.table-hover tbody tr:hover {
-            background: #f5f5f5;
-        }
-        table.table th i {
-            font-size: 13px;
-            margin: 0 5px;
-            cursor: pointer;
-        }	
-        table.table td:last-child i {
-            opacity: 0.9;
-            font-size: 22px;
-            margin: 0 5px;
-        }
-        table.table td a {
-            font-weight: bold;
-            color: #566787;
-            display: inline-block;
-            text-decoration: none;
-            outline: none !important;
-        }
-        table.table td a:hover {
-            color: #2196F3;
-        }
-        table.table td a.edit {
-            color: #FFC107;
-        }
-        table.table td a.delete {
-            color: #F44336;
-        }
-        table.table td i {
-            font-size: 19px;
-        }
-        table.table .avatar {
-            border-radius: 50%;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .pagination {
-            float: right;
-            margin: 0 0 5px;
-        }
-        .pagination li a {
-            border: none;
-            font-size: 13px;
-            min-width: 30px;
-            min-height: 30px;
-            color: #999;
-            margin: 0 2px;
-            line-height: 30px;
-            border-radius: 2px !important;
-            text-align: center;
-            padding: 0 6px;
-        }
-        .pagination li a:hover {
-            color: #666;
-        }	
-        .pagination li.active a, .pagination li.active a.page-link {
-            background: #03A9F4;
-        }
-        .pagination li.active a:hover {        
-            background: #0397d6;
-        }
-        .pagination li.disabled i {
-            color: #ccc;
-        }
-        .pagination li i {
-            font-size: 16px;
-            padding-top: 6px
-        }
-        .hint-text {
-            float: left;
-            margin-top: 10px;
-            font-size: 13px;
-        }    
-        /* Custom checkbox */
-        .custom-checkbox {
-            position: relative;
-        }
-        .custom-checkbox input[type="checkbox"] {    
-            opacity: 0;
-            position: absolute;
-            margin: 5px 0 0 3px;
-            z-index: 9;
-        }
-        .custom-checkbox label:before{
-            width: 18px;
-            height: 18px;
-        }
-        .custom-checkbox label:before {
-            content: '';
-            margin-right: 10px;
-            display: inline-block;
-            vertical-align: text-top;
-            background: white;
-            border: 1px solid #bbb;
-            border-radius: 2px;
-            box-sizing: border-box;
-            z-index: 2;
-        }
-        .custom-checkbox input[type="checkbox"]:checked + label:after {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 3px;
-            width: 6px;
-            height: 11px;
-            border: solid #000;
-            border-width: 0 3px 3px 0;
-            transform: inherit;
-            z-index: 3;
-            transform: rotateZ(45deg);
-        }
-        .custom-checkbox input[type="checkbox"]:checked + label:before {
-            border-color: #03A9F4;
-            background: #03A9F4;
-        }
-        .custom-checkbox input[type="checkbox"]:checked + label:after {
-            border-color: #fff;
-        }
-        .custom-checkbox input[type="checkbox"]:disabled + label:before {
-            color: #b8b8b8;
-            cursor: auto;
-            box-shadow: none;
-            background: #ddd;
-        }
-        /* Modal styles */
-        .modal .modal-dialog {
-            max-width: 400px;
-        }
-        .modal .modal-header, .modal .modal-body, .modal .modal-footer {
-            padding: 20px 30px;
-        }
-        .modal .modal-content {
-            border-radius: 3px;
-            font-size: 14px;
-        }
-        .modal .modal-footer {
-            background: #ecf0f1;
-            border-radius: 0 0 3px 3px;
-        }
-        .modal .modal-title {
-            display: inline-block;
-        }
-        .modal .form-control {
-            border-radius: 2px;
-            box-shadow: none;
-            border-color: #dddddd;
-        }
-        .modal textarea.form-control {
-            resize: vertical;
-        }
-        .modal .btn {
-            border-radius: 2px;
-            min-width: 100px;
-        }	
-        .modal form label {
-            font-weight: normal;
-        }	
-        </style> -->
