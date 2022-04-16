@@ -13,12 +13,23 @@ body {
   background-color: antiquewhite;
   height: 150px;
   width: 150px;
-  border: 3px solid #0af;
+  border: 3px solid rgb(236, 202, 202);
   border-radius: 50%;
   transition: background ease-out 200ms;
 }
+#avatarMercado {
+  background-color: antiquewhite;
+  height: 150px;
+  width: 150px;
+  border: 3px solid rgb(236, 202, 202);
+  border-radius: 50%;
+  transition: background ease-out 200ms;}
 
 #preview {
+  position: relative;
+}
+
+#previewMercado {
   position: relative;
 }
 
@@ -27,11 +38,11 @@ input[type="file"] {
 }
 
 button#upload-button {
-  padding: 18px;
-  border-radius: 50%;
+  padding: 10px;
+  border-radius: 70%;
   border: none;
   cursor: pointer;
-  background-color: #08f;
+  background-color: white;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   transition: background-color ease-out 120ms;
@@ -41,6 +52,26 @@ button#upload-button {
 }
 
 button#upload-button:hover {
-  background-color: #45a;
+  background-color: rgb(236, 202, 202);
 }
+button#upload-buttonMercado {
+  padding: 10px;
+  border-radius: 70%;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  transition: background-color ease-out 120ms;
+  position: absolute;
+  right: -5%;
+  bottom: 0%;
+}
+
+button#upload-buttonMercado:hover {
+  background-color: rgb(236, 202, 202);
+}
+
+
+
 

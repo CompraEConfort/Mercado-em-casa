@@ -15,17 +15,5 @@ function mudarForm(){
         document.getElementById("mudarmercado").style.display="none";    
     }
     
-    if (user != null){
-        UserPerfilfoto()
-    } else {
-        MercadoPerfilfoto()
-    }
+    
   }
-
- async function UserPerfilfoto () {
-    userPic.setAttribute('src', user.imagem)
-}
-
-async function MercadoPerfilfoto () {
-    MercadoPic.setAttribute('src', userMercado.image_link) 
-}
