@@ -43,7 +43,7 @@ svg[hidden] {
 
 .clicky-menu a:focus,
 .clicky-menu button:focus {
-	outline: .125em dotted #fff;
+	/* outline: .125em dotted #fff; */
 	outline-offset: -.125em;
 }
 

@@ -1,5 +1,5 @@
-// Definição de Variaveis para aparecer as fotos no header (Cliente)
 
+// Definição de Variaveis para aparecer as fotos no header (Cliente)
 var user = JSON.parse(localStorage.getItem('user'))
 
 var userPic = document.querySelector('#user-pic')
@@ -38,7 +38,10 @@ function esconderlogin(){
     userPic.setAttribute('src', user.imagem)
     username.innerHTML += user.name
     userPicMenu.setAttribute('src', user.imagem)
+    document.getElementById("txtAddProd").style.display="none";
+    document.getElementById("imgAddProd").style.display="none";
 }
+
 
 
 function Mercadofoto () {
@@ -46,6 +49,7 @@ function Mercadofoto () {
     Mercadoname.innerHTML += userMercado.name
     MercadoPicMenu.setAttribute('src', userMercado.image_link)
 }
+
 
 // Botão de deslogar
 

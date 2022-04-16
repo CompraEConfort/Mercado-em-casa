@@ -127,7 +127,7 @@ function userUploadImage (formData) {
           "Content-Type": "multipart/form-data",
         },
     }).then(res => {
-      
+
         alert('Imagem atualizada com sucesso')
         userimagem.imagem = res.data.imagemAtualizada
         
