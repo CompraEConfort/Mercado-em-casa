@@ -2,6 +2,7 @@ const UPLOAD_BUTTON = document.getElementById("upload-button");
 const FILE_INPUT = document.querySelector("input[type=file]");
 const AVATAR = document.getElementById("avatar");
 
+if(user!= null) {
 AVATAR.style.background = `url(${user.imagem}) center center/cover`;
 
 UPLOAD_BUTTON.addEventListener("click", (event) => {
@@ -32,4 +33,5 @@ function updateImage (file) {
   formData.append('filetoupload', file)
 
   userUploadImage(formData)
+}
 }
