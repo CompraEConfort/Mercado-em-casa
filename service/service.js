@@ -41,6 +41,7 @@ function getprodutosNome(nomeCorredor) {
 		produtos = JSON.parse(xhr.responseText);
 		if (xhr.readyState == 4 && xhr.status == "200") {
 			console.log(produtos);
+			localStorage.setItem("EscolhaDoCorredor", data.produtos);
 		} else {
 			console.error(produtos);
 		}
@@ -98,3 +99,4 @@ function guardarCodigoSupermercado(codigoSupermercado) {
 function guardarNomeCorredor(nomeCorredor) {
 	localStorage.setItem("nome-corredor", nomeCorredor)
 }
+

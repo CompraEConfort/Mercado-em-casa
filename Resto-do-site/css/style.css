@@ -71,7 +71,7 @@ h5 {
 }
 
 h6 {
-	font-size: 16px;
+	font-size: 21px;
 }
 
 p {
@@ -1042,7 +1042,7 @@ ol {
 .breadcrumb-section {
 	display: flex;
 	align-items: center;
-	padding: 100px 0 40px;
+	padding: 50px 0 40px;
 	
 }
 
@@ -1614,12 +1614,13 @@ ol {
 }
 
 .product__item__text h6 a {
-	color: #252525;
+	color: #1e1e1e;
+    text-decoration: none;
 }
 
 .product__item__text h5 {
 	color: #252525;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .product__pagination,
@@ -2907,7 +2908,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 1060px;
 	}
 }
 
