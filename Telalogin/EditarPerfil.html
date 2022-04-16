@@ -30,7 +30,7 @@
 						aria-labelledby="image"
 						aria-describedby="image"
 						>
-						🙂
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACTklEQVRoge2ZPUwUQRTHfwfmQkGsFIiJdibaS2hNrGhMsLKyo7LQypqO087CmNhR0mBoKaRGjZ98xBYDxmgjmkgUWYt5G94tw+zO7pDd28wvudx8vJl5/3vzZvd2IRKJuOgASd1OhGCobgdCcUaVO7V5UY0EWhqRlEHJmb4d1OqIpDQ1Z6w7pjURiUKaRhQSkC7wENgFdoCetHmT0H8SZOunTU+tmX56DvsT/a1byC7HhXxx2Fv9DbG1LgJvgTfAuRLjbT/aYRlHqkTkCrCtxrwERj3Xt22t+TL+lhVyDfgmtq+Az1JewS9ZuxgxOxRL9qBCrgM/xG4VOAtcBr5K23NguJgOb4IJuQn8FptlYET1TQI/pe9pZZftBBFyB/gr/QvYbzpvAPtiM1fJZTuVhdzDnCYJ8Bj33fEMcCC290u7bKe0kA7wSNoOgQcFF7wrY/4Btx12E8Br4J2U8yglZBh4JvUDYLbAQpo5GfsHmLb0jwPras1PwIWcOb2FjABLUt4HbnmKSHkic/wCplT7BLAlfZuqvIU7Mt5CXsj3HiaByzIELMpc34GrGREbUtdtLjHeQhLMBW+ygoiULuZCmWDuBFKH1zHbK6WIGG8h25hfLxSjwJqa/yMwZrHLE+Mt5FJ130908ANwvqBtVkzQWxRf9OmUl8wpY2qMPs1qFfKeo8Qez7HV2CJTq5A1zH+WIpHIkhVTq5Cq6G020EKgPzIDLQQcOaLfWHVUh643Dau/TXiuFQTX0/imbi8rrY5IU3PDSWsiEt+zRyKRweI/76Q9uX56W3AAAAAASUVORK5CYII=" style="height: 25px; width: 25px; margin: auto;"/>
 						</button>
 					</div>
 				</div>
@@ -102,7 +102,19 @@
 			<div class="card">
 				<a href="http://localhost:5500/Tela%20inicial/"> voltar </a>
 				<div class="card-top">
-					<img id="mercadoPerfil-pic" src="img/user.png" alt="Avatar" class="avatar">
+					<div class="image-upload-wrapper">
+						<input type="file" name="image" id="imageMercado" accept="image/*" />
+						<div id="previewMercado">
+							<div id="avatarMercado"></div>
+							<button
+							id="upload-buttonMercado"
+							aria-labelledby="image"
+							aria-describedby="image"
+							>
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACTklEQVRoge2ZPUwUQRTHfwfmQkGsFIiJdibaS2hNrGhMsLKyo7LQypqO087CmNhR0mBoKaRGjZ98xBYDxmgjmkgUWYt5G94tw+zO7pDd28wvudx8vJl5/3vzZvd2IRKJuOgASd1OhGCobgdCcUaVO7V5UY0EWhqRlEHJmb4d1OqIpDQ1Z6w7pjURiUKaRhQSkC7wENgFdoCetHmT0H8SZOunTU+tmX56DvsT/a1byC7HhXxx2Fv9DbG1LgJvgTfAuRLjbT/aYRlHqkTkCrCtxrwERj3Xt22t+TL+lhVyDfgmtq+Az1JewS9ZuxgxOxRL9qBCrgM/xG4VOAtcBr5K23NguJgOb4IJuQn8FptlYET1TQI/pe9pZZftBBFyB/gr/QvYbzpvAPtiM1fJZTuVhdzDnCYJ8Bj33fEMcCC290u7bKe0kA7wSNoOgQcFF7wrY/4Btx12E8Br4J2U8yglZBh4JvUDYLbAQpo5GfsHmLb0jwPras1PwIWcOb2FjABLUt4HbnmKSHkic/wCplT7BLAlfZuqvIU7Mt5CXsj3HiaByzIELMpc34GrGREbUtdtLjHeQhLMBW+ygoiULuZCmWDuBFKH1zHbK6WIGG8h25hfLxSjwJqa/yMwZrHLE+Mt5FJ130908ANwvqBtVkzQWxRf9OmUl8wpY2qMPs1qFfKeo8Qez7HV2CJTq5A1zH+WIpHIkhVTq5Cq6G020EKgPzIDLQQcOaLfWHVUh643Dau/TXiuFQTX0/imbi8rrY5IU3PDSWsiEt+zRyKRweI/76Q9uX56W3AAAAAASUVORK5CYII=" style="height: 25px; width: 25px; margin: auto;"/>
+							</button>
+						</div>
+					</div>
 					<h2 class="title">Dados Pessoais</h2> 
 				</div>
 			
@@ -155,11 +167,6 @@
 						<input id="alt-telefonemercado" type="tel" placeholder="Insira Telefone, Ex:00123456789" required>
 					</label> 
 
-					<label class="label-input" for="">
-						<i class="fas fa-image icon-modify"></i>
-						<input id="alt-imagemmercado" type="text" placeholder="Insira a Sua Logo (Ex: logoMercado.jpg / logoMercado.png) " required>
-					</label> 
-				
 					<input class="btn btn-second" type="submit" value="Atualizar" onclick="updateMercado()">
 	
 					<input class="bot btn-prime" type="button" value="Desativar Perfil" onclick="deleteMercado()">
@@ -173,5 +180,6 @@
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>	
     <script src="js/imageUpload.js" defer></script>
+	<script src="js/imageMercadoUpload.js" defer></script>
 </body>
 </html>

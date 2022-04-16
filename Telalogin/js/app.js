@@ -69,7 +69,7 @@ function altSubmit () {
     var bairro = $("#alt-bairro").val()
     var cep = $("#alt-cep").val()
     var telefone = $("#alt-telefone").val()
-    var imagem = $("alt-imagemuser").val()
+    
     
 
 
@@ -81,7 +81,6 @@ function altSubmit () {
         bairro: bairro,
         cep: cep,
         telefone: telefone,
-        imagem: imagem,
         id: JSON.parse(localStorage.getItem('user')).id
     }
     alterarPerfilService(requestBody)
@@ -156,7 +155,7 @@ function cadastroMercadoSubmit () {
     var neighborhood = $("#cadastromercado-bairro").val()
     var cep = $("#cadastromercado-cep").val()
     var telefone = $("#cadastromercado-telefone").val()
-    var image_link = $("#cadastromercado-imagem").val()
+    var image_link = "https://i.imgur.com/5FmOYw7.png"
 
     var requestBody = {
         name: name,
@@ -180,7 +179,7 @@ function updateMercado () {
     var bairro = $("#alt-bairromercado").val()
     var cep = $("#alt-cepmercado").val()
     var telefone = $("#alt-telefonemercado").val()
-    var image_link = $("#alt-imagemmercado").val()
+   
 
 
     var requestBody = {
@@ -190,7 +189,7 @@ function updateMercado () {
         bairro: bairro,
         cep: cep,
         telefone: telefone,
-        imagem: image_link,
+       
         id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
     }
     UpdateMercadoService(requestBody)

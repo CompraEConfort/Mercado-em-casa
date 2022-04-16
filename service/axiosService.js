@@ -119,14 +119,21 @@ function profileService() {
         })
 }
 
+let userimagem = JSON.parse(localStorage.getItem('user'))
+
 function userUploadImage (formData) {
     axios.post("http://localhost:3000/usuarios/uploadImage", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
     }).then(res => {
-        alert('Imagem atualizada com sucesso')
 
+        alert('Imagem atualizada com sucesso')
+        userimagem.imagem = res.data.imagemAtualizada
+        
+        
+
+        
     }).catch(err => {
         console.log(err);
         alert('Erro ao atualizar imagem')
@@ -210,6 +217,25 @@ function deleteMercadoService(requestBody) {
       alert('Erro ao Desativar Perfil')
   })
   }
+
+let mercadoimagem = JSON.parse(localStorage.getItem('userMercado'))
+
+function MercadoUploadImage (formDataMercado) {
+    axios.post("http://localhost:3000/supermercados/uploadMercadoImage", formDataMercado, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+    }).then(res => {
+      
+        alert('Imagem atualizada com sucesso')
+        mercadoimagem.image_link = res.data.imageMercadoAtualizada
+        
+    }).catch(err => {
+        console.log(err);
+        alert('Erro ao atualizar imagem')
+    })
+}
+
 //  produtos  //
 
 async function productsByCategoryService(requestBody) {
