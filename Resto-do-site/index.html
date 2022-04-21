@@ -30,14 +30,28 @@
 	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
 	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/clicky-menus.css" />
 
+      <!-- CSS Checkout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/Checkout/imports.min.css">
+    <link rel="stylesheet" href="css/Checkout/simpleStore.min.css">
+
+     <!-- FONT Checkout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+      <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
 
  <body onload="esconderlogin()"> 
 
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <!-- Header Section Begin -->
     <header class="header" style="width: 100%;">
@@ -69,7 +83,12 @@
                     <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
                     ≡ </a>
                     <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; padding: 1% 0px 0px 0px; margin: 15px 0px 0px -115px" href="../Telalogin/login.html">Cadastre-se</a>
-       
+            </li>
+               
+            <li style="margin: 0.9rem 0% 0% 80%;position: absolute;">
+             <a class="button button-primary u-pull-right simpleStore_viewCart">
+                <i style="" class="fa fa-shopping-cart"></i><span class="simpleCart_total"></span>
+             </a>
             </li>
 		</ul>
     
@@ -104,133 +123,108 @@
     </header>
     <!-- Header Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2 id="Market-title">FreshMarket</h2>
-                        <div class="breadcrumb__option">
-                            <a id="Market-Name" href="./index.html">Busca</a>
-                            <span>Mercado</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container simpleStore">
+        <div class="row">
+            
         </div>
-    </section>
-    <!-- Breadcrumb Section End -->
+        <div class="simpleStore_container"></div>
+        <div class="simpleStore_cart_container"></div>
+    </div>
 
-    <!-- Product Section Begin -->
-    <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-7">
-                    <div class="filter__item">
-                        <div class="row">
-                            <!-- <div class="col-lg-4 col-md-5">
-                                <div class="filter__sort">
-                                    <span>Mostrar por: </span>
-                                    <select>
-                                        <option value="0">Padrão</option>
-                                        <option value="0">Ordem Alfabética</option>
-                                    </select>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-lg-4 col-md-4">
-                                <div class="filter__found">
-                                    <h6><span>2</span> Produtos Encontrados</h6>
-                                </div>
-                            </div> -->
-                            
-                        </div>
+    <!-- Templates
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Products View -->
+    <script id="products-template" type="x-template">
+        <div class="column">
+            <div class="simpleCart_shelfItem">
+                <img src="" class="item_thumb"/>
+                <div class="row">
+                    <h5 class="item_name"></h5>
+                    <div class="simpleStore_getDetail_container">
+                        <span class="item_price"></span>
                     </div>
-                    <div class="row" id="produtos">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/QgE2Yb2.png">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a>Cenoura</a></h6>
-                                    <h5>R$2.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/0PRsSaX.jpg">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a >Banana</a></h6>
-                                    <h5>R$4.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/9GMsEiP.png">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a>Pizza</a></h6>
-                                    <h5>R$10.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/jAKBD1Z.png">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a>Macarrão</a></h6>
-                                    <h5>R$4.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/YAnUjyG.png">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a>Cookie</a></h6>
-                                    <h5>R$1.00</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/y2bhgTk.png">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    <h6><a >Torta de morango</a></h6>
-                                    <h5>R$2.00</h5>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="simpleStore_getDetail_container">
+                        <a class="button u-pull-right simpleStore_getDetail">Details</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Product Section End -->
+    </script>
+
+    <!-- Product Detail View -->
+    <script id="product-detail-template" type="x-template">
+        <div class="simpleCart_shelfItem simpleStore_detailView">
+            <a href="#" class="close view_close">&times;</a>
+
+            <div class="row">
+                <div class="four columns">
+                    <img src="" class="item_thumb"/>
+                </div>
+                <div class="eight columns">
+                    <h5 class="item_name"></h5>
+
+                    <p class="item_description"></p>
+                    <span class="item_price"></span>
+
+                    <div class="qty">
+                        <label>QTY</label>
+                        <input type="number" value="1" min="1" step="1" class="item_Quantity">
+                    </div>
+                    <div class="simpleStore_options"></div>
+                    <a class="item_add button u-pull-right" href="javascript:;">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Cart View -->
+    <script id="cart-template" type="x-template">
+        <div class="simpleStore_cart">
+            <h2>Cart</h2>
+            <a href="#" class="close">&times;</a>
+
+            <div class="row">
+                <div class="eight columns">
+                    <div class="simpleCart_items"></div>
+                    <a href="javascript:;" class="simpleCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="four columns">
+                    <div class="cart_info">
+                        <div class="cart_info_item cart_itemcount">Items:
+                            <div class="simpleCart_quantity"></div>
+                        </div>
+                        <div class="cart_info_item cart_taxrate">Tax Rate:
+                            <div class="simpleCart_taxRate"></div>
+                        </div>
+                        <div class="cart_info_item cart_tax">Tax:
+                            <div class="simpleCart_tax"></div>
+                        </div>
+                        <div class="cart_info_item cart_shipping">Shipping:
+                            <div class="simpleCart_shipping"></div>
+                        </div>
+                        <div class="cart_info_item cart_total"><b>Total:
+                            <div class="simpleCart_grandTotal"></div>
+                        </b></div>
+                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!-- Error View -->
+    <script id="error-template" type="x-template">
+        <div class="error">
+            <b>Sorry, something went wrong :(</b>
+			<p class="error_text"></p>
+			<a href="#" class="close alert_close">&times;</a>
+        </div>
+    </script>
+
+ <!-- Fim do teste do novo carrinho-->
 
     <!-- Footer Section Begin -->
     <div class="footer-top-area">
@@ -275,6 +269,9 @@
         </div>
     <!-- Footer Section End -->
 
+ <!-- Teste do novo carrinho -->
+
+
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -301,6 +298,14 @@
      <script src="js/HeaderMenu/util.js"></script>
      <script src="js/HeaderMenu/mainHeader.js"></script>
      <script src="js/HeaderMenu/MenuPerfil.js"></script>
+
+     <!-- Scripts Checkout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+     <script src="js/Checkout/simpleCart.min.js"></script>
+     <script src="js/Checkout/simpleStore.min.js"></script>
+     <script src="plugins/google-sheets.js"></script>
+     <script src="js/Checkout/config.js"></script>
 
 
 </body>
