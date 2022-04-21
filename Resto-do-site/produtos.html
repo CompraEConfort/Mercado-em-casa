@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="css/Tela de Produtos/css/imageUploadProdutos.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/BootStrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css"     type="text/css">
     <link rel="stylesheet" href="css/style copy 4.css"     type="text/css">
     <link rel="stylesheet" href="css/style copy.css"       type="text/css">
+    
 
      <!-- Css HeaderMenu -->
      <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
@@ -84,7 +86,7 @@
                           <div class="opcoes">
 
                                   <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
-                              <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Configurações<br></a>
+                              <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Dados do Usuário<br></a>
                                   <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
                               <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
                                   <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
@@ -172,7 +174,7 @@
                         <h4 class="modal-title">Informações do Produto</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <div class="modal-body">					
+                    <div class="modal-body">		
                         <div class="form-group">
                             <label>Produto</label>
                             <input type="text" id="add-produto" class="form-control" required>
@@ -181,18 +183,15 @@
                             <label>Preço</label>
                             <input type="valor" id="add-preco" class="form-control" required>
                         </div>
-                        <div class="form-group">
-                            <label>Imagem</label>
-                            <input type="text" class="form-control" id="add-image" required>
-                        </div>
+                        
                         <div class="form-group">
                             <label>Categoria</label>
                             <!-- <input type="text" id="add-categoria" class="form-control" required> -->
                             <select name="category" id="add-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
                             <option value="">Selecione a Categoria </option>  
-                            <option value="hortifruti">hortifruti</option>
-                            <option value="massas">massas</option>
-                            <option value="docesebiscoitos">doces e biscoitos</option>
+                            <option value="Hortifruti">Hortifruti</option>
+                            <option value="Massas">Massas</option>
+                            <option value="Doces e Biscoitos">Doces e Biscoitos</option>
                             </select>
                         </div>					
                     </div>
@@ -213,7 +212,25 @@
                         <h4 class="modal-title">Editar Produto</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <div class="modal-body">					
+                    
+                    <div class="modal-body">			
+                        <div class="form-group">
+                            <label>Imagem</label>
+                            <div class="image-upload-wrapper">
+                                <input type="file" name="image" id="imageProduto" accept="image/*" />
+                                <div id="previewProduto">
+                                    <div id="avatarProduto"></div>
+                                    <button
+                                    type="button"
+                                    id="upload-buttonProduto"
+                                    aria-labelledby="image"
+                                    aria-describedby="image"
+                                    >
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACTklEQVRoge2ZPUwUQRTHfwfmQkGsFIiJdibaS2hNrGhMsLKyo7LQypqO087CmNhR0mBoKaRGjZ98xBYDxmgjmkgUWYt5G94tw+zO7pDd28wvudx8vJl5/3vzZvd2IRKJuOgASd1OhGCobgdCcUaVO7V5UY0EWhqRlEHJmb4d1OqIpDQ1Z6w7pjURiUKaRhQSkC7wENgFdoCetHmT0H8SZOunTU+tmX56DvsT/a1byC7HhXxx2Fv9DbG1LgJvgTfAuRLjbT/aYRlHqkTkCrCtxrwERj3Xt22t+TL+lhVyDfgmtq+Az1JewS9ZuxgxOxRL9qBCrgM/xG4VOAtcBr5K23NguJgOb4IJuQn8FptlYET1TQI/pe9pZZftBBFyB/gr/QvYbzpvAPtiM1fJZTuVhdzDnCYJ8Bj33fEMcCC290u7bKe0kA7wSNoOgQcFF7wrY/4Btx12E8Br4J2U8yglZBh4JvUDYLbAQpo5GfsHmLb0jwPras1PwIWcOb2FjABLUt4HbnmKSHkic/wCplT7BLAlfZuqvIU7Mt5CXsj3HiaByzIELMpc34GrGREbUtdtLjHeQhLMBW+ygoiULuZCmWDuBFKH1zHbK6WIGG8h25hfLxSjwJqa/yMwZrHLE+Mt5FJ130908ANwvqBtVkzQWxRf9OmUl8wpY2qMPs1qFfKeo8Qez7HV2CJTq5A1zH+WIpHIkhVTq5Cq6G020EKgPzIDLQQcOaLfWHVUh643Dau/TXiuFQTX0/imbi8rrY5IU3PDSWsiEt+zRyKRweI/76Q9uX56W3AAAAAASUVORK5CYII=" style="height: 25px; width: 25px; margin: auto;"/>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>		
                         <div class="form-group">
                             <label>Produto</label>
                             <input id="alt-produto" type="text" class="form-control" required>
@@ -222,24 +239,21 @@
                             <label>Preço</label>
                             <input id="alt-preco" type="valor" class="form-control" required>
                         </div>
-                        <div class="form-group">
-                            <label>Imagem</label>
-                            <input id="alt-imagem" type="url" class="form-control">
-                        </div>
-                        <div class="form-group">
+
+                        <div class="form-group" >
                             <label>Categoria</label>
                             <!-- <input id="alt-categoria" type="text" class="form-control" required> -->
                             <select name="category" id="alt-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
                                 <option value="">Selecione a Categoria </option>  
-                                <option value="hortifruti">hortifruti</option>
-                                <option value="massas">massas</option>
-                                <option value="docesebiscoitos">doces e biscoitos</option>
+                                <option value="Hortifruti">Hortifruti</option>
+                                <option value="Massas">Massas</option>
+                                <option value="Doces e Biscoitos">Doces e Biscoitos</option>
                                 </select>
                         </div>					
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save" onclick="updateproduto()" >
+                        <input type="submit" id="update-prod-button" class="btn btn-info" value="Save" >
                     </div>
                 </form>
             </div>
@@ -307,6 +321,7 @@
     <script src="../service/service.js"></script>
     <script src="js/Tela de produtos/js/main.js"></script>
     <script src="js/Tela de produtos/js/AparecerNaTela.js"></script>
+    <script src="js/Tela de produtos/js/imageProdutoUpload.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/Bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
@@ -321,10 +336,10 @@
        <!-- HeaderMenu -->
        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
        <script src="../service/axiosService.js"></script>
+       <script src="../service/updateInfoService.js"></script>
        <script src="js/HeaderMenu/jquery.min.js"></script>
        <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
        <script src="js/HeaderMenu/skel.min.js"></script>
-  
        <script src="/Resto-do-site/js/HeaderMenu/clicky-menus.js"></script>
        <script src="js/HeaderMenu/Buscar.js"></script>
        <script src="js/HeaderMenu/util.js"></script>

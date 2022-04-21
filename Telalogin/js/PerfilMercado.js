@@ -16,9 +16,9 @@ console.log(userMercado);
 nome.value = userMercado?.name
 email.value = userMercado?.email
 cnpj.value = userMercado?.cnpj
-endereco.value = userMercado?.address
-cidade.value = userMercado?.city
-bairro.value = userMercado?.neighborhood
+endereco.value = userMercado?.endereco
+cidade.value = userMercado?.cidade
+bairro.value = userMercado?.bairro
 cep.value = userMercado?.cep
 telefone.value = userMercado?.telefone
 // imagem.value= userMercado?.image_link 

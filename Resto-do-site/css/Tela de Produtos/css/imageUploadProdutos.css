@@ -1,0 +1,41 @@
+.image-upload-wrapper {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#avatarProduto {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 150px;
+  border: 3px solid rgb(236, 202, 202);
+  border-radius: 50%;
+  transition: background ease-out 200ms;
+}
+
+#previewProduto {
+  position: relative;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button#upload-buttonProduto {
+  padding: 10px;
+  border-radius: 70%;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  transition: background-color ease-out 120ms;
+  position: absolute;
+  right: -5%;
+  bottom: 0%;
+}
+
+button#upload-buttonProduto:hover {
+  background-color: rgb(236, 202, 202);
+}
