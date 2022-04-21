@@ -112,14 +112,13 @@ function profileService() {
     })
         .then(res => {
             console.log(res)
-            return res.data
+
+            localStorage.setItem('user', JSON.stringify(res.data))
         })
         .catch(err => {
             console.log(err)
         })
 }
-
-let userimagem = JSON.parse(localStorage.getItem('user'))
 
 function userUploadImage (formData) {
     axios.post("http://localhost:3000/usuarios/uploadImage", formData, {
@@ -129,8 +128,11 @@ function userUploadImage (formData) {
     }).then(res => {
 
         alert('Imagem atualizada com sucesso')
-        userimagem.imagem = res.data.imagemAtualizada
-        
+        console.log(res);
+        let image_link = res.data.imagemAtualizada
+        let user = JSON.parse(localStorage.getItem('user'))
+        user.imagem = image_link
+        localStorage.setItem('user', JSON.stringify(user))
         
 
         
@@ -181,7 +183,7 @@ function profileMercadoService() {
     })
         .then(res => {
             console.log(res)
-            return res.data
+            localStorage.setItem('userMercado', JSON.stringify(res.data))
         })
         .catch(err => {
             console.log(err)
@@ -218,8 +220,6 @@ function deleteMercadoService(requestBody) {
   })
   }
 
-let mercadoimagem = JSON.parse(localStorage.getItem('userMercado'))
-
 function MercadoUploadImage (formDataMercado) {
     axios.post("http://localhost:3000/supermercados/uploadMercadoImage", formDataMercado, {
         headers: {
@@ -228,7 +228,11 @@ function MercadoUploadImage (formDataMercado) {
     }).then(res => {
       
         alert('Imagem atualizada com sucesso')
-        mercadoimagem.image_link = res.data.imageMercadoAtualizada
+        console.log(res.data);
+        let image_link = res.data.imagemAtualizada
+        let userMercado = JSON.parse(localStorage.getItem('userMercado'))
+        userMercado.imagem = image_link
+        localStorage.setItem('userMercado', JSON.stringify(userMercado))
         
     }).catch(err => {
         console.log(err);
@@ -319,3 +323,24 @@ function deleteProdutosService(requestBody){
       alert('Erro ao Atualizar Produtos')
   })
   }
+
+
+
+
+  function produtoUploadImage (formDataProduto) {
+    axios.post("http://localhost:3000/produtos/uploadProdutoImage", formDataProduto, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+    }).then(res => {
+      
+        alert('Imagem atualizada com sucesso')
+        let prodTemp = JSON.parse(localStorage.getItem('prodTemp'))
+        prodTemp.imagem_produto = res.data.imagemAtualizada
+        localStorage.setItem('prodTemp', JSON.stringify(prodTemp))
+        
+    }).catch(err => {
+        console.log(err);
+        alert('Erro ao atualizar imagem')
+    })
+}

@@ -35,7 +35,7 @@ var buttons = `<a href="#editEmployeeModal" class="btn btn-info" data-toggle="mo
   var newRow = tableRef.insertRow(-1);
   newRow.insertCell(0).innerHTML = checkbox;
   newRow.insertCell(1).innerHTML = produto.nome;
-  newRow.insertCell(2).innerHTML = produto.preco;
+  newRow.insertCell(2).innerHTML = "R$ " + produto.preco;
   newRow.insertCell(3).innerHTML = produto.imagem_produto;
   newRow.insertCell(4).innerHTML = produto.categoria;
   var actions = newRow.insertCell(5);
@@ -54,12 +54,12 @@ function preencherForm (produto) {
 
   var nomeproduto = document.querySelector("#alt-produto")
   var precoproduto = document.querySelector("#alt-preco")
-  var imagemproduto = document.querySelector("#alt-imagem")
+  var imagemproduto = document.querySelector("#avatarProduto")
   var categoriaproduto = document.querySelector("#alt-categoria")
 
   nomeproduto.value = produto.nome
   precoproduto.value = produto.preco
-  imagemproduto.value = produto.imagem_produto
+  imagemproduto.setAttribute('style', `background-image: url(${produto.imagem_produto})`)
   categoriaproduto.value = produto.categoria
 
 }

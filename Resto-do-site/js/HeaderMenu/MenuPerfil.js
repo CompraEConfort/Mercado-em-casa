@@ -45,9 +45,9 @@ function esconderlogin(){
 
 
 function Mercadofoto () {
-    MercadoPic.setAttribute('src', userMercado.image_link)
+    MercadoPic.setAttribute('src', userMercado.imagem)
     Mercadoname.innerHTML += userMercado.name
-    MercadoPicMenu.setAttribute('src', userMercado.image_link)
+    MercadoPicMenu.setAttribute('src', userMercado.imagem)
 }
 
 

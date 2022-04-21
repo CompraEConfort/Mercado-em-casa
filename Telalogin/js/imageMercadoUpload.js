@@ -3,7 +3,7 @@ const FILE_INPUTMERCADO = document.querySelector("input[type=file]");
 const AVATARMERCADO = document.getElementById("avatarMercado");
 
 if (userMercado != null){
-AVATARMERCADO.style.background = `url(${userMercado.image_link}) center center/cover`;
+AVATARMERCADO.style.background = `url(${userMercado.imagem}) center center/cover`;
 
 UPLOAD_BUTTONMERCADO.addEventListener("click", (event) => {
   event.preventDefault()
