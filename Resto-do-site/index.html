@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/BootStrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
@@ -22,53 +22,86 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/style copy.css" type="text/css">
+
+    <!-- Css HeaderMenu -->
+    <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
+    <link rel="stylesheet" href="css/HeaderMenu.css/style.css">
+	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
+	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/clicky-menus.css" />
+
 </head>
 
-<body>
-    <!-- Page Preloder -->
+ <body onload="esconderlogin()"> 
+
+    <!-- Page Preloder
     <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
+
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="http://localhost//Mercado-em-casa/Tela%20inicial"><img src="img/Logom.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu">
-                        <ul>
-                            <li><a href="http://localhost/Mercado-em-casa/tela%20deselecao/Selecionarmercado.html">Selecionar Mercado</a></li>
-                            <li><a href="http://localhost/Mercado-em-casa/tela%20deselecao/Corredores.html">Corredores</a></li>
-                            <li class="active"><a href="./index.html">Produtos</a></li>
-                                                  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__cart">
-                        <ul>
-                            <li><a href="http://localhost/Mercado-em-casa/Resto-do-site/shoping-cart.html"><i class="fa fa-shopping-bag"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
+    <header class="header" style="width: 100%;">
+      	<!-- for use with <use> -->
+	<svg xmlns="http://www.w3.org/2000/svg"  hidden>
+		<symbol id="arrow" viewbox="0 0 16 16" >
+			<polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
+		</symbol>
+	</svg>
+
+	<!-- In the real world, all hrefs would have go to real, unique URLs, not a "#" -->
+	<nav id="site-navigation" class="site-navigation" aria-label="Clickable Menu Demonstration">
+       
+		<ul class="main-menu clicky-menu no-js">
+            <a href="../Tela inicial/index.html" style="color:white; font-weight: 600;margin: 0px 85px 0px 65px; text-decoration: none; text-transform: uppercase; background: #007b5b;">
+                <img src="https://i.imgur.com/6pTWKvq.jpg"width="50" height="100" style=" border-radius: 20%; padding: 4px 0px 4px 0px;"> Compra&Confort
+            </a>
+			<li>
+				<a href="../Tela inicial/index.html">Buscar Mercados</a>
+			</li>
+            <li>
+				<a href="../tela deselecao/Selecionarmercado.html">Selecionar Mercados</a>
+			</li>
+            <li>
+				<a href="../tela deselecao/Corredores.html">Corredores</a>
+			</li>
+            <li style="margin-left: 93%;position: absolute;">
+                <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%;">
+                    <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+                    ≡ </a>
+                    <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; padding: 1% 0px 0px 0px; margin: 15px 0px 0px -115px" href="../Telalogin/login.html">Cadastre-se</a>
+       
+            </li>
+		</ul>
+    
+	</nav> <!-- End mainmenu area -->
+
+    <!-- Menu -->
+         <div id="menu">
+            <ul class="links">
+                    <form Class="form">
+                        <div id="infuser" class="card" style=" background: rgb(0 0 0 / 0%); display: block; border: rgb(0 0 0 / 0%);">
+    
+                            <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                            
+                                <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                                <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                           
+                                <div class="opcoes">
+    
+                                        <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                                    <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Dados do Usuário<br></a>
+                                    <img id="imgAddProd" src="https://img.icons8.com/ios/50/ffffff/add--v1.png" style=" width: 30px; height: 30px;"/>
+									<a id="txtAddProd" href="../Resto-do-site/produtos.html" style="color: #FFFFFF; text-decoration: none;">Adicionar Produtos<br></a>
+                                        <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                                    <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                        <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                                    <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+    
+                                </div>
+                        </div>
+                    </form>
+                </div> 
     </header>
     <!-- Header Section End -->
 
@@ -78,9 +111,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>FreshMarket</h2>
+                        <h2 id="Market-title">FreshMarket</h2>
                         <div class="breadcrumb__option">
-                            <a href="./index.html">Busca</a>
+                            <a id="Market-Name" href="./index.html">Busca</a>
                             <span>Mercado</span>
                         </div>
                     </div>
@@ -97,7 +130,7 @@
                 <div class="col-lg-9 col-md-7">
                     <div class="filter__item">
                         <div class="row">
-                            <div class="col-lg-4 col-md-5">
+                            <!-- <div class="col-lg-4 col-md-5">
                                 <div class="filter__sort">
                                     <span>Mostrar por: </span>
                                     <select>
@@ -105,91 +138,85 @@
                                         <option value="0">Ordem Alfabética</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
+                            </div> -->
+                            <!-- <div class="col-lg-4 col-md-4">
                                 <div class="filter__found">
                                     <h6><span>2</span> Produtos Encontrados</h6>
                                 </div>
-                            </div>
+                            </div> -->
                             
                         </div>
                     </div>
                     <div class="row" id="produtos">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/QgE2Yb2.png">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a>Cenoura</a></h6>
-                                    <h5>R$2.00</h5>
+                                   
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/0PRsSaX.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a >Banana</a></h6>
-                                    <h5>R$4.00</h5>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/9GMsEiP.png">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a>Pizza</a></h6>
-                                    <h5>R$10.00</h5>
+                                   
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/jAKBD1Z.png">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a>Macarrão</a></h6>
-                                    <h5>R$4.00</h5>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/YAnUjyG.png">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a>Cookie</a></h6>
-                                    <h5>R$1.00</h5>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="https://i.imgur.com/y2bhgTk.png">
+                                <div class="product__item__pic set-bg" data-setbg="">
                                     <ul class="product__item__pic__hover">
                                         <li><a><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a >Torta de morango</a></h6>
-                                    <h5>R$2.00</h5>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -252,10 +279,24 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+  
     <script src="../service/service.js"></script>
     <script src="js/produtos.js"></script>
     <script src="../Telalogin/js/app.js"></script>
+
+     <!-- HeaderMenu -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="../service/axiosService.js"></script>
+     <script src="js/HeaderMenu/jquery.min.js"></script>
+     <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
+     <script src="js/HeaderMenu/skel.min.js"></script>
+
+     <script src="/Resto-do-site/js/HeaderMenu/clicky-menus.js"></script>
+     <script src="js/HeaderMenu/Buscar.js"></script>
+     <script src="js/HeaderMenu/util.js"></script>
+     <script src="js/HeaderMenu/mainHeader.js"></script>
+     <script src="js/HeaderMenu/MenuPerfil.js"></script>
+
 
 </body>
 

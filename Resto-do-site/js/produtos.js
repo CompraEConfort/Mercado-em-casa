@@ -5,6 +5,8 @@
     //var produtos = getProductsByCategoryAndSupermarketId();
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
+    document.getElementById('Market-title').innerHTML = nomeCorredor;
+    // document.getElementById('Market-Name').innerHTML = nomeCorredor;
 
     produtos.produtos.forEach(element => {
         console.log(element)
@@ -19,7 +21,7 @@
         produtosDinamico +=         `</div>`
         produtosDinamico +=         `<div class="product__item__text">`
         produtosDinamico +=            `<h6><a href="#">${element.name}</a></h6>`
-        produtosDinamico +=            `<h5>R$ ${element.value}.00</h5>`
+        produtosDinamico +=            `<h5>R$ ${element.value}</h5>`
         produtosDinamico +=         `</div>`
         produtosDinamico +=      `</div>`
         produtosDinamico +=  `</div>`
@@ -28,3 +30,4 @@
     console.log("Após a chamada da function")
     divprodutos.innerHTML = produtosDinamico;
 })()
+

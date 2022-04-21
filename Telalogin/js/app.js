@@ -4,18 +4,22 @@ var btnSignup = document.querySelector("#signup");
 
 var body = document.querySelector("body");
 
+btnSignin?.addEventListener("click", function () {
 
-btnSignin.addEventListener("click", function () {
-   body.className = "sign-in-js"; 
+  body.className = "sign-in-js"; 
 });
 
-btnSignup.addEventListener("click", function () {
+btnSignup?.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
 
+btnSignup?.addEventListener("click", function () {
+    body.className = "sign-up-js";
+})
 
+/*      Usuário       */
 
-function cadastroSubmit () {
+function getSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
     var password = $("#cadastro-password").val()
@@ -25,6 +29,7 @@ function cadastroSubmit () {
     var bairro = $("#cadastro-bairro").val()
     var cep = $("#cadastro-cep").val()
     var telefone = $("#cadastro-telefone").val()
+    var imagem_link = $("#file-preview-js").val()
 
     var requestBody = {
         name: name,
@@ -35,10 +40,73 @@ function cadastroSubmit () {
         cidade: cidade,
         bairro: bairro,
         cep: cep,
-        telefone: telefone
+        telefone: telefone,
+        imagem: imagem_link,
+    }
+    getService(requestBody)
+}
+
+function cadastroSubmit () {
+    var name = $("#cadastro-name").val()
+    var email = $("#cadastro-email").val()
+    var password = $("#cadastro-password").val()
+    var imagem_link = "http://localhost:3000/images/users/user.png"
+
+    var requestBody = {
+        name: name,
+        email: email,
+        senha: password,
+        imagem: imagem_link,
     }
     cadastroService(requestBody)
 }
+
+function altSubmit () {
+    var name = $("#alt-name").val()
+    var endereco = $("#alt-endereco").val()
+    var complemento = $("#alt-complemento").val()
+    var cidade = $("#alt-cidade").val()
+    var bairro = $("#alt-bairro").val()
+    var cep = $("#alt-cep").val()
+    var telefone = $("#alt-telefone").val()
+    
+    
+
+
+    var requestBody = {
+        name: name,
+        endereco: endereco,
+        complemento: complemento,
+        cidade: cidade,
+        bairro: bairro,
+        cep: cep,
+        telefone: telefone,
+        id: JSON.parse(localStorage.getItem('user')).id
+    }
+    alterarPerfilService(requestBody)
+
+}
+
+function deleteSubmit () {
+    if (confirm('Deseja Desativar seu Perfil?')) {
+        var requestBody = {
+            id: JSON.parse(localStorage.getItem('user')).id
+        }
+        deletePerfilService (requestBody)
+    }
+    
+}
+
+// pega a referencia dos form do login
+var login_form = document.querySelector('#login-form')
+// adicionda um evento onsubmit, e passa a função com o parametro event
+// com esse parametro é possivel cancelar a ação default do submit que seria de recarregar
+login_form?.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    // chama o loginsubmit
+    loginSubmit()
+})
 
 function loginSubmit () {
     var email = $("#login-email").val()
@@ -48,7 +116,33 @@ function loginSubmit () {
         email: email,
         senha: password,
     }
+    // console.log('aqui');
     loginService(requestBody)
+}
+
+/*      Mercado       */
+
+// pega a referencia dos form do login
+var login_formMercado = document.querySelector('#login-formMercado')
+// adicionda um evento onsubmit, e passa a função com o parametro event
+// com esse parametro é possivel cancelar a ação default do submit que seria de recarregar
+login_formMercado?.addEventListener('submit', function (event) {
+    event.preventDefault()
+
+    // chama o loginsubmit
+    loginMercado()
+})
+
+function loginMercado () {
+    var email = $("#loginMercado-email").val()
+    var password = $("#loginMercado-password").val()
+
+    var requestBody = {
+        email: email,
+        senha: password,
+    }
+    console.log(requestBody);
+    loginMercadoService(requestBody)
 }
 
 function cadastroMercadoSubmit () {
@@ -61,7 +155,7 @@ function cadastroMercadoSubmit () {
     var neighborhood = $("#cadastromercado-bairro").val()
     var cep = $("#cadastromercado-cep").val()
     var telefone = $("#cadastromercado-telefone").val()
-    var imagem_link = $("#cadastromercado-imagem").val()
+    var image_link = "http://localhost:3000/images/mercados/market.png"
 
     var requestBody = {
         name: name,
@@ -73,10 +167,44 @@ function cadastroMercadoSubmit () {
         bairro: neighborhood,
         cep: cep,
         telefone: telefone,
-        imagem: imagem_link,
+        imagem: image_link,
     }
     cadastroMercadoService(requestBody)
 }
+
+function updateMercado () {
+    var name = $("#alt-namemercado").val()
+    var endereco = $("#alt-enderecomercado").val()
+    var cidade = $("#alt-cidademercado").val()
+    var bairro = $("#alt-bairromercado").val()
+    var cep = $("#alt-cepmercado").val()
+    var telefone = $("#alt-telefonemercado").val()
+   
+
+
+    var requestBody = {
+        name: name,
+        endereco: endereco,
+        cidade: cidade,
+        bairro: bairro,
+        cep: cep,
+        telefone: telefone,
+        id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
+    }
+    UpdateMercadoService(requestBody)
+
+}
+
+function deleteMercado () {
+    if (confirm('Deseja Desativar Sua Conta?')) {
+        var requestBody = {
+            id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
+    }
+        }
+        deleteMercadoService (requestBody)
+    }
+
+/*      Produtos       */
 
 async function getProductsByCategoryAndSupermarketId() {
     var nomeCorredor = localStorage.getItem("nome-corredor");
@@ -88,3 +216,32 @@ async function getProductsByCategoryAndSupermarketId() {
     }
     return await productsByCategoryService(requestBody)
 }
+
+/* botão de upar imagens */
+
+var btnClose = document.querySelector('.close-preview-js');
+var output = document.getElementById("new");
+var loaderFile = function(event){
+var reader = new FileReader();
+      reader.onload = function() {
+output.style.display = "block";
+btnClose.style.display = "block";
+output.style.backgroundImage = "url("+reader.result+")";
+  }
+reader.readAsDataURL(event.target.files[0]);
+}
+
+var editarAvatar = document.querySelector(".editar-content");
+var buttonFile = document.getElementById("file-preview-js");
+
+editarAvatar?.addEventListener("click", function(){
+buttonFile.click();
+});
+
+btnClose?.addEventListener("click", function(){
+btnClose.style.display = "none";
+output.style.backgroundImage = "url('')";
+document.getElementById("file-preview-js").value = "";
+});
+
+

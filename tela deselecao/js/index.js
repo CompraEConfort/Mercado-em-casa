@@ -5,7 +5,6 @@
     var supermercadosDinamico = '';
 
     supermarkets.supermercados.forEach(element => {
-    // supermarkets.forEach(element   => {
         console.log(element)
 
         supermercadosDinamico += `<div class="col-md-3 col-sm-6">`

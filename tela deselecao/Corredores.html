@@ -19,8 +19,13 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+     <!-- Css HeaderMenu -->
+     <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+     <!-- <link rel="stylesheet" href="css/HeaderMenu.css/main.css"> -->
+     <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,51 +34,75 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-   
-    
-    
-    <div class="site-branding-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="logo">
-                        <h1><a href="http://localhost/Mercado-em-casa/Tela%20inicial/"><img src="https://i.imgur.com/UhpSYKW.png" width="70" height="70"><span>Compra&Confort</span></a></h1>
-                    </div>
-                </div>
-            
-            </div>
-        </div>
-    </div> <!-- End site branding area -->
-    
+  <body onload="esconderlogin()">
+       
     <div class="mainmenu-area">
-        <div class="container">
+        <div class="container" style="width: 100%;">
             <div class="row">
-                <div class="navbar-header">
+                <div class="navbar-header" style="margin-left: 5%;">
+                    <a href="../Tela inicial/index.html" style="color: white;font-weight: 600;margin-right: 85px; text-decoration: none; ">
+                        <img src="img/Logom.jpg"width="50" height="100" style=" border-radius: 20%; padding-top: 6px; vertical-align: -20px; "> Compra&Confort
+                    </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>                
+                </div>       
+                         
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="http://localhost/Mercado-em-casa/Tela%20inicial/">Inicio</a></li>
+                    <ul class="nav navbar-nav" style="margin-right: 15%;">
+                        <li><a href="../Tela inicial/index.html">Buscar Mercados</a></li>
                         <li><a href="Selecionarmercado.html">Selecionar Mercado</a></li>
                         <li class="active"><a href="Corredores.html">Corredores</a></li>
                     </ul>
-                </div>  
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
+                    <ul>
+                        <a id="btnlogado" href="#menu" style="font-size: 35px; margin-left: 94%; position: relative; color: white; text-decoration: none; ">
+                            <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+                            ≡ </a>
+                            <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; margin-left: 88%; padding: 1% 0px 0px 0px;" href="../Telalogin/login.html">Cadastre-se</a>
+               
+                    </ul>
+                    
+                    <!-- Menu -->
+                    <nav id="menu" style="width: 30rem;">
+                        <ul class="links">
+                                <form Class="form">
+                                    <div id="infuser" class="card">
+            
+                                        <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                                        
+                                            <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                                            <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                                       
+                                            <div class="opcoes" style="line-height: 35px;">
+            
+                                                    <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                                                <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Dados do Usuário<br></a>
+                                                <img id="imgAddProd" src="https://img.icons8.com/ios/50/ffffff/add--v1.png" style=" width: 30px; height: 30px;"/>
+                                                <a id="txtAddProd" href="../Resto-do-site/produtos.html" style="color: #FFFFFF; text-decoration: none;">Adicionar Produtos<br></a>
+                                                    <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                                                <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                                    <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                                                <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+            
+                                            </div>
+                                    </div>
+                                </form>
+                            </nav> 
+                     </div>  
+               </div>
+         </div>
+    </div> 
+    <!-- End mainmenu area -->
     
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Esses São os corredores do Mercado Selecionado: </h2>
+                        <h2>Esses são os corredores do mercado selecionado: </h2>
                     </div>
                 </div>
             </div>
@@ -90,7 +119,7 @@
                         <div class="product-upper">
                             <img src="https://i.imgur.com/3b38VlV.png" alt="">
                         </div>
-                        <h2><a href="http://localhost/Mercado-em-casa/Resto-do-site/" onclick="guardarNomeCorredor('Massas')">Massas</a></h2>
+                        <h2><a href="../Resto-do-site/index.html" onclick="guardarNomeCorredor('Massas')">Massas</a></h2>
                         <div class="product-carousel-price">
                             
                         </div>  
@@ -103,7 +132,7 @@
                         <div class="product-upper">
                             <img src="https://i.imgur.com/r9lNYLv.jpg" alt="">
                         </div>
-                        <h2><a href="http://localhost/Mercado-em-casa/Resto-do-site/" onclick="guardarNomeCorredor('Hortifruti')">Hortifruti</a></h2>
+                        <h2><a href="../Resto-do-site/index.html" onclick="guardarNomeCorredor('Hortifruti')">Hortifruti</a></h2>
                         <div class="product-carousel-price">
                             
                         </div>  
@@ -116,7 +145,7 @@
                         <div class="product-upper">
                             <img src="https://i.imgur.com/sevtTQU.png" alt="">
                         </div>
-                        <h2><a href="http://localhost/Mercado-em-casa/Resto-do-site/" onclick="guardarNomeCorredor('Doces e Biscoitos')">Doces e Biscoitos</a></h2>
+                        <h2><a href="../Resto-do-site/index.html" onclick="guardarNomeCorredor('Doces e Biscoitos')">Doces e Biscoitos</a></h2>
                         <div class="product-carousel-price">
                             
                         </div>             
@@ -172,14 +201,27 @@
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="footer-card-icon">
+                   <!-- <div class="footer-card-icon">
                         <i class="fa fa-cc-mastercard"></i>
-                        <i class="fa fa-cc-visa"></i>
+                        <i class="fa fa-cc-visa"></i> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- HeaderMenu -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../service/axiosService.js"></script>
+    <script src="../service/updateInfoService.js"></script>
+    <script src="js/HeaderMenu/jquery.min.js"></script>
+    <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
+    <script src="js/HeaderMenu/skel.min.js"></script>
+ 
+    <script src="js/HeaderMenu/Buscar.js"></script>
+    <script src="js/HeaderMenu/util.js"></script>
+    <script src="js/HeaderMenu/mainHeader.js"></script>
+    <script src="js/HeaderMenu/MenuPerfil.js"></script>
    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -196,7 +238,6 @@
     
     <!-- Main Script -->
     <script src="js/main.js"></script>
-
     <script src="../service/service.js"></script>
     <script src="js/corredores.js"></script>
     

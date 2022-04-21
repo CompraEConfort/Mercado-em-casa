@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ogani Template">
+    <meta name="description" content="Ogani Template, width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,9 +11,13 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"    type="text/css">
+    <link rel="stylesheet" href="css/Tela de Produtos/css/imageUploadProdutos.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/BootStrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css"    type="text/css">
     <link rel="stylesheet" href="css/nice-select.css"      type="text/css">
@@ -22,20 +26,79 @@
     <link rel="stylesheet" href="css/slicknav.min.css"     type="text/css">
     <link rel="stylesheet" href="css/style copy 4.css"     type="text/css">
     <link rel="stylesheet" href="css/style copy.css"       type="text/css">
+    
 
-    <!-- Head Produtos-->
-    <meta charset="utf-8">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <!-- Css HeaderMenu -->
+     <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
+     <link rel="stylesheet" href="css/HeaderMenu.css/style.css">
+     <link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
+     <link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/clicky-menus.css" />
     
 </head>
 
-<body>
+
+<body onload="esconderlogin()">
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
     
+ <!-- Header Section Begin -->
+ <header class="header" style="position: fixed; width: 100%;">
+    <!-- for use with <use> -->
+<svg xmlns="http://www.w3.org/2000/svg"  hidden>
+  <symbol id="arrow" viewbox="0 0 16 16" >
+      <polyline points="4 6, 8 10, 12 6" stroke="#000" stroke-width="2" fill="transparent" stroke-linecap="round" />
+  </symbol>
+</svg>
+
+<!-- In the real world, all hrefs would have go to real, unique URLs, not a "#" -->
+<nav id="site-navigation" class="site-navigation" aria-label="Clickable Menu Demonstration">
+ 
+  <ul class="main-menu clicky-menu no-js">
+      <a href="../Tela inicial/index.html" style="color:white; font-weight: 600;margin: 0px 85px 0px 65px; text-decoration: none; text-transform: uppercase; background: #007b5b;">
+          <img src="https://i.imgur.com/6pTWKvq.jpg"width="50" height="100" style=" border-radius: 20%; padding: 4px 0px 4px 0px;"> Compra&Confort
+      </a>
+      
+      <li style="margin-left: 93%;position: absolute;">
+          <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%;">
+              <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
+              ≡ </a>
+              <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; padding: 1% 0px 0px 0px; margin: 15px 0px 0px -115px" href="../Telalogin/login.html">Cadastre-se</a>
+ 
+      </li>
+  </ul>
+
+</nav> <!-- End mainmenu area -->
+
+<!-- Menu -->
+   <div id="menu">
+      <ul class="links">
+              <form Class="form">
+                  <div id="infuser" class="card" style=" background: rgb(0 0 0 / 0%); display: block; border: rgb(0 0 0 / 0%);">
+
+                      <img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">
+                      
+                          <h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+                          <h2 id="boasvindas" style="font-size: 20px;"></h2> 
+                     
+                          <div class="opcoes">
+
+                                  <img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 30px; height: 30px;"/>
+                              <a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Dados do Usuário<br></a>
+                                  <img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 30px; height: 30px;"/>
+                              <a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+                                  <img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 30px; height: 30px;"/>
+                              <a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+
+                          </div>
+                  </div>
+              </form>
+          </div> 
+</header>
+<!-- Header Section End -->
+
     <!-- Breadcrumb Section Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="">
         <div class="container">
@@ -52,84 +115,171 @@
     <!-- Breadcrumb Section End -->
 
     <!-- Checkout Section Begin -->
-    <section class="checkout spad">
-        <div class="container">
-                <form>
-                    <div class="col-lg-4 col-md-6">
-                            <div class="checkout__order">
-
-                                <nav class="navbar navbar-default">
-                                    <div class="container-fluid">
-                                      <div class="navbar-header">
-                                        <a id="navTitle" class="navbar-brand"></a>
-                                      </div>
-                                    </div>
-                                  </nav>
-                              
-                                <div class="container-fluid1">
-                                  <div class="form-inline">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="desc" placeholder="Produto">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="amount" placeholder="Quantidade">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="value" placeholder="Valor">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="weight" placeholder="Peso">
-                                    </div>
-                                    <div class="form-group">
-                                      <input type="text" class="form-control" id="Barcode" placeholder="Código de Barras">
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="text" class="form-control" id="Expedition Date" placeholder="Data de Expedição">
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="text" class="form-control" id="Expire" placeholder="Data de Validade">
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="text" class="form-control" id="Category" placeholder="Categoria">
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="text" class="form-control" id="image" placeholder="Imagem">                                
-                                  </div>
-                              
-                                    <span id="btnUpdate" style="display: none;">
-                                        <span id="inputIDUpdate"></span>
-                                        <button onclick="updateData();" class="btn btn-default">Salvar</button>
-                                        <button onclick="resetForm();" class="btn btn-default">Cancelar</button>
-                                    </span>
-                                    <span id="btnAdd">
-                                        <button onclick="addData();" class="btn btn-default">Adicionar</button>
-                                        <button onclick="resetForm();" class="btn btn-default">Resetar</button>
-                                        <button onclick="deleteList();" class="btn btn-default">Deletar Lista</button>
-                                    </span>
-                                </div>
-                                </div>
-
-                                  <div class="container-fluid">
-                                      <div id="errors" style="display: none;"></div>
-                              
-                                      <table id="listTable" class="table">
-                                      
-                                      </table>
-                                  </div>
-                              
-                                  <nav class="navbar navbar-default navbar-fixed-bottom">
-                                      <div class="container">
-                                          <h4 class="text-center text-success">Total: <span id="totalValue">R$ 0,00</span></h4>
-                                      </div>
-                                  </nav>
-
-                            </div>
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2>Adição de<b> Produtos</b></h2>
                         </div>
+                        <div class="col-sm-6">
+                            <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar</span></a>
+                            <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Deletar</span></a>						
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover" >
+                    <thead>
+                        <tr>
+                            <th>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="selectAll">
+                                    <label for="selectAll"></label>
+                                </span>
+                            </th>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Imagem</th>
+                            <th>Categoria</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        
+                             <!-- vai ser carregado no script AparecerNaTela                    -->
+                    </tbody>
+                </table>
+                <div class="clearfix">
+                    <!-- <div class="hint-text">Mostrando <b>1</b> de <b>1</b> Produtos Cadastrados</div> -->
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Anterior</a></li>
+                        <!-- <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li> -->
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                        <!-- <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li> -->
+                        <li class="page-item"><a href="#" class="page-link">Próxima</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- ADD Modal HTML -->
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Informações do Produto</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">		
+                        <div class="form-group">
+                            <label>Produto</label>
+                            <input type="text" id="add-produto" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Preço</label>
+                            <input type="valor" id="add-preco" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Categoria</label>
+                            <!-- <input type="text" id="add-categoria" class="form-control" required> -->
+                            <select name="category" id="add-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
+                            <option value="">Selecione a Categoria </option>  
+                            <option value="Hortifruti">Hortifruti</option>
+                            <option value="Massas">Massas</option>
+                            <option value="Doces e Biscoitos">Doces e Biscoitos</option>
+                            </select>
+                        </div>					
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                        <input type="submit" class="btn btn-success" value="Adicionar" onclick="addProduto()">
                     </div>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Editar Produto</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    
+                    <div class="modal-body">			
+                        <div class="form-group">
+                            <label>Imagem</label>
+                            <div class="image-upload-wrapper">
+                                <input type="file" name="image" id="imageProduto" accept="image/*" />
+                                <div id="previewProduto">
+                                    <div id="avatarProduto"></div>
+                                    <button
+                                    type="button"
+                                    id="upload-buttonProduto"
+                                    aria-labelledby="image"
+                                    aria-describedby="image"
+                                    >
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACTklEQVRoge2ZPUwUQRTHfwfmQkGsFIiJdibaS2hNrGhMsLKyo7LQypqO087CmNhR0mBoKaRGjZ98xBYDxmgjmkgUWYt5G94tw+zO7pDd28wvudx8vJl5/3vzZvd2IRKJuOgASd1OhGCobgdCcUaVO7V5UY0EWhqRlEHJmb4d1OqIpDQ1Z6w7pjURiUKaRhQSkC7wENgFdoCetHmT0H8SZOunTU+tmX56DvsT/a1byC7HhXxx2Fv9DbG1LgJvgTfAuRLjbT/aYRlHqkTkCrCtxrwERj3Xt22t+TL+lhVyDfgmtq+Az1JewS9ZuxgxOxRL9qBCrgM/xG4VOAtcBr5K23NguJgOb4IJuQn8FptlYET1TQI/pe9pZZftBBFyB/gr/QvYbzpvAPtiM1fJZTuVhdzDnCYJ8Bj33fEMcCC290u7bKe0kA7wSNoOgQcFF7wrY/4Btx12E8Br4J2U8yglZBh4JvUDYLbAQpo5GfsHmLb0jwPras1PwIWcOb2FjABLUt4HbnmKSHkic/wCplT7BLAlfZuqvIU7Mt5CXsj3HiaByzIELMpc34GrGREbUtdtLjHeQhLMBW+ygoiULuZCmWDuBFKH1zHbK6WIGG8h25hfLxSjwJqa/yMwZrHLE+Mt5FJ130908ANwvqBtVkzQWxRf9OmUl8wpY2qMPs1qFfKeo8Qez7HV2CJTq5A1zH+WIpHIkhVTq5Cq6G020EKgPzIDLQQcOaLfWHVUh643Dau/TXiuFQTX0/imbi8rrY5IU3PDSWsiEt+zRyKRweI/76Q9uX56W3AAAAAASUVORK5CYII=" style="height: 25px; width: 25px; margin: auto;"/>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>		
+                        <div class="form-group">
+                            <label>Produto</label>
+                            <input id="alt-produto" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Preço</label>
+                            <input id="alt-preco" type="valor" class="form-control" required>
+                        </div>
+
+                        <div class="form-group" >
+                            <label>Categoria</label>
+                            <!-- <input id="alt-categoria" type="text" class="form-control" required> -->
+                            <select name="category" id="alt-categoria" style="width : 100%; border-color: #dddddd; border-radius: 2px; padding: 10px;" required>
+                                <option value="">Selecione a Categoria </option>  
+                                <option value="Hortifruti">Hortifruti</option>
+                                <option value="Massas">Massas</option>
+                                <option value="Doces e Biscoitos">Doces e Biscoitos</option>
+                                </select>
+                        </div>					
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" id="update-prod-button" class="btn btn-info" value="Save" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="deleteForm">
+                    <div class="modal-header">						
+                        <h4 class="modal-title">Deletar Produto</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">					
+                        <p>Tem certeza de que deseja excluir esses Produtos?</p>
+                        <p class="text-warning"><small>Essa ação não pode ser desfeita.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Checkout Section End -->
 
     <!-- Footer Section Begin -->
@@ -160,29 +310,66 @@
                         <p>&copy; 2021 Compra&Confort. Todos os direitos reservados.</p>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="footer-card-icon">
-                        <i class="fa fa-cc-mastercard"></i>
-                        <i class="fa fa-cc-visa"></i>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
     <!-- Footer Section End -->
     
     <!-- Js Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../service/axiosService.js"></script>
+    <script src="../service/service.js"></script>
+    <script src="js/Tela de produtos/js/main.js"></script>
+    <script src="js/Tela de produtos/js/AparecerNaTela.js"></script>
+    <script src="js/Tela de produtos/js/imageProdutoUpload.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/button1.js"></script>
-    
-	<script type="text/javascript" src="js/mainProdutos.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+       <!-- HeaderMenu -->
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+       <script src="../service/axiosService.js"></script>
+       <script src="../service/updateInfoService.js"></script>
+       <script src="js/HeaderMenu/jquery.min.js"></script>
+       <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
+       <script src="js/HeaderMenu/skel.min.js"></script>
+       <script src="/Resto-do-site/js/HeaderMenu/clicky-menus.js"></script>
+       <script src="js/HeaderMenu/Buscar.js"></script>
+       <script src="js/HeaderMenu/util.js"></script>
+       <script src="js/HeaderMenu/mainHeader.js"></script>
+       <script src="js/HeaderMenu/MenuPerfil.js"></script>   
+
+    <script>
+        $(document).ready(function(){
+            // Activate tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            // Select/Deselect checkboxes
+            var checkbox = $('table tbody input[type="checkbox"]');
+            $("#selectAll").click(function(){
+                if(this.checked){
+                    checkbox.each(function(){
+                        this.checked = true;                        
+                    });
+                } else{
+                    checkbox.each(function(){
+                        this.checked = false;                        
+                    });
+                } 
+            });
+            checkbox.click(function(){
+                if(!this.checked){
+                    $("#selectAll").prop("checked", false);
+                }
+            });
+        });
+    </script>
+</body>
 </html>

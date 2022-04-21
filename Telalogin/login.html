@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+   <!-- <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="js/AutGoogle.js"></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script> -->
+    <script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <link rel="stylesheet" href="css/Login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
-        crossorigin="anonymous">
-         
-    <script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+        crossorigin="anonymous"> 
+
 </head>
-<body >
+<body>
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
@@ -23,26 +26,51 @@
                 
             </div>    
             <div class="second-column">
-                <img src="img/logo.jpg" width="150" height="150" alt="">
-                <h2 class="title title-second">Criar conta</h2>
+
+                 <!-- botão de mudar imagem de perfil -->
+            
+            
+            
+                <!-- <img src="img/logo.jpg" width="150" height="150" alt=""> -->
+                <h2 class="title title-second">Criar conta Cliente</h2>
+                <!--Fim do botão-->
+
+               <!-- <div id="buttonDiv"></div> --> <!--Butão do google-->
 
                 <form class="form">
+
+                    <!-- <div class="image">
+                        <div class="editar-content">
+                        <span>
+                        <i>editar</i>
+                        </span>
+                        </div>
+                        <div id="new">
+                        <div class="close-preview-js close-preview">x</div>
+                        </div>
+                        <img src="https://jamesrmoro.me/wp-content/uploads/2021/02/profile.png" width="150" height="150" alt="Sem imagem">
+                        </div>
+                        <br>
+                        <input id="file-preview-js" type="file" accept="image/*" onchange="loaderFile(event)"><br><br> -->
+                        
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input id="cadastro-name" type="text" placeholder="Nome" required>
+                        <input id="cadastro-name" type="text" placeholder="Insira o seu Nome" required>
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input id="cadastro-email" type="email" placeholder="Email" required>
+                        <input id="cadastro-email" type="email" placeholder="Insira o seu Email" required>
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input id="cadastro-password" type="password" placeholder="Senha" required>
+                        <input id="cadastro-password" type="password" placeholder="Insira a sua Senha" required>
                     </label>
 
+<!--
                     <label class="label-input" for="">
+
                         <i class="fas fa-home icon-modify"></i>
                         <input id="cadastro-endereco" type="text" placeholder="Endereço" required>
                     </label>
@@ -73,9 +101,9 @@
                         <input id="cadastro-telefone" type="text" placeholder="Telefone" required>
                     </label> 
         
-
-                    <button type="button" class="btn btn-second" onclick="cadastroSubmit()">Cadastrar</button>
-                    <a class="password" href="Cadastro de mercado.html">Quer cadastrar seu mercado ? clique aqui</a>
+                -->
+                    <input type="button" value="Cadastrar" class="btn btn-second" onclick="cadastroSubmit()" style="color: #2a6049;"></input>
+                    <a class="password" href="http://localhost:5500/Telalogin/Cadastro%20de%20mercado.html">Quer cadastrar seu mercado ? clique aqui</a>
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
@@ -87,9 +115,9 @@
                 <button id="signup" class="btn btn-primary">Cadastrar</button>
             </div>
             <div class="second-column">
-                 <img src="img/logo.jpg" width="150" height="150" alt="">
-                <h2 class="title title-second">Login</h2>
-                <form class="form">
+                 <!-- <img src="img/logo.jpg" width="150" height="150" alt=""> -->
+                <h2 class="title title-second">Login Cliente</h2>
+                <form class="form" id="login-form">
                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
@@ -102,12 +130,17 @@
                     </label>
                 
                     <!-- <a class="password" href="Rsenha.html">Esqueceu sua senha?</a> -->
-                    <button type="button" onclick="loginSubmit()" class="btn btn-second">Logar</button>
+                    <!--<button type="button" onclick="loginSubmit()" class="btn btn-second">Logar</button> -->
+                    
 
-                </form>
+                    <input type="submit" value="Logar" class="btn btn-second" style="color: #2a6049;">
+                    <a class="password" href="http://localhost:5500/Telalogin/loginMercado.html">Logue Com sua Conta Mercado</a>         
+                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
+     
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../service/axiosService.js"></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>

@@ -11,23 +11,54 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/Menu.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 </head>
 
-<body>
+<body onload = "esconderlogin()">
 
 	<!-- Header -->
 	<header id="header" class="alt">
 		<div class="logo"><a href="index.html">Compra&Confort</a></div>
-		<a href="#menu">Menu</a>
+		<a id="btnlogado" href="#menu" style="font-size: 35px; margin-left: 91%; position: relative;">
+			<img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" class="avatar"style="vertical-align: -9px; ">	 
+			≡ </a>
+		<a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; margin-left: 88%; position: relative;" href="../Telalogin/login.html">Cadastre-se</a>
 	</header>
 
-	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="http://localhost/Mercado-em-casa/Telalogin/login.html">Registre-se</a></li>
-			<li><a href="http://localhost/Mercado-em-casa/Telalogin/Cadastro%20de%20mercado.html">Registre seu Mercado</a></li>
-		</ul>
-	</nav>
+	 <!-- Menu -->
+	 
+		<nav id="menu">
+			<ul class="links">
+					<form Class="form">
+						<div id="infuser" class="card">
+
+							<img id="user-pic" src="https://i.imgur.com/KyzOaCq.png" class="avatar">
+							
+								<h1 class="title" style="text-align: center">Olá, <span id="user-name"></span></h1>
+								<h2 id="boasvindas" style="font-size: 20px;"></h2> 
+						   
+								<div class="opcoes">
+
+										<img src="https://img.icons8.com/ios/50/ffffff/settings--v1.png"  style=" width: 20px; height: 20px;"/>
+									<a href="../Telalogin/EditarPerfil.html" style="color: #FFFFFF; text-decoration: none;">Dados do Usuário<br></a>
+									<img id="imgAddProd" src="https://img.icons8.com/ios/50/ffffff/add--v1.png" style=" width: 20px; height: 20px;"/>
+									<a id="txtAddProd" href="../Resto-do-site/produtos.html" style="color: #FFFFFF; text-decoration: none;">Adicionar Produtos<br></a>
+										<img src="https://img.icons8.com/windows/64/ffffff/time-machine.png"  style=" width: 20px; height: 20px;"/>
+									<a href="" style="color: #FFFFFF; text-decoration: none;">histórico<br></a>
+										<img src="https://img.icons8.com/ios-filled/100/ffffff/logout-rounded-down.png" style=" width: 20px; height: 20px;"/>
+									<a href=""onclick="return deslogarPerfil()" style="color: #FFFFFF; text-decoration: none;">Sair</a>
+
+								</div>
+						</div>
+					</form>
+			</ul>
+		</nav> 
+
+
+	 
+	
 
 	<!-- Banner -->
 	<section class="banner full">
@@ -37,7 +68,7 @@
 				<header>
 					<p>Seja Bem-vindo ao</p>
 					<h2>COMPRA&CONFORT</h2>
-					<a href="#busca">INICIAR</a>
+					<a href="#two">INICIAR</a>
 				</header>
 			</div>
 		</article>
@@ -48,7 +79,7 @@
 				<header>
 					<p>No Conforto do seu Lar, Ele é o Seu</p>
 					<h2>Mercado em Casa</h2>
-					<a href="#busca">INICIAR</a>
+					<a href="#two">INICIAR</a>
 				</header>
 			</div>
 		</article>
@@ -59,7 +90,7 @@
 				<header>
 					<p>Faça suas Compra de um Jeito</p>
 					<h2>Rápido, Fácil e Seguro</h2>
-					<a href="#busca">INICIAR</a>
+					<a href="#two">INICIAR</a>
 				</header>
 			</div>
 		</article>
@@ -69,7 +100,7 @@
 				<header>
 					<p>Seus produtos e marcas favoritas</p>
 					<h2>Você Encontra aqui</h2>
-					<a href="#busca">INICIAR</a>
+					<a href="#two">INICIAR</a>
 				</header>
 			</div>
 		</article>
@@ -79,21 +110,33 @@
 	<!-- Two -->
 	<section id="two" class="wrapper style3">
 		<div class="inner">
+			
 			<header class="align-center" id="busca">
-				<p>Busque Por Mercados Próximos</p>
+				<div class="card" style=
+				"box-shadow: 0px 1px 15px black;
+				background-color: white;
+				width: 95%;
+				padding: 170px;
+				border-radius: 5px;
+				margin-top: -25px;">
+
+				<p>Encontre os Mercados Próximos de você</p>
 				<form class="search-container">
-					<input type="text" id="search-bar" placeholder="Buscar por cidade" required>
-					<a href="http://localhost/Mercado-em-casa/tela%20deselecao/Selecionarmercado.html" id="link-buscar">
-					<!-- <a href="#" id="link-buscar"> -->
-						<img src="download.png" />
+					
+					<input type="text" id="search-bar" placeholder="..." required style="box-shadow: 2px 3px 3px grey; background-color: white; border-radius: 5px;">
+					<a href="../tela deselecao/Selecionarmercado.html" id="link-buscar">
+						<button type="button" class="btn">BUSCAR</button>
+						
 					</a>
 					</input>
+		
 				</form>
-
+			</div>
 			</header>
 		</div>
 	</section>
-
+	
+	
 
 
 	<!-- Footer -->
@@ -117,8 +160,13 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/Dashboard.js"></script>
-	<script src="js/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<!-- <script src="assets/js/Dashboard.js"></script> -->
+	<script src="../service/axiosService.js"></script>
+	<script src="../service/updateInfoService.js"></script>
+	<script src="assets/js/Buscar.js"></script>
+	<script src="assets/js/MenuPerfil.js"></script>
+	<script src="https://kit.fontawesome.com/eedee4af8e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
