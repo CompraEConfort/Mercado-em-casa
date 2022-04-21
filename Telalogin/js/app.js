@@ -50,7 +50,7 @@ function cadastroSubmit () {
     var name = $("#cadastro-name").val()
     var email = $("#cadastro-email").val()
     var password = $("#cadastro-password").val()
-    var imagem_link = "https://i.imgur.com/5FmOYw7.png"
+    var imagem_link = "http://localhost:3000/images/users/user.png"
 
     var requestBody = {
         name: name,
@@ -155,7 +155,7 @@ function cadastroMercadoSubmit () {
     var neighborhood = $("#cadastromercado-bairro").val()
     var cep = $("#cadastromercado-cep").val()
     var telefone = $("#cadastromercado-telefone").val()
-    var image_link = "https://i.imgur.com/5FmOYw7.png"
+    var image_link = "http://localhost:3000/images/mercados/market.png"
 
     var requestBody = {
         name: name,
@@ -189,7 +189,6 @@ function updateMercado () {
         bairro: bairro,
         cep: cep,
         telefone: telefone,
-       
         id_supermarket: JSON.parse(localStorage.getItem('userMercado')).id_supermarket
     }
     UpdateMercadoService(requestBody)

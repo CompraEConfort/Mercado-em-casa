@@ -38,6 +38,9 @@ function esconderlogin(){
     userPic.setAttribute('src', user.imagem)
     username.innerHTML += user.name
     userPicMenu.setAttribute('src', user.imagem)
+    document.getElementById("txtAddProd").style.display="none";
+    document.getElementById("imgAddProd").style.display="none";
+
 }
 
 
@@ -45,6 +48,7 @@ function Mercadofoto () {
     MercadoPic.setAttribute('src', userMercado.image_link)
     Mercadoname.innerHTML += userMercado.name
     MercadoPicMenu.setAttribute('src', userMercado.image_link)
+    
 }
 
 // Botão de deslogar

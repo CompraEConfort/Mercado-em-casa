@@ -26,7 +26,8 @@ body{
     flex-direction: column;
     width: 35%;
     margin: auto;
-    padding-top: 50px;
+    padding: 0px 0px 0px 15px;
+    
     
 }
 .forms {

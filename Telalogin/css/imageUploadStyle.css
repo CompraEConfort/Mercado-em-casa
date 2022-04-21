@@ -1,9 +1,4 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 .image-upload-wrapper {
   width: fit-content;
   margin: 20px auto;
