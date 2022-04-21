@@ -16,7 +16,8 @@ select {
 }
 
 .simpleStore {
-    margin-top: 20px
+    margin-top: 140px;
+    margin-bottom: 140px;
 }
 
 .brand {
@@ -48,6 +49,7 @@ select {
     width: 100%;
     min-height: 20px;
     margin-bottom: 50px
+    
 }
 
 .simpleCart_items div:first-child {
@@ -63,7 +65,8 @@ select {
 
 .cart_total,
 .item_price {
-    font-size: 20px
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
 .simpleCart_shelfItem label {
@@ -132,13 +135,15 @@ select {
     bottom: 0;
     right: 0;
     margin: 22px;
-    text-align: right
+    text-align: right;
+    font-family: sans-serif;
 }
 
 .simpleStore_cart,
 .simpleStore_detailView {
     position: relative;
-    border: 1px solid #EFEFEF
+    border: 1px solid #e9e9e9;
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
 }
 
 .cart_info div {
@@ -185,11 +190,11 @@ select {
 .simpleStore_cart {
     padding: 22px;
     min-height: 230px;
-    margin: 15px 0
+    margin: 150px 0
 }
 
 a.simpleCart_empty {
-    color: #CDCDCD;
+    color: black;
     text-transform: uppercase;
     font-size: 14px
 }
@@ -199,7 +204,8 @@ a.simpleCart_empty:hover {
 }
 
 .simpleCart_checkout {
-    margin: 12px 0 0
+    margin: 12px 0 0;
+    
 }
 
 .loader {
@@ -238,7 +244,6 @@ a.close {
     top: 18px;
     right: 14px;
     font-size: 32px;
-    color: #CDCDCD;
     font-family: Garamond, "Apple Garamond"
 }
 
@@ -316,11 +321,12 @@ p.error_text {
     }
 
     .simpleCart_checkout {
-        width: 100%
+        width: 100%;
     }
 
     .simpleCart_items {
         font-size: 12px
+        
     }
 
     .item-decrement,
