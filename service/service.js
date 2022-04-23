@@ -32,11 +32,11 @@ function getCorredoresNome(codigoSupermercado) {
 	return corredores;
 }
 
-function getprodutosNome(nomeCorredor) {
+function getprodutosNome(nomeCorredor, idSupermarket) {
 	var url  = "http://localhost:3000/produtos/corredores/";
 	var xhr  = new XMLHttpRequest()
 	var produtos = {}
-	xhr.open('GET', url+nomeCorredor, false)
+	xhr.open('GET', url+nomeCorredor+"/"+idSupermarket, false)
 	xhr.onload = function () {
 		produtos = JSON.parse(xhr.responseText);
 		if (xhr.readyState == 4 && xhr.status == "200") {

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/style copy.css" type="text/css">
+    <link rel="stylesheet" href="css/simpleStore.css">
 
     <!-- Css HeaderMenu -->
     <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
@@ -125,105 +126,53 @@
 
     <!-- Product Section Begin -->
     <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-7">
-                    <div class="filter__item">
-                        <div class="row">
-                            <!-- <div class="col-lg-4 col-md-5">
-                                <div class="filter__sort">
-                                    <span>Mostrar por: </span>
-                                    <select>
-                                        <option value="0">Padrão</option>
-                                        <option value="0">Ordem Alfabética</option>
-                                    </select>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-lg-4 col-md-4">
-                                <div class="filter__found">
-                                    <h6><span>2</span> Produtos Encontrados</h6>
-                                </div>
-                            </div> -->
-                            
-                        </div>
-                    </div>
-                    <div class="row" id="produtos">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="">
-                                    <ul class="product__item__pic__hover">
-                                        <li><a><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product__item__text">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container">
+  
+       <div class="row" style="margin-top: 20px;">
+          <a class="button button-primary u-pull-right" data-featherlight="#cart"><i class="fa fa-shopping-cart"></i> Carrinho <span class="simpleCart_total"></span></a>
+      </div>
+  
+      <div id="produtos" class="row">
+  
+        <!-- <div class="one-third column">
+          <div class="simpleCart_shelfItem">
+              <img src="http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg" class="item_thumb" />
+              <h5 class="item_name">Awesome T-shirt </h5>
+              <div class="qty">QTY</div><input type="text" value="1" class="item_Quantity">
+              <span class="item_price">$35.99</span>
+              <a class="item_add button u-pull-right" href="javascript:;"> Add to Cart </a>
+          </div>
+        </div> -->
+  
+      </div>
+    </div>
+  
+   <!-- Cart
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="hidden">
+      <div id="cart">
+          <h2>Cart</h2>
+          <div class="row">
+  
+            <div class="eight columns">
+              <div class="simpleCart_items"></div>
             </div>
-        </div>
+  
+            <div class="four columns">
+              <div class="cart_info">
+                <div class="cart_info_item cart_itemcount">Items: <div class="simpleCart_quantity"></div></div>
+                <div class="cart_info_item cart_taxrate">Tax Rate: <div class="simpleCart_taxRate"></div></div>
+                <div class="cart_info_item cart_tax">Tax: <div class="simpleCart_tax"></div></div>
+                <div class="cart_info_item cart_shipping">Shipping: <div class="simpleCart_shipping"></div></div>
+                <div class="cart_info_item cart_total"><b>Total: <div class="simpleCart_grandTotal"></div></b></div>
+              </div>
+              <a href="javascript:;" class="simpleCart_empty button u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
+              <a href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+            </div>
+  
+          </div>
+      </div>
+    </div>
     </section>
     <!-- Product Section End -->
 
@@ -297,6 +246,8 @@
      <script src="js/HeaderMenu/mainHeader.js"></script>
      <script src="js/HeaderMenu/MenuPerfil.js"></script>
 
+     <script src="js/Checkout/simpleStore.min.js"></script>
+     <script src="js/Checkout/config.js"></script>
 
 </body>
 
