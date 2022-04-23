@@ -35,7 +35,8 @@ select {
 .simpleCart_shelfItem {
     border: 1px solid #EFEFEF;
     padding: 25px 18px 10px;
-    margin: 15px 0
+    margin: 15px 0;
+    box-shadow:  4px 4px 4px rgb(0 0 0 / 20%); 
 }
 
 .headerRow,
