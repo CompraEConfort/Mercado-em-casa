@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="css/simpleStore.css">
 
     <!-- Css HeaderMenu -->
-    <link rel="stylesheet" href="css/HeaderMenu.css/font-awesome.min.css">
     <link rel="stylesheet" href="css/HeaderMenu.css/Menu.css">
     <link rel="stylesheet" href="css/HeaderMenu.css/style.css">
 	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
@@ -67,14 +66,20 @@
 				<a href="../tela deselecao/Corredores.html">Corredores</a>
 			</li>
             <li style="margin-left: 93%;position: absolute;">
-                <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%;">
+                <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%; right: 140px;">
                     <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
                     ≡ </a>
-                    <a id="btncadastro" style="font-size: 20px; color: #FFFFFF; text-decoration: none; position: relative; padding: 1% 0px 0px 0px; margin: 15px 0px 0px -115px" href="../Telalogin/login.html">Cadastre-se</a>
+                    <a id="btncadastro" style="font-size: 17px; color: #FFFFFF; text-decoration: none; position: relative; padding: 0% 0px 0px 0px; margin: 15px 0px 0px -115px; right: 110px;" href="../Telalogin/login.html">Cadastre-se</a>
        
             </li>
+
+            <div class="row" style="margin-top: auto; margin-left: 265px;">
+                <a class="button button-primary u-pull-right" data-featherlight="#cart"><i class="fa fa-shopping-cart"></i>  <span class="simpleCart_total"></span></a>
+            </div>
+
 		</ul>
-    
+
+       
 	</nav> <!-- End mainmenu area -->
 
     <!-- Menu -->
@@ -102,7 +107,11 @@
                                 </div>
                         </div>
                     </form>
+                    
                 </div> 
+                
+
+                
     </header>
     <!-- Header Section End -->
 
@@ -114,8 +123,7 @@
                     <div class="breadcrumb__text">
                         <h2 id="Market-title">FreshMarket</h2>
                         <div class="breadcrumb__option">
-                            <a id="Market-Name" href="./index.html">Busca</a>
-                            <span>Mercado</span>
+                            <h6 id="Market-Name">Smart Market</h6>
                         </div>
                     </div>
                 </div>
@@ -127,10 +135,6 @@
     <!-- Product Section Begin -->
     <section class="product spad">
     <div class="container">
-  
-       <div class="row" style="margin-top: 20px;">
-          <a class="button button-primary u-pull-right" data-featherlight="#cart"><i class="fa fa-shopping-cart"></i> Carrinho <span class="simpleCart_total"></span></a>
-      </div>
   
       <div id="produtos" class="row">
   
@@ -151,7 +155,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="hidden">
       <div id="cart">
-          <h2>Cart</h2>
+          <h2>Carrinho</h2>
           <div class="row">
   
             <div class="eight columns">
@@ -161,13 +165,11 @@
             <div class="four columns">
               <div class="cart_info">
                 <div class="cart_info_item cart_itemcount">Items: <div class="simpleCart_quantity"></div></div>
-                <div class="cart_info_item cart_taxrate">Tax Rate: <div class="simpleCart_taxRate"></div></div>
-                <div class="cart_info_item cart_tax">Tax: <div class="simpleCart_tax"></div></div>
-                <div class="cart_info_item cart_shipping">Shipping: <div class="simpleCart_shipping"></div></div>
+                <div class="cart_info_item cart_shipping">Frete: <div class="simpleCart_shipping"></div></div>
                 <div class="cart_info_item cart_total"><b>Total: <div class="simpleCart_grandTotal"></div></b></div>
               </div>
-              <a href="javascript:;" class="simpleCart_empty button u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
-              <a href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+              <a href="javascript:;" class="simpleCart_empty button u-pull-left"> Limpar Carrinho <i class="fa fa-trash-o"></i></a>
+              <a href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right"> Pagamento <i class="fa fa-arrow-right"></i></a>
             </div>
   
           </div>
@@ -221,14 +223,12 @@
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-  
     <script src="../service/service.js"></script>
     <script src="js/produtos.js"></script>
     <script src="../Telalogin/js/app.js"></script>
@@ -236,12 +236,12 @@
      <!-- HeaderMenu -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="../service/axiosService.js"></script>
+     <script src="../service/updateInfoService.js"></script>
      <script src="js/HeaderMenu/jquery.min.js"></script>
      <script src="js/HeaderMenu/jquery.scrollex.min.js"></script>
      <script src="js/HeaderMenu/skel.min.js"></script>
 
      <script src="/Resto-do-site/js/HeaderMenu/clicky-menus.js"></script>
-     <script src="js/HeaderMenu/Buscar.js"></script>
      <script src="js/HeaderMenu/util.js"></script>
      <script src="js/HeaderMenu/mainHeader.js"></script>
      <script src="js/HeaderMenu/MenuPerfil.js"></script>

@@ -1,6 +1,7 @@
 (function () {
 
     var nomeCorredor = localStorage.getItem("nome-corredor");
+    // var nomeMercado = localStorage.getItem("nome-corredor");
     var idSupermarket = localStorage.getItem('codigo-supermercado');
     var result = getprodutosNome(nomeCorredor, idSupermarket);
     console.log(result);
@@ -8,23 +9,21 @@
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
     document.getElementById('Market-title').innerHTML = nomeCorredor;
-    // document.getElementById('Market-Name').innerHTML = nomeCorredor;
+    // document.getElementById('Market-Name').innerHTML = nomeMercado;
 
     result.produtos.forEach(function (produto) {
-        console.log(produto)
 
         produtosDinamico += `<div class="one-third column">`
         produtosDinamico +=   `<div class="simpleCart_shelfItem">`
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
-        produtosDinamico +=       `<div class="qty">QTY</div><input type="number" value="1" class="item_Quantity">`
-        produtosDinamico +=       `<span class="item_price">${produto.value}</span>`
-        produtosDinamico +=       `<a class="item_add button u-pull-right" href="javascript:;"> Adicionar ao carrinho </a>`
+        produtosDinamico +=       `<div class="qty">Quant.</div><input type="number" min="1" value="1" class="item_Quantity">`
+        produtosDinamico +=       `<span class="item_price"> R$ ${produto.value}</span>`
+        produtosDinamico +=       `<a class="item_add button u-pull-right" href="javascript:;"> Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`
 
     });
-    console.log("Após a chamada da function")
     divprodutos.innerHTML = produtosDinamico;
 })()
 
