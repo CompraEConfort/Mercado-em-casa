@@ -76,7 +76,7 @@ function alterarPerfilService(requestBody) {
             console.log(res)
             alert("Atualizado com sucesso ! ")
             localStorage.setItem('user', JSON.stringify(res.data.usuarioAtualizado))
-            window.location.href = "http://localhost:5500/Telalogin/EditarPerfil.html"
+            window.location.reload()
         })
         .catch(err => {
             console.log(err)
@@ -173,7 +173,7 @@ function profileMercadoService() {
 
     // Vai pegar o token do local storage
     // Vai montar a requisição com o token
-    // Fazer a chamada ao endpoint GET usuarios/perfil/
+    // Fazer a chamada ao endpoint GET supermercados/perfilMercado/
     const tokenMerc = localStorage.getItem('tokenMerc')
 
     axios.get('http://localhost:3000/Supermercados/perfilMercado', {
@@ -183,6 +183,7 @@ function profileMercadoService() {
     })
         .then(res => {
             console.log(res)
+
             localStorage.setItem('userMercado', JSON.stringify(res.data))
         })
         .catch(err => {
@@ -196,7 +197,7 @@ function UpdateMercadoService(requestBody) {
             console.log(res)
             alert("Atualizado com sucesso ! ")
             localStorage.setItem('userMercado', JSON.stringify(res.data.mercadoAtualizado))
-            window.location.href = "http://localhost:5500/Telalogin/EditarPerfil.html"
+            window.location.reload()
             
         })
         .catch(err => {
@@ -231,7 +232,7 @@ function MercadoUploadImage (formDataMercado) {
         console.log(res.data);
         let image_link = res.data.imagemAtualizada
         let userMercado = JSON.parse(localStorage.getItem('userMercado'))
-        userMercado.imagem = image_link
+        userMercado.image_link= image_link
         localStorage.setItem('userMercado', JSON.stringify(userMercado))
         
     }).catch(err => {

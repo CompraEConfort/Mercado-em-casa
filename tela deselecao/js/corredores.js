@@ -1,6 +1,6 @@
 (function () {
-    var codigoSupermercado = localStorage.getItem("codigo-supermercado");
-    var corredores = getCorredoresNome(codigoSupermercado);
+    var codigoMercado = localStorage.getItem("codigo-supermercado");
+    var corredores = getCorredoresNome(codigoMercado);
     var divCorredores = document.getElementById('corredores');
     var CorredoresDinamico = '';
 

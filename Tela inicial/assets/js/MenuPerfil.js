@@ -33,7 +33,7 @@ function esconderlogin(){
 
   function Userfoto () {
     userPic.setAttribute('src', user.imagem)
-    username.innerHTML += user.name
+    username.innerHTML += user.nome
     userPicMenu.setAttribute('src', user.imagem)
     document.getElementById("txtAddProd").style.display="none";
     document.getElementById("imgAddProd").style.display="none";
@@ -42,9 +42,9 @@ function esconderlogin(){
 
 
 function Mercadofoto () {
-    MercadoPic.setAttribute('src', userMercado.imagem)
-    Mercadoname.innerHTML += userMercado.name
-    MercadoPicMenu.setAttribute('src', userMercado.imagem)
+    MercadoPic.setAttribute('src', userMercado.image_link)
+    Mercadoname.innerHTML += userMercado.nome
+    MercadoPicMenu.setAttribute('src', userMercado.image_link)
     
 }
 
