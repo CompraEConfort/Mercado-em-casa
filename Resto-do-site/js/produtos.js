@@ -6,7 +6,7 @@
     var result = getprodutosNome(nomeCorredor, idSupermarket);
     console.log(result);
     //var produtos = getProductsByCategoryAndSupermarketId();
-    var divprodutos = document.getElementById('produtos');
+    var divprodutos = document.getElementById('products-template');
     var produtosDinamico = '';
     // var quantidade = JSON.parse(localStorage.getItem("simpleCart_items"))
     document.getElementById('Market-title').innerHTML = nomeCorredor;
