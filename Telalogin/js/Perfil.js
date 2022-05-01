@@ -11,7 +11,7 @@ var telefone = document.querySelector("#alt-telefone")
 
 console.log(user);
 
-nome.value = user?.name
+nome.value = user?.nome
 email.value = user?.email
 endereco.value = user?.endereco
 complemento.value = user?.complemento

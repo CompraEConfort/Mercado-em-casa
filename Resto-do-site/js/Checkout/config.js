@@ -7,7 +7,7 @@ $(function() {
 	        { attr: "name" , label: "Nome" },
 	        { attr: "price" , label: "Preço", view: 'currency' },
 	        { view: "decrement" , label: false },
-	        { attr: "quantity" , label: "Quantidade" },
+	        { attr: "quantity" , label: "Quant." },
 	        { view: "increment" , label: false },
 	        { attr: "total" , label: "SubTotal", view: 'currency' },
 	        { view: "remove" , text: "Remover" , label: false }
@@ -19,7 +19,7 @@ $(function() {
 	    // how simpleCart should checkout, see the checkout reference for more info
 	    checkout: {
 	        type: "PayPal" ,
-	        email: "you@yours.com"
+	        email: "alvaro.santana1@hotmail.com"
 	    },
 
 	    // set the currency, see the currency reference for more info
@@ -33,10 +33,7 @@ $(function() {
 	    language: "english-us",
 
 	    // array of item fields that will not be sent to checkout
-	    excludeFromCheckout: [
-	    	'qty',
-	    	'thumb'
-	    ],
+	    excludeFromCheckout: [],
 
 	    // custom function to add shipping cost
 	    shippingCustom: null,
@@ -69,18 +66,4 @@ $(function() {
 	    beforeCheckout              : null
 
 	});
-
-	simpleStore.init({
-
-		// brand can be text or image URL
-		brand : "Compra&Confort",
-
-		// numder of products per row (accepts 1, 2 or 3)
-		numColumns : 3,
-
-		// name of JSON file, located in directory root
-		JSONFile : "products.json"
-
-	});
-
 });

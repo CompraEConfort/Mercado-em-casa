@@ -1,25 +1,25 @@
 var userMercado = JSON.parse(localStorage.getItem('userMercado'))
 // localStorage.setItem('userMercado', JSON.stringify(userMercado))
 
-var nome = document.querySelector("#alt-namemercado")
-var email = document.querySelector("#alt-emailmercado")
-var cnpj = document.querySelector("#alt-cnpjmercado")
-var endereco = document.querySelector("#alt-enderecomercado")
-var cidade = document.querySelector("#alt-cidademercado")
-var bairro = document.querySelector("#alt-bairromercado")
-var cep = document.querySelector("#alt-cepmercado")
-var telefone = document.querySelector("#alt-telefonemercado")
+var nomeMercado = document.querySelector("#alt-namemercado")
+var emailMercado = document.querySelector("#alt-emailmercado")
+var cnpjMercado = document.querySelector("#alt-cnpjmercado")
+var enderecoMercado = document.querySelector("#alt-enderecomercado")
+var cidadeMercado = document.querySelector("#alt-cidademercado")
+var bairroMercado = document.querySelector("#alt-bairromercado")
+var cepMercado = document.querySelector("#alt-cepmercado")
+var telefoneMercado = document.querySelector("#alt-telefonemercado")
 // var imagem = document.querySelector("alt-imagemmercado")
 
 console.log(userMercado);
 
-nome.value = userMercado?.name
-email.value = userMercado?.email
-cnpj.value = userMercado?.cnpj
-endereco.value = userMercado?.address
-cidade.value = userMercado?.city
-bairro.value = userMercado?.neighborhood
-cep.value = userMercado?.cep
-telefone.value = userMercado?.telefone
+nomeMercado.value = userMercado?.nome
+emailMercado.value = userMercado?.email
+cnpjMercado.value = userMercado?.cnpj
+enderecoMercado.value = userMercado?.endereco
+cidadeMercado.value = userMercado?.cidade
+bairroMercado.value = userMercado?.bairro
+cepMercado.value = userMercado?.cep
+telefoneMercado.value = userMercado?.telefone
 // imagem.value= userMercado?.image_link 
 

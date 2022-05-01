@@ -36,15 +36,19 @@ function esconderlogin(){
 
   function Userfoto () {
     userPic.setAttribute('src', user.imagem)
-    username.innerHTML += user.name
+    username.innerHTML += user.nome
     userPicMenu.setAttribute('src', user.imagem)
+    document.getElementById("txtAddProd").style.display="none";
+    document.getElementById("imgAddProd").style.display="none";
+
 }
 
 
 function Mercadofoto () {
     MercadoPic.setAttribute('src', userMercado.image_link)
-    Mercadoname.innerHTML += userMercado.name
+    Mercadoname.innerHTML += userMercado.nome
     MercadoPicMenu.setAttribute('src', userMercado.image_link)
+    
 }
 
 // Botão de deslogar
@@ -59,6 +63,7 @@ function deslogarPerfil () {
         localStorage.removeItem ("userMercado");
         localStorage.removeItem ("email");
         localStorage.removeItem ("nome");
+        localStorage.removeItem ("simpleCart_items");
         window.location = "http://localhost:5500/Telalogin/login.html";
 
         return false;

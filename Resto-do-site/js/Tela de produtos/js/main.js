@@ -11,7 +11,7 @@ function addProduto (){
         name: name,
         value: value,
         category: category,
-        image_link: image_link
+        image_link: "http://localhost:3000/images/products/product.png"
     }
    addProdutoService(requestBody)
 }
@@ -19,19 +19,21 @@ function addProduto (){
 function updateproduto (){
     var name = $("#alt-produto").val()
     var value = $("#alt-preco").val()
-    var image_link = $("#alt-imagem").val()
     var category = $("#alt-categoria").val()
     
     var requestBody = {
         id_product: JSON.parse(localStorage.getItem('prodTemp'))?.id_produto,
         name: name,
         value: value,
-        image_link: image_link,
         category: category,
     }
     updateProdutosService(requestBody)
 }
 
+document.querySelector('#update-prod-button').addEventListener('click', event => {
+    event.preventDefault()
+    updateproduto()
+})
 
 
 // const openModal = () => document.getElementById('modal')

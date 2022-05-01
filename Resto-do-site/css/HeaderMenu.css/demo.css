@@ -12,6 +12,14 @@ svg[hidden] {
 	box-shadow: 2px 2px 4px rgba(0,0,0,.2);
 	background-color: #007b5b;
 	/* border-radius: 4px; */
+	z-index:999;
+	margin:0 auto;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+   
 }
 
 .clicky-menu {
@@ -63,7 +71,7 @@ svg[hidden] {
 	flex-wrap: wrap;
 	align-items: center;
 	border: 0;
-	/* font-size: inherit; */
+	font-size: inherit;
 	line-height: 1.5;
 	cursor: pointer;
 }
