@@ -8,7 +8,10 @@
     //var produtos = getProductsByCategoryAndSupermarketId();
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
+    // var quantidade = JSON.parse(localStorage.getItem("simpleCart_items"))
     document.getElementById('Market-title').innerHTML = nomeCorredor;
+    var quantidade = document.getElementsByClassName('item-total').item(0);
+   
     // document.getElementById('Market-Name').innerHTML = nomeMercado;
 
     result.produtos.forEach(function (produto) {
@@ -17,16 +20,24 @@
         produtosDinamico +=   `<div class="simpleCart_shelfItem">`
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
-        produtosDinamico +=       `<div class="qty">Quant.</div><input type="number" min="1" value="1" class="item_Quantity">`
-        produtosDinamico +=       `<span class="item_price"> R$ ${produto.value}</span>`
-        produtosDinamico +=       `<a class="item_add button u-pull-right" href="javascript:;"> Adicionar </a>`
+        produtosDinamico +=        `<h5 class="item_price"> R$ ${produto.value}</h5>`
+        produtosDinamico +=       `<div id="qtys" class="qty" style="display:"none;">Quant. <input type="number" min="1" value="" class="item_Quantity"> </div>`
+        produtosDinamico +=       `<a id="qtya" onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`
-
+        
     });
     divprodutos.innerHTML = produtosDinamico;
+
+    console.log(quantidade);
+  
 })()
 
+// Transição do botão de quantidade
+function AparecerQty() {
+    document.getElementById("qtys").style.display="flex";
+    document.getElementById("qtya");
+}
 
 
 // antigo
