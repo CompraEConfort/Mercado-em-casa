@@ -273,7 +273,15 @@ th {
     }
 
     .four.columns {
-        width: 30.6666666667%
+        width: 26.6666666667%;
+        /* border: 1px solid #d7d7d7; */
+        padding: 20px;
+        box-shadow: 6px 7px 14px #cfcfcf;
+        border-radius: 10px;
+        height: fit-content;
+        position: relative;
+        left: 40px;
+        top: 50px;
     }
 
     .five.columns {
@@ -291,6 +299,7 @@ th {
     .eight.columns {
         width: 65.3333333333%;
         overflow-y: scroll;
+        height: 270px;
     }
 
     .nine.columns {
@@ -3266,8 +3275,11 @@ padding: 0px 20px;
 
 .item_Quantity {
     display: block;
-    width: 50px
+    width: 50px;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
 }
+
 
 .qty {
     display: flex;
@@ -3294,6 +3306,22 @@ padding: 0px 20px;
 
 .simpleCart_items div:first-child {
     width: 100%
+}
+
+#ExcluirTudo{
+    width: 15%;
+    position: relative;
+    bottom: 220px;
+    padding: 0px;
+    background-color: #c91d19;
+}
+
+#ExcluirTudo:hover{
+    background-color: #333;
+}
+#bots{
+    font-size: 25px;
+    padding: 5px;
 }
 
 .headerRow {
@@ -3338,7 +3366,7 @@ padding: 0px 20px;
 
 .cart_info {
     text-align: right;
-    padding: 0 0 15px
+    font-size: larger;
 }
 
 .cart_info div {
@@ -3346,9 +3374,10 @@ padding: 0px 20px;
 }
 
 .cart_info_item {
-    display: block !important
+    display: block !important;
+    text-align: left;
 }
 
 .cart_total {
-    font-size: 20px
+    font-size: 25px
 }
