@@ -251,7 +251,9 @@ th {
     .column,
     .columns {
     }
+    #pagamentobtn{
 
+    }
     .column:first-child,
     .columns:first-child {
         margin-left: 0
@@ -287,7 +289,8 @@ th {
     }
 
     .eight.columns {
-        width: 65.3333333333%
+        width: 65.3333333333%;
+        overflow-y: scroll;
     }
 
     .nine.columns {
@@ -557,7 +560,6 @@ input[type=reset].button-primary,
 input[type=button].button-primary {
     color: #FFF;
     padding: 0;
-    border-color: #333;
     transition: background-color 0.5s;
     /* background-color: #33C3F0; */
 }
@@ -864,6 +866,12 @@ hr {
     }
 }
 
+.featherlight .row {
+    border: 1px solid #f1f1f1;
+    padding: 0px 10px;
+    box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 20px;
+}
 /* Font Awesome | @davegandy (http://fontawesome.io) | MIT License | Version 4.3.0 */
 @font-face {
     font-family: 'FontAwesome';
@@ -3226,17 +3234,21 @@ hr {
     border: 1px solid #f1f1f1;
     padding: 20px;
     box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 30px;
 }
+
+
 
 .item_add{
-width: -webkit-fill-available;
+width: 50%;
+padding: 0px 20px;
 }
 
-.item_add:focus {
-    width: auto;
+/* .item_add:focus {
+    width: 50%;
     display: flex;
-    transition: 0.5s;
-}
+    padding: 0px 20px;
+} */
 
 .item_thumb {
     height: 150px;
@@ -3257,7 +3269,7 @@ width: -webkit-fill-available;
 }
 
 .qty {
-    display: none;
+    display: flex;
     float: left;
     line-height: 40px;
     margin-right: 10px

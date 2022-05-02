@@ -8,10 +8,10 @@
     //var produtos = getProductsByCategoryAndSupermarketId();
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
-    // var quantidade = JSON.parse(localStorage.getItem("simpleCart_items"))
     document.getElementById('Market-title').innerHTML = nomeCorredor;
-    var quantidade = document.getElementsByClassName('item-total').item(0);
-   
+    var produtosTotais = document.getElementsByClassName("simpleCart_quantity");
+    var numv = localStorage.getItem("simpleCart_items");
+
     // document.getElementById('Market-Name').innerHTML = nomeMercado;
 
     result.produtos.forEach(function (produto) {
@@ -21,22 +21,25 @@
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
         produtosDinamico +=        `<h5 class="item_price"> R$ ${produto.value}</h5>`
-        produtosDinamico +=       `<div id="qtys" class="qty" style="display:"none;">Quant. <input type="number" min="1" value="" class="item_Quantity"> </div>`
-        produtosDinamico +=       `<a id="qtya" onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
+        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="" class="item_Quantity"> </div>`
+        produtosDinamico +=       `<a onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`
         
     });
     divprodutos.innerHTML = produtosDinamico;
 
-    console.log(quantidade);
+    console.log(numv);
   
 })()
 
 // Transição do botão de quantidade
 function AparecerQty() {
-    document.getElementById("qtys").style.display="flex";
-    document.getElementById("qtya");
+    document.getElementsByClassName("qty")[0].style.display="flex";
+    document.getElementsByClassName("item_add button u-pull-right")[0].style.width="50%";
+    document.getElementsByClassName("item_add button u-pull-right")[0].style.padding="0px 20px";
+    simpleCart_remove
+    simpleCart_quantity
 }
 
 
