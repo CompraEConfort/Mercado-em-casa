@@ -81,23 +81,18 @@
 				<a href="../tela deselecao/Corredores.html">Corredores</a>
 			</li>
 
-            <li style="margin-left: 93%;position: absolute;">
-                <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%; right: 140px;">
+            <li style="margin-left: 89%;position: absolute;">
+                <a id="btnlogado" href="#menu" style="background: #007b5b; font-size: 35px; position: relative; color: white; text-decoration: none; padding: 0%;">
                     <img id="user-picMenu" src="https://i.imgur.com/KyzOaCq.png" alt="Avatar" class="avatar">	 
                     ≡ </a>
-                    <a id="btncadastro" style="font-size: 17px; color: #FFFFFF; text-decoration: none; position: relative; padding: 0% 0px 0px 0px; margin: 15px 0px 0px -115px; right: 110px;" href="../Telalogin/login.html">Cadastre-se</a>
+                    <a id="btncadastro" style="font-size: 17px; color: #FFFFFF; text-decoration: none; position: relative; padding: 0% 0px 0px 0px; margin: 15px 0px 0px -65px;" href="../Telalogin/login.html">Cadastre-se</a>
+       
 
-            <li style="margin: 0.9rem 0% 0% 90%;position: absolute;">
-             <a class="button button-primary u-pull-right simpleStore_viewCart">
-                <i style="font-size: 150%;" class="fa fa-shopping-cart">⠀</i><span style="font-family: sans-serif;" class="simpleCart_total"></span>
-             </a>
-              
             </li>
-
-            <div class="row" style="margin-top: auto; margin-left: 265px;">
-                <a class="button button-primary u-pull-right" data-featherlight="#cart"><i class="fa fa-shopping-cart"></i>  <span class="simpleCart_total"></span></a>
-            </div>
-
+            <li class="row" style="margin: 0.6% 0% 0% 95%; position: absolute;">
+                <a class="button button-primary u-pull-right" data-featherlight="#cart"><img id="imgcart" src="https://img.icons8.com/material-outlined/96/ffffff/shopping-cart--v1.png"/><div id="nume" class="simpleCart_quantity"></div></a>
+                <!-- Valor total dos itens -->
+            </li>
 		</ul>
 
        
@@ -142,6 +137,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
+                        <img id="Market-image" src=""  style=" width: 100px; height: 100px; border-radius: 25px; border: 1px solid #373737;box-shadow: 6px 7px 14px #373737;margin-top: 0px;"/>
                         <h2 id="Market-title">FreshMarket</h2>
                         <div class="breadcrumb__option">
                             <h6 id="Market-Name">Smart Market</h6>
@@ -169,7 +165,7 @@
               <a class="item_add button u-pull-right" href="javascript:;"> Add to Cart </a>
           </div>
         </div> -->
-  
+       
       </div>
     </div>
   
@@ -189,10 +185,10 @@
                 <div class="cart_info_item cart_itemcount">Items: <div class="simpleCart_quantity"></div></div>
                 <div class="cart_info_item cart_shipping">Frete: <div class="simpleCart_shipping"></div></div>
                 <div class="cart_info_item cart_total"><b>Total: <div class="simpleCart_grandTotal"></div></b></div>
+                <a href="javascript:;" class="simpleCart_empty button u-pull-left"> Limpar Carrinho <i class="fa fa-trash-o"></i></a>
               </div>
-              <a href="javascript:;" class="simpleCart_empty button u-pull-left"> Limpar Carrinho <i class="fa fa-trash-o"></i></a>
-              <a href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right"> Pagamento <i class="fa fa-arrow-right"></i></a>
             </div>
+            <a id="pagamentobtn" href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right"> Pagamento <i class="fa fa-arrow-right"></i></a>
   
           </div>
       </div>
@@ -254,7 +250,8 @@
     <script src="../service/service.js"></script>
     <script src="js/produtos.js"></script>
     <script src="../Telalogin/js/app.js"></script>
-
+<script src="/Resto-do-site/js/teste.js"></script>
+    
      <!-- HeaderMenu -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="../service/axiosService.js"></script>

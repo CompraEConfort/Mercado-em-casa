@@ -71,7 +71,7 @@ svg[hidden] {
 	flex-wrap: wrap;
 	align-items: center;
 	border: 0;
-	/* font-size: inherit; */
+	font-size: inherit;
 	line-height: 1.5;
 	cursor: pointer;
 }

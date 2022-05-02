@@ -1,15 +1,18 @@
 (function () {
-
+    var mercado = JSON.parse(localStorage.getItem('mercado-selecionado'))
     var nomeCorredor = localStorage.getItem("nome-corredor");
-    // var nomeMercado = localStorage.getItem("nome-corredor");
+    var nomeMercado = JSON.parse(localStorage.getItem('mercado-selecionado')).nome
+    var fotoMercado = document.querySelector('#Market-image')
     var idSupermarket = localStorage.getItem('codigo-supermercado');
     var result = getprodutosNome(nomeCorredor, idSupermarket);
-    console.log(result);
-    //var produtos = getProductsByCategoryAndSupermarketId();
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
-    document.getElementById('Market-title').innerHTML = nomeCorredor;
-    // document.getElementById('Market-Name').innerHTML = nomeMercado;
+    var numv = localStorage.getItem("simpleCart_items");
+    fotoMercado.setAttribute('src', mercado.image_link)
+    document.getElementById('Market-title').innerHTML = nomeMercado;
+    document.getElementById('Market-Name').innerHTML = nomeCorredor;
+    //var produtos = getProductsByCategoryAndSupermarketId();
+    // var produtosTotais = document.getElementsByClassName("simpleCart_quantity");
 
     result.produtos.forEach(function (produto) {
 
@@ -17,16 +20,27 @@
         produtosDinamico +=   `<div class="simpleCart_shelfItem">`
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
-        produtosDinamico +=       `<div class="qty">Quant.</div><input type="number" min="1" value="1" class="item_Quantity">`
-        produtosDinamico +=       `<span class="item_price"> R$ ${produto.value}</span>`
-        produtosDinamico +=       `<a class="item_add button u-pull-right" href="javascript:;"> Adicionar </a>`
+        produtosDinamico +=        `<h5 class="item_price"> R$ ${produto.value}</h5>`
+        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="1" class="item_Quantity"> </div>`
+        produtosDinamico +=       `<a onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`
-
+        
     });
     divprodutos.innerHTML = produtosDinamico;
+
+    console.log(numv);
+  
 })()
 
+// Transição do botão de quantidade
+function AparecerQty() {
+    document.getElementsByClassName("qty")[0].style.display="flex";
+    document.getElementsByClassName("item_add button u-pull-right")[0].style.width="50%";
+    document.getElementsByClassName("item_add button u-pull-right")[0].style.padding="0px 20px";
+    simpleCart_remove
+    simpleCart_quantity
+}
 
 
 // antigo

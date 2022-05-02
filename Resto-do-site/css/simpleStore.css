@@ -96,7 +96,8 @@ sub {
 }
 
 img {
-    border: 0
+    height: 4;
+    border: 0;
 }
 
 svg:not(:root) {
@@ -228,7 +229,6 @@ th {
     padding: 0 20px;
     box-sizing: border-box
 }
-
 .column,
 .columns {
     width: 100%;
@@ -250,9 +250,10 @@ th {
 
     .column,
     .columns {
-        margin-left: 4%
     }
+    #pagamentobtn{
 
+    }
     .column:first-child,
     .columns:first-child {
         margin-left: 0
@@ -288,7 +289,8 @@ th {
     }
 
     .eight.columns {
-        width: 65.3333333333%
+        width: 65.3333333333%;
+        overflow-y: scroll;
     }
 
     .nine.columns {
@@ -309,7 +311,7 @@ th {
     }
 
     .one-third.column {
-        width: 30.6666666667%
+        width: 30.6666666667%;
     }
 
     .two-thirds.column {
@@ -458,7 +460,8 @@ h6 {
     }
 
     h2 {
-        font-size: 4.2rem
+        font-size: 4.2rem;
+  
     }
 
     h3 {
@@ -474,7 +477,8 @@ h6 {
     }
 
     h6 {
-        font-size: 1.5rem
+        font-size: 22px;
+        box-shadow: #000;
     }
 }
 
@@ -498,20 +502,40 @@ input[type=button] {
     display: inline-block;
     height: 38px;
     padding: 0 30px;
-    color: #555;
+    color: white;
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 38px;
     letter-spacing: .1rem;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: transparent;
-    border-radius: 4px;
-    border: 1px solid #bbb;
+    background-color: #007b5b;
+    border-radius: 20px;
+    border: 1px solid #dcdcdc;
     cursor: pointer;
-    box-sizing: border-box
+    box-sizing: border-box;
+    width: -webkit-fill-available;
+    transition: 0.5s;
+}
+
+#nume{
+    width: 30px;
+    background: white;
+    border-radius: 20px;
+    color: #333;
+    /* font-size: 17px; */
+    padding: 3px;
+    position: absolute;
+    right: -15px;
+    top: -5px;
+    box-shadow: 0px 0px 20px #818181;
+}
+
+
+#imgcart{
+    height: 40px;
 }
 
 .button:focus,
@@ -524,7 +548,8 @@ input[type=reset]:focus,
 input[type=reset]:hover,
 input[type=button]:focus,
 input[type=button]:hover {
-    color: #333;
+    color: white;
+    background-color: #333;
     border-color: #888;
     outline: 0
 }
@@ -535,12 +560,13 @@ input[type=submit].button-primary,
 input[type=reset].button-primary,
 input[type=button].button-primary {
     color: #FFF;
-    background-color: #33C3F0;
-    border-color: #33C3F0
+    padding: 0;
+    transition: background-color 0.5s;
+    /* background-color: #33C3F0; */
 }
 
-.button.button-primary:focus,
-.button.button-primary:hover,
+.button.button-primary:focus{display: flex;}
+.button.button-primary:hover{ background-color: #333;}
 button.button-primary:focus,
 button.button-primary:hover,
 input[type=submit].button-primary:focus,
@@ -688,7 +714,7 @@ th:last-child {
 
 .button,
 button {
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 fieldset,
@@ -721,7 +747,7 @@ ul {
 }
 
 .u-pull-right {
-    float: right
+    /* float: right; */
 }
 
 .u-pull-left {
@@ -778,7 +804,6 @@ hr {
         text-align: left;
         vertical-align: middle;
         display: inline-block;
-        overflow: auto;
         padding: 25px 25px 0;
         border-bottom: 25px solid transparent;
         min-width: 30%;
@@ -793,7 +818,18 @@ hr {
     .featherlight .featherlight-inner {
         display: block
     }
-
+    .featherlight-inner h2 {
+        background-image: url(https://i.imgur.com/lYJxarW.jpg);
+        align-items: center;
+        padding: 40px 0 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 84%;
+        color: white;
+        text-shadow: 0em 0em 14px #333;
+        border-radius: 15px;
+        box-shadow: 4px 5px 10px #dcdcdc;
+    }
     .featherlight .featherlight-close-icon {
         position: absolute;
         z-index: 9999;
@@ -803,10 +839,8 @@ hr {
         width: 35px;
         cursor: pointer;
         text-align: center;
-        font: Arial, sans-serif;
-        background: #fff;
-        background: rgba(255, 255, 255, .3);
-        color: #000
+        background: transparent;
+        color: #000;
     }
 
     .featherlight .featherlight-image {
@@ -833,6 +867,12 @@ hr {
     }
 }
 
+.featherlight .row {
+    border: 1px solid #f1f1f1;
+    padding: 0px 10px;
+    box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 20px;
+}
 /* Font Awesome | @davegandy (http://fontawesome.io) | MIT License | Version 4.3.0 */
 @font-face {
     font-family: 'FontAwesome';
@@ -3190,10 +3230,26 @@ hr {
 }
 
 .simpleCart_shelfItem {
-    border: 1px solid #EFEFEF;
     padding: 20px;
-    margin: 15px 0
+    margin: 15px 0;
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+    box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 30px;
 }
+
+
+
+.item_add{
+width: 50%;
+padding: 0px 20px;
+}
+
+/* .item_add:focus {
+    width: 50%;
+    display: flex;
+    padding: 0px 20px;
+} */
 
 .item_thumb {
     height: 150px;
@@ -3214,14 +3270,18 @@ hr {
 }
 
 .qty {
-    display: block;
+    display: flex;
     float: left;
     line-height: 40px;
     margin-right: 10px
 }
 
+.qty:focus{
+    display: flex;
+}
+
 .item_price {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     line-height: 35px
 }

@@ -15,7 +15,7 @@
 a:focus { outline: 0px solid }
 img {
     max-width: 100%;
-    height: auto;
+    height: 2;
 }
 .fix { overflow: hidden }
 h1,
@@ -26,6 +26,7 @@ h5,
 h6 {
     font-weight: 700;
     margin: 0 0 15px;
+    text-align: center;
 }
 body { font-family: 'Titillium Web', sans-serif;}
 
