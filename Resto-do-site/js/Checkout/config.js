@@ -20,6 +20,7 @@ $(function() {
 	    checkout: {
 	        type: "PayPal" ,
 	        email: "alvaro.santana1@hotmail.com"
+
 	    },
 
 	    // set the currency, see the currency reference for more info
@@ -33,7 +34,9 @@ $(function() {
 	    language: "english-us",
 
 	    // array of item fields that will not be sent to checkout
+
 	    excludeFromCheckout: [],
+
 
 	    // custom function to add shipping cost
 	    shippingCustom: null,
