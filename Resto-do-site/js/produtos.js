@@ -1,18 +1,18 @@
 (function () {
-
+    var mercado = JSON.parse(localStorage.getItem('mercado-selecionado'))
     var nomeCorredor = localStorage.getItem("nome-corredor");
-    // var nomeMercado = localStorage.getItem("nome-corredor");
+    var nomeMercado = JSON.parse(localStorage.getItem('mercado-selecionado')).nome
+    var fotoMercado = document.querySelector('#Market-image')
     var idSupermarket = localStorage.getItem('codigo-supermercado');
     var result = getprodutosNome(nomeCorredor, idSupermarket);
-    console.log(result);
-    //var produtos = getProductsByCategoryAndSupermarketId();
     var divprodutos = document.getElementById('produtos');
     var produtosDinamico = '';
-    document.getElementById('Market-title').innerHTML = nomeCorredor;
-    var produtosTotais = document.getElementsByClassName("simpleCart_quantity");
     var numv = localStorage.getItem("simpleCart_items");
-
-    // document.getElementById('Market-Name').innerHTML = nomeMercado;
+    fotoMercado.setAttribute('src', mercado.image_link)
+    document.getElementById('Market-title').innerHTML = nomeMercado;
+    document.getElementById('Market-Name').innerHTML = nomeCorredor;
+    //var produtos = getProductsByCategoryAndSupermarketId();
+    // var produtosTotais = document.getElementsByClassName("simpleCart_quantity");
 
     result.produtos.forEach(function (produto) {
 
@@ -21,7 +21,7 @@
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
         produtosDinamico +=        `<h5 class="item_price"> R$ ${produto.value}</h5>`
-        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="" class="item_Quantity"> </div>`
+        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="1" class="item_Quantity"> </div>`
         produtosDinamico +=       `<a onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`

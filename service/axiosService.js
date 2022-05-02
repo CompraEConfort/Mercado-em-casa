@@ -241,6 +241,17 @@ function MercadoUploadImage (formDataMercado) {
     })
 }
 
+function getMercadoId (requestBody) {
+    axios.get(`http://localhost:3000/supermercados/${requestBody.id_supermarket}`)
+    .then(res => {
+        // console.log('feio', res.data.mercado);
+        localStorage.setItem('mercado-selecionado', JSON.stringify( res.data.mercado))
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+
 //  produtos  //
 
 async function productsByCategoryService(requestBody) {
