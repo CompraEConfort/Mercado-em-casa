@@ -80,6 +80,7 @@ svg[hidden] {
 	.clicky-menu > li > button {
 		justify-content: center;
 		text-transform: uppercase;
+		transition: 0.5s;
 	}	
 }
 
