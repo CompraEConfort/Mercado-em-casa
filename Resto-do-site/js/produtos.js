@@ -21,7 +21,7 @@
         produtosDinamico +=       `<img src="${produto.imageLink}" class="item_thumb" />`
         produtosDinamico +=       `<h5 class="item_name">${produto.name}</h5>`
         produtosDinamico +=        `<h5 class="item_price"> R$ ${produto.value}</h5>`
-        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="1" class="item_Quantity"> </div>`
+        produtosDinamico +=       `<div class="qty" style="display:"none;">Quant. <input type="text" min="1" value="" class="item_Quantity"> </div>`
         produtosDinamico +=       `<a onclick="AparecerQty()" class="item_add button u-pull-right" href="javascript:;">Adicionar </a>`
         produtosDinamico +=   `</div>`
         produtosDinamico += `</div>`
