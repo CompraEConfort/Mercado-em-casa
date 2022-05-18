@@ -63,6 +63,7 @@ function deslogarPerfil () {
         localStorage.removeItem ("userMercado");
         localStorage.removeItem ("email");
         localStorage.removeItem ("nome");
+        localStorage.removeItem ("simpleCart_items");
         window.location = "http://localhost:5500/Telalogin/login.html";
 
         return false;
