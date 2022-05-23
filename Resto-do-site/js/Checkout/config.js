@@ -61,8 +61,19 @@ $(function() {
 	    afterSave               	: null,
 	    update                  	: null,
 	    ready                   	: null,
-	    checkoutSuccess             : null,
-	    checkoutFail                : null,
+		
+		//Compra Realizada 
+	    checkoutSuccess             : function compraRealizada(){
+			alert ("Parabéns 🥳🎉!! Sua compra foi realizada com sucesso!!")
+		window.location.href = 'http://localhost:5500/Resto-do-site/confirmaçao.html'
+
+		},
+
+		//Compra Falha
+	    checkoutFail                : function compraFalha(){
+		alert("Algo deu errado 😞!! Porfavor, Verifique e tente novamente!!")
+		},
+
 	    beforeCheckout              : null
 
 	});
