@@ -166,6 +166,7 @@ function loginMercadoService(requestBody) {
         })
         .catch(err => {
             console.log(err)
+            alert("Erro ao logar !")
         })
 }
 
@@ -238,6 +239,17 @@ function MercadoUploadImage (formDataMercado) {
     }).catch(err => {
         console.log(err);
         alert('Erro ao atualizar imagem')
+    })
+}
+
+function getMercadoId (requestBody) {
+    axios.get(`http://localhost:3000/supermercados/${requestBody.id_supermarket}`)
+    .then(res => {
+        // console.log('feio', res.data.mercado);
+        localStorage.setItem('mercado-selecionado', JSON.stringify( res.data.mercado))
+    })
+    .catch(err => {
+        console.log(err);
     })
 }
 

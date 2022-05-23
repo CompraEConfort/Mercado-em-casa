@@ -34,6 +34,25 @@ function esconderlogin(){
     }
   }
 
+  function esconderloginDois(){
+    //Gambiarra pra tirar o erro do Undefined-sticky-wrapper
+    localStorage.removeItem ("simpleCart_items");
+   document.getElementById('undefined-sticky-wrapper').setAttribute('style', 'clear: both;')
+
+    if (user == null && userMercado == null){
+        document.getElementById("btnlogado").style.display="none";
+        document.getElementById("btncadastro").style.display="block";
+    } else {
+        document.getElementById("btnlogado").style.display="block";
+        document.getElementById("btncadastro").style.display="none";    
+    }
+    if (user != null){
+        Userfoto()
+    } else {
+        Mercadofoto()
+    }
+  }
+
   function Userfoto () {
     userPic.setAttribute('src', user.imagem)
     username.innerHTML += user.nome

@@ -77,6 +77,9 @@ function getProductsByCategoryAndSupermarketId() {
 function guardarCodigoSupermercado(codigoSupermercado, ) {
     localStorage.setItem("codigo-supermercado", codigoSupermercado);
 
+    getMercadoId({
+        id_supermarket: codigoSupermercado
+    })
 }
 
 function guardarNomeCorredor(nomeCorredor) {

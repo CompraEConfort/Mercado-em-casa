@@ -45,7 +45,7 @@ template {
 
 a {
     background-color: transparent
-}
+;}
 
 a:active,
 a:hover {
@@ -58,7 +58,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: 700
+    font-weight: 700;
 }
 
 dfn {
@@ -251,7 +251,9 @@ th {
     .column,
     .columns {
     }
+    #pagamentobtn{
 
+    }
     .column:first-child,
     .columns:first-child {
         margin-left: 0
@@ -271,7 +273,17 @@ th {
     }
 
     .four.columns {
-        width: 30.6666666667%
+        width: 34%;
+        /* border: 1px solid #d7d7d7; */
+        padding: 25px;
+        /* box-shadow: 6px 7px 14px #cfcfcf; */
+        /* border-radius: 10px; */
+        /* height: fit-content; */
+        /* position: relative; */
+        /* left: 40px; */
+        /* top: 50px; */
+        /* font-size: 25px; */
+        font-size: inherit;
     }
 
     .five.columns {
@@ -287,7 +299,9 @@ th {
     }
 
     .eight.columns {
-        width: 65.3333333333%
+        width: 65.3333333333%;
+        overflow-y: scroll;
+        height: 270px;
     }
 
     .nine.columns {
@@ -471,10 +485,11 @@ h6 {
 
     h5 {
         font-size: 2.4rem
-    }
+    ;}
 
     h6 {
-        font-size: 1.5rem
+        font-size: 22px;
+        box-shadow: #000;
     }
 }
 
@@ -557,7 +572,6 @@ input[type=reset].button-primary,
 input[type=button].button-primary {
     color: #FFF;
     padding: 0;
-    border-color: #333;
     transition: background-color 0.5s;
     /* background-color: #33C3F0; */
 }
@@ -826,7 +840,7 @@ hr {
         text-shadow: 0em 0em 14px #333;
         border-radius: 15px;
         box-shadow: 4px 5px 10px #dcdcdc;
-    }
+    text-align: center;}
     .featherlight .featherlight-close-icon {
         position: absolute;
         z-index: 9999;
@@ -864,6 +878,12 @@ hr {
     }
 }
 
+.featherlight .row {
+    border: 1px solid #f1f1f1;
+    padding: 0px 10px;
+    box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 20px;
+}
 /* Font Awesome | @davegandy (http://fontawesome.io) | MIT License | Version 4.3.0 */
 @font-face {
     font-family: 'FontAwesome';
@@ -3226,17 +3246,21 @@ hr {
     border: 1px solid #f1f1f1;
     padding: 20px;
     box-shadow: 6px 7px 14px #cfcfcf;
+    border-radius: 30px;
 }
+
+
 
 .item_add{
-width: -webkit-fill-available;
+width: 50%;
+padding: 0px 20px;
 }
 
-.item_add:focus {
-    width: auto;
+/* .item_add:focus {
+    width: 50%;
     display: flex;
-    transition: 0.5s;
-}
+    padding: 0px 20px;
+} */
 
 .item_thumb {
     height: 150px;
@@ -3253,11 +3277,14 @@ width: -webkit-fill-available;
 
 .item_Quantity {
     display: block;
-    width: 50px
+    width: 50px;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
 }
 
+
 .qty {
-    display: none;
+    display: flex;
     float: left;
     line-height: 40px;
     margin-right: 10px
@@ -3281,6 +3308,31 @@ width: -webkit-fill-available;
 
 .simpleCart_items div:first-child {
     width: 100%
+}
+
+.botoes_cart{
+    display: flex;
+    width: 50%;
+    position: fixed;
+    justify-content: center;
+    bottom: 135px;
+    right: 19%;
+}
+
+#ExcluirTudo{
+    /* width: 15%;
+    position: relative;
+    bottom: 220px; */
+    padding: 0px;
+    background-color: #c91d19;
+}
+
+#ExcluirTudo:hover{
+    background-color: #333;
+}
+#bots{
+    font-size: 25px;
+    padding: 5px;
 }
 
 .headerRow {
@@ -3316,16 +3368,29 @@ width: -webkit-fill-available;
     text-align: center
 }
 
-.simpleCart_decrement,
+.simpleCart_decrement{
+    font-size: 18px;
+    line-height: 5px;
+    text-decoration: none;
+    padding: 0px 7px;
+    background-color: #df2a2a;
+    border-radius: 20px;
+    color: white;
+}
+
 .simpleCart_increment {
     font-size: 18px;
     line-height: 5px;
-    text-decoration: none
+    text-decoration: none;
+    padding: 0px 5px;
+    background-color: #007b5b;
+    border-radius: 20px;
+    color: white;
 }
 
 .cart_info {
     text-align: right;
-    padding: 0 0 15px
+    font-size: 20px;
 }
 
 .cart_info div {
@@ -3333,9 +3398,12 @@ width: -webkit-fill-available;
 }
 
 .cart_info_item {
-    display: block !important
+    display: block !important;
+    text-align: left;
+    margin-top: 12px;
 }
 
 .cart_total {
-    font-size: 20px
+    font-size: 25px;
+    margin-top: 40px;
 }

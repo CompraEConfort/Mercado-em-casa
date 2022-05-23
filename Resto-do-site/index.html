@@ -30,20 +30,6 @@
 	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/demo.css" />
 	<link rel="stylesheet" href="/Resto-do-site/css/HeaderMenu.css/clicky-menus.css" />
 
-      <!-- CSS Checkout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/Checkout/imports.min.css">
-    <link rel="stylesheet" href="css/Checkout/simpleStore.min.css">
-
-     <!-- FONT Checkout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
-      <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
 
  <body onload="esconderlogin()"> 
@@ -134,6 +120,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
+                        <img id="Market-image" src=""  style=" width: 100px; height: 100px; border-radius: 25px; border: 1px solid #373737;box-shadow: 6px 7px 14px #373737;margin-top: 0px;"/>
                         <h2 id="Market-title">FreshMarket</h2>
                         <div class="breadcrumb__option">
                             <h6 id="Market-Name">Smart Market</h6>
@@ -171,22 +158,26 @@
           <h2>Carrinho</h2>
           <div class="row">
   
-            <div class="eight columns">
-              <div class="simpleCart_items"></div>
+              <div class="eight columns">
+                  <div class="simpleCart_items"></div>
+                </div>
+                
+                <div class="four columns">
+                    <div class="cart_info">
+                        <div class="cart_info_item cart_itemcount"><i style ="font-size: 20px; border-radius: 20px; box-shadow: 0px 2px 14px #cfcfcf; padding: 7px;" class="fa fa-shopping-bag" aria-hidden="true"></i> Items: <div class="simpleCart_quantity"></div></div>
+                        <div class="cart_info_item cart_shipping"><i style ="font-size: 20px; border-radius: 20px; box-shadow: 0px 2px 14px #cfcfcf; padding: 7px;" class="fa fa-truck" aria-hidden="true"></i> Frete: <div class="simpleCart_shipping"></div></div>
+                        <div class="cart_info_item cart_total"><b>Total: <div class="simpleCart_grandTotal"></div></b></div>
+                     
+                        <!-- <a id="ExcluirTudo" href="javascript:;" class="simpleCart_empty button u-pull-left">Limpar Carrinho<i id="bots" class="fa fa-trash-o"></i></a>  -->
+                        <a id="pagamentobtn" href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right"> Pagamento <i class="fa fa-arrow-right"></i></a>
+            
+                    </div>
+                    
+                </div>
+                
+                
             </div>
-  
-            <div class="four columns">
-              <div class="cart_info">
-                <div class="cart_info_item cart_itemcount">Items: <div class="simpleCart_quantity"></div></div>
-                <div class="cart_info_item cart_shipping">Frete: <div class="simpleCart_shipping"></div></div>
-                <div class="cart_info_item cart_total"><b>Total: <div class="simpleCart_grandTotal"></div></b></div>
-              </div>
-              <a href="javascript:;" class="simpleCart_empty button u-pull-left"> Limpar Carrinho <i class="fa fa-trash-o"></i></a>
-              <a href="javascript:;" class="button button-primary simpleCart_checkout u-pull-right"> Pagamento <i class="fa fa-arrow-right"></i></a>
-            </div>
-  
-          </div>
-      </div>
+        </div>
     </div>
     </section>
     <!-- Product Section End -->
@@ -234,9 +225,6 @@
         </div>
     <!-- Footer Section End -->
 
- <!-- Teste do novo carrinho -->
-
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
@@ -248,7 +236,7 @@
     <script src="../service/service.js"></script>
     <script src="js/produtos.js"></script>
     <script src="../Telalogin/js/app.js"></script>
-<script src="/Resto-do-site/js/teste.js"></script>
+    <script src="/Resto-do-site/js/teste.js"></script>
     
      <!-- HeaderMenu -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
