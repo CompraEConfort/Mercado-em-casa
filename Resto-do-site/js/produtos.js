@@ -29,7 +29,7 @@
     });
     divprodutos.innerHTML = produtosDinamico;
 
-    console.log(numv);
+    console.log(produtosDinamico);
   
 })()
 
@@ -38,8 +38,6 @@ function AparecerQty() {
     document.getElementsByClassName("qty")[0].style.display="flex";
     document.getElementsByClassName("item_add button u-pull-right")[0].style.width="50%";
     document.getElementsByClassName("item_add button u-pull-right")[0].style.padding="0px 20px";
-    simpleCart_remove
-    simpleCart_quantity
 }
 
 
