@@ -166,6 +166,7 @@ function loginMercadoService(requestBody) {
         })
         .catch(err => {
             console.log(err)
+            alert("Erro ao logar !")
         })
 }
 

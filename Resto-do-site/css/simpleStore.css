@@ -45,7 +45,7 @@ template {
 
 a {
     background-color: transparent
-}
+;}
 
 a:active,
 a:hover {
@@ -485,7 +485,7 @@ h6 {
 
     h5 {
         font-size: 2.4rem
-    }
+    ;}
 
     h6 {
         font-size: 22px;
@@ -840,7 +840,7 @@ hr {
         text-shadow: 0em 0em 14px #333;
         border-radius: 15px;
         box-shadow: 4px 5px 10px #dcdcdc;
-    }
+    text-align: center;}
     .featherlight .featherlight-close-icon {
         position: absolute;
         z-index: 9999;
