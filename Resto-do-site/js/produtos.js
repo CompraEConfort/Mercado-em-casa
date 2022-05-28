@@ -29,7 +29,9 @@
     });
     divprodutos.innerHTML = produtosDinamico;
 
+
     // console.log(produtosDinamico);
+
   
 })()
 
