@@ -20,7 +20,8 @@ $(function() {
 	    checkout: {
 	        type: "PayPal" ,
 	        email: "30gerson30@gmail.com",
-			success: "confirmaçao.htm" 
+			    success: "confirmaçao.htm" 
+
 	    },
 
 	    // set the currency, see the currency reference for more info
@@ -34,7 +35,9 @@ $(function() {
 	    language: "english-us",
 
 	    // array of item fields that will not be sent to checkout
+
 	    excludeFromCheckout: [],
+
 
 	    // custom function to add shipping cost
 	    shippingCustom: null,
@@ -62,8 +65,19 @@ $(function() {
 	    afterSave               	: null,
 	    update                  	: null,
 	    ready                   	: null,
-	    checkoutSuccess             : null,
-	    checkoutFail                : null,
+		
+		//Compra Realizada 
+	    checkoutSuccess             : function compraRealizada(){
+			alert ("Parabéns 🥳🎉!! Sua compra foi realizada com sucesso!!")
+		window.location.href = 'http://localhost:5500/Resto-do-site/confirmaçao.html'
+
+		},
+
+		//Compra Falha
+	    checkoutFail                : function compraFalha(){
+		alert("Algo deu errado 😞!! Porfavor, Verifique e tente novamente!!")
+		},
+
 	    beforeCheckout              : null
 
 	});
